@@ -1,0 +1,7 @@
+compilar:
+
+g++ -I C:\allegro\include src\main.cpp -o bin\main.exe C:\allegro\lib\liballegro_monolith.dll.a
+
+executar:
+
+bin\main.exe
