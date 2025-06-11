@@ -3,39 +3,49 @@
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_ttf.h>
-
 #include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
+#include "Bird.hpp"
+#include "Pipe.hpp"
 using namespace std;
 
-const float FPS = 30;
-// pode mudar o tamanho da tela aq q o resto se ajusta de boa
+const float FPS = 60;
 const int SCREEN_W = 800;
 const int SCREEN_H = 600;
+const float SCROLL_SPEED = 100.0f;
+const float PIPE_INTERVAL = 2.5f;
+const float GAP_HEIGHT = 200.0f;
 
 int main() {
+    srand(time(0));
+
     if (!al_init()) {
-        cout << "nao deu pra iniciar o allegro" << endl;
+        cout << "nao iniciou allegro" << endl;
         return -1;
     }
 
-    al_init_primitives_addon();
     al_install_keyboard();
+    al_init_image_addon();
     al_init_font_addon();
     al_init_ttf_addon();
-    al_init_image_addon();
+    al_init_primitives_addon();
 
     ALLEGRO_DISPLAY* display = al_create_display(SCREEN_W, SCREEN_H);
-    if (!display) {
-        cout << "nao criou a tela" << endl;
-        return -1;
-    }
+    if (!display) return -1;
 
     ALLEGRO_EVENT_QUEUE* event_queue = al_create_event_queue();
     ALLEGRO_TIMER* timer = al_create_timer(1.0 / FPS);
 
-    if (!event_queue || !timer) {
-        cout << "nao criou a fila ou o timer" << endl;
-        al_destroy_display(display);
+    ALLEGRO_FONT* font = al_load_font("bin/ARIAL.TTF", 24, 0);
+    ALLEGRO_BITMAP* bird_bmp = al_load_bitmap("bin/bird.png");
+    ALLEGRO_BITMAP* bg = al_load_bitmap("bin/background.png");
+    ALLEGRO_BITMAP* pipe_bmp = al_load_bitmap("bin/pipe.png");
+
+    if (!font || !bird_bmp || !bg || !pipe_bmp) {
+        cout << "erro ao carregar arquivos" << endl;
         return -1;
     }
 
@@ -45,121 +55,124 @@ int main() {
 
     al_start_timer(timer);
 
-    ALLEGRO_FONT* font_arial = al_load_font("bin/ARIAL.TTF", 24, 0);
-    if (!font_arial) {
-        cout << "fonte nao carregou" << endl;
-        al_destroy_display(display);
-        al_destroy_event_queue(event_queue);
-        al_destroy_timer(timer);
-        return -1;
-    }
+    float escalaTela = float(SCREEN_W) / 800.0f;
+    Bird bird(bird_bmp, SCREEN_W / 3.0f, SCREEN_H / 2.0f, escalaTela);
 
-    ALLEGRO_BITMAP* bird_bmp = al_load_bitmap("bin/bird.png");
-    if (!bird_bmp) {
-        cout << "imagem do bird deu erro" << endl;
-        al_destroy_display(display);
-        al_destroy_event_queue(event_queue);
-        al_destroy_timer(timer);
-        al_destroy_font(font_arial);
-        return -1;
-    }
+    float deltaTime = 1.0f / FPS;
+    float pipe_timer = 0;
+    int score = 0;
+    float bg_offset = 0; // deslocamento do fundo
 
-    ALLEGRO_BITMAP* background_bmp = al_load_bitmap("bin/background.jpg");
-    if (!background_bmp) {
-        cout << "background nao carregou" << endl;
-        al_destroy_bitmap(bird_bmp);
-        al_destroy_display(display);
-        al_destroy_event_queue(event_queue);
-        al_destroy_timer(timer);
-        al_destroy_font(font_arial);
-        return -1;
-    }
+    vector<Pipe> pipes;
+    vector<bool> pontuado;
 
     bool playing = true;
-    int offset_x = 0, offset_y = 0;
-    string last_command = "None";
-
-    // pega o tamanho real do bird pra poder escalar
-    int bird_orig_w = al_get_bitmap_width(bird_bmp);
-    int bird_orig_h = al_get_bitmap_height(bird_bmp);
-
-    // escala o bird pra ficar proporcional
-    float bird_scale = 1 * (float(SCREEN_W) / 800.0f);
 
     while (playing) {
         ALLEGRO_EVENT ev;
         al_wait_for_event(event_queue, &ev);
 
         if (ev.type == ALLEGRO_EVENT_TIMER) {
-            // limpa a tela com branco antes de desenhar
-            al_clear_to_color(al_map_rgb(255, 255, 255));
+            bg_offset -= SCROLL_SPEED * deltaTime;
 
-            // desenha o fundo e escala pra caber na tela toda
-            int bg_w = al_get_bitmap_width(background_bmp);
-            int bg_h = al_get_bitmap_height(background_bmp);
+            int bg_w = al_get_bitmap_width(bg);
+            int bg_h = al_get_bitmap_height(bg);
             float scale_x = float(SCREEN_W) / float(bg_w);
             float scale_y = float(SCREEN_H) / float(bg_h);
-            float bg_scale = max(scale_x, scale_y); // usa o maior pra n sobrar buraco
-            al_draw_scaled_bitmap(background_bmp,
-                                  0, 0, bg_w, bg_h,
-                                  0, 0, bg_w * bg_scale, bg_h * bg_scale,
-                                  0);
+            float bg_scale = max(scale_x, scale_y);
 
-            // coloca o bird no meio da tela (com deslocamento)
-            float bird_w = bird_orig_w * bird_scale;
-            float bird_h = bird_orig_h * bird_scale;
-            float bird_x = SCREEN_W / 2.0f + offset_x;
-            float bird_y = SCREEN_H / 2.0f + offset_y;
+            int img_largura = bg_w * bg_scale;
+            if (bg_offset <= -img_largura)
+                bg_offset += img_largura;
 
-            // desenha o bird escalado
-            al_draw_scaled_bitmap(bird_bmp,
-                                  0, 0, bird_orig_w, bird_orig_h,
-                                  bird_x - bird_w / 2, bird_y - bird_h / 2,
-                                  bird_w, bird_h,
-                                  0);
+            bird.update(deltaTime);
+            pipe_timer += deltaTime;
 
-            // texto do comando que foi apertado por último
-            int font_size = int(24 * (float(SCREEN_H) / 600.0f)); // se mudar a tela ele ajusta tb
-            al_draw_text(font_arial, al_map_rgb(0, 0, 0),
-                         5, 10, ALLEGRO_ALIGN_LEFT,
-                         ("Last command: " + last_command).c_str());
+            if (pipe_timer >= PIPE_INTERVAL) {
+                pipe_timer = 0;
+                float pipe_w = 80 * escalaTela;
+                float minY = 100 * escalaTela;
+                float maxY = SCREEN_H - GAP_HEIGHT * escalaTela - minY;
+                float gapY = minY + rand() % int(maxY - minY);
 
+                pipes.emplace_back(SCREEN_W, 0, pipe_w, gapY, SCROLL_SPEED, true, pipe_bmp);
+                pipes.emplace_back(SCREEN_W, gapY + GAP_HEIGHT * escalaTela, pipe_w, SCREEN_H - (gapY + GAP_HEIGHT * escalaTela), SCROLL_SPEED, false, pipe_bmp);
+                pontuado.push_back(false);
+            }
+
+            for (auto& pipe : pipes)
+                pipe.update(deltaTime);
+
+            for (size_t i = 0; i < pipes.size(); i += 2) {
+                if (!pontuado[i / 2] && pipes[i].getX() + pipes[i].getWidth() < bird.getX()) {
+                    score++;
+                    pontuado[i / 2] = true;
+                }
+            }
+
+            for (auto& pipe : pipes) {
+                float px1 = pipe.getX();
+                float px2 = px1 + pipe.getWidth();
+                float py1 = pipe.getY();
+                float py2 = py1 + pipe.getHeight();
+
+                float bx1 = bird.getX() - bird.getWidth() / 2;
+                float bx2 = bird.getX() + bird.getWidth() / 2;
+                float by1 = bird.getY() - bird.getHeight() / 2;
+                float by2 = bird.getY() + bird.getHeight() / 2;
+
+                bool colidiuX = bx1 < px2 && bx2 > px1;
+                bool colidiuY = by1 < py2 && by2 > py1;
+
+                if (colidiuX && colidiuY) {
+                    playing = false;
+                    break;
+                }
+            }
+
+            pipes.erase(remove_if(pipes.begin(), pipes.end(), [](Pipe& p) {
+                return p.isOffScreen();
+            }), pipes.end());
+
+            while (pontuado.size() > pipes.size() / 2) {
+                pontuado.erase(pontuado.begin());
+            }
+
+            al_clear_to_color(al_map_rgb(255, 255, 255));
+
+            al_draw_scaled_bitmap(bg, 0, 0, bg_w, bg_h, bg_offset, 0, img_largura, SCREEN_H, 0);
+            al_draw_scaled_bitmap(bg, 0, 0, bg_w, bg_h, bg_offset + img_largura, 0, img_largura, SCREEN_H, 0);
+
+            for (auto& pipe : pipes)
+                pipe.render();
+
+            bird.render();
+
+            al_draw_textf(font, al_map_rgb(0, 0, 0), 10, 10, 0, "Pontos: %d", score);
             al_flip_display();
         }
-        else if (ev.type == ALLEGRO_EVENT_KEY_DOWN) {
+
+        if (ev.type == ALLEGRO_EVENT_KEY_DOWN) {
             switch (ev.keyboard.keycode) {
                 case ALLEGRO_KEY_ESCAPE:
                     playing = false;
                     break;
-                case ALLEGRO_KEY_UP:
-                    offset_y -= 20;
-                    last_command = "Up";
-                    break;
-                case ALLEGRO_KEY_DOWN:
-                    offset_y += 20;
-                    last_command = "Down";
-                    break;
-                case ALLEGRO_KEY_LEFT:
-                    offset_x -= 20;
-                    last_command = "Left";
-                    break;
-                case ALLEGRO_KEY_RIGHT:
-                    offset_x += 20;
-                    last_command = "Right";
+                case ALLEGRO_KEY_SPACE:
+                    bird.flap();
                     break;
             }
         }
-        else if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
+
+        if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
             playing = false;
         }
     }
 
-    cout << "fechando o prog..." << endl;
-    al_rest(2.0);
-
-    al_destroy_bitmap(background_bmp);
+    al_rest(1.5);
+    al_destroy_bitmap(bg);
     al_destroy_bitmap(bird_bmp);
-    al_destroy_font(font_arial);
+    al_destroy_bitmap(pipe_bmp);
+    al_destroy_font(font);
     al_destroy_timer(timer);
     al_destroy_event_queue(event_queue);
     al_destroy_display(display);
