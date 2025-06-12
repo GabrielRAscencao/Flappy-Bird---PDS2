@@ -4,6 +4,9 @@
 #include "Scenario.hpp"
 #include "PlayerManager.hpp"
 
+// Forward declaration para Player para evitar inclusões circulares, caso Player.hpp não seja incluído por PlayerManager.hpp
+class Player; 
+
 enum EstadoJogo {
     MENU,
     JOGANDO,
@@ -26,6 +29,14 @@ private:
     int screenHeight;
     float scaleX;
     float scaleY;
+
+    // --- NOVAS VARIÁVEIS PARA OS DADOS DA TELA DE GAME OVER ---
+    int lastScore;
+    int lastRecordPessoal;
+    int lastRecordGeral;
+    bool lastBateuRecordePessoal;
+    bool lastBateuRecordeGeral;
+    // ---------------------------------------------------------
 };
 
 #endif

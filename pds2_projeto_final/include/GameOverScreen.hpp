@@ -14,7 +14,7 @@ public:
 
 private:
     ALLEGRO_FONT* font;
-    ALLEGRO_FONT* fontLarge; // ✅ ADICIONADO para "GAME OVER!"
+    ALLEGRO_FONT* fontLarge;
     ALLEGRO_BITMAP* background;
     float scroll;
     float SCREEN_W, SCREEN_H;
@@ -23,6 +23,11 @@ private:
     std::array<float, 4> replayBtn;
     std::array<float, 4> menuBtn;
     int selected;
+
+    // --- NOVOS MÉTODOS ADICIONADOS ---
+    void drawButton(const std::string& text, const std::array<float, 4>& rect, bool hover);
+    bool isMouseOver(const std::array<float, 4>& rect, float mx, float my);
+    // ---------------------------------
 };
 
 #endif

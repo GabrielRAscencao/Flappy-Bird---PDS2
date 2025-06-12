@@ -2,6 +2,7 @@
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_ttf.h>
 #include <allegro5/allegro_font.h>
+#include <algorithm> // Para std::max ou outras utilidades se precisar
 
 Menu::Menu(ALLEGRO_FONT* fonte, ALLEGRO_BITMAP* fundo, int screenWidth, int screenHeight)
     : font(fonte), background(fundo), screenWidth(screenWidth), screenHeight(screenHeight),
@@ -9,13 +10,12 @@ Menu::Menu(ALLEGRO_FONT* fonte, ALLEGRO_BITMAP* fundo, int screenWidth, int scre
       cursorVisible(true), cursorTimer(0.0), bgOffsetX(0.0f)
 {
     fontLarge = al_load_ttf_font("bin/Minecrafter.Reg.ttf", 72, 0);
-    if (!fontLarge) fontLarge = font;  // fallback
+    if (!fontLarge) fontLarge = font;   // fallback
 
     buttonWidth = 300.0f;
     buttonHeight = 60.0f;
 
     const float centerX = screenWidth / 2.0f;
-    // Usando proporções relativas à altura da tela para o Y dos botões
     float startBtnY = screenHeight * 0.4f;
     float rankBtnY  = screenHeight * 0.52f;
     float exitBtnY  = screenHeight * 0.64f;
@@ -51,11 +51,11 @@ void Menu::updateCursor(double deltaTime) {
 void Menu::render() {
     int bgWidth = al_get_bitmap_width(background);
     int bgHeight = al_get_bitmap_height(background);
-  
-    al_draw_scaled_bitmap(background, 0, 0, bgWidth, bgHeight, (int)bgOffsetX, 0, bgWidth, screenHeight, 0);
-    al_draw_scaled_bitmap(background, 0, 0, bgWidth, bgHeight, (int)(bgOffsetX + bgWidth), 0, bgWidth, screenHeight, 0);
+    
+    // Usando float para bgOffsetX - ESSA FOI A PRIMEIRA CORREÇÃO
+    al_draw_scaled_bitmap(background, 0, 0, bgWidth, bgHeight, bgOffsetX, 0, bgWidth, screenHeight, 0);
+    al_draw_scaled_bitmap(background, 0, 0, bgWidth, bgHeight, bgOffsetX + bgWidth, 0, bgWidth, screenHeight, 0);
 
-    // Usando proporção para o Y do título
     al_draw_text(fontLarge, al_map_rgb(0, 0, 0), screenWidth / 2, screenHeight * 0.12f, ALLEGRO_ALIGN_CENTER, "FLAPPY BIRD");
 
     const float inputY = screenHeight * 0.27f;
@@ -125,7 +125,7 @@ void Menu::onClick(int mx, int my) {
     const float inputHeight = al_get_font_line_height(font) + 10.0f;
 
     bool clickInput = (mx >= inputX && mx <= inputX + boxW &&
-                       my >= inputY && my <= inputY + inputHeight);
+                        my >= inputY && my <= inputY + inputHeight);
 
     if (clickInput) {
         inputActive = true;
