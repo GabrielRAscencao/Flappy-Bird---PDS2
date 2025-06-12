@@ -78,7 +78,7 @@ void exibirRanking(PlayerManager* pm, const std::string& jogadorAtual, int scree
         al_draw_filled_rounded_rectangle(80, 60, screenWidth - 80, screenHeight - 150, 10, 10, al_map_rgba(0, 0, 0, 180));
 
         // Título
-        al_draw_text(font, al_map_rgb(255, 255, 0), screenWidth / 2, 90, ALLEGRO_ALIGN_CENTER, "RANKING - TOP 10");
+        al_draw_text(font, al_map_rgb(255, 255, 0), screenWidth / 2, 89, ALLEGRO_ALIGN_CENTER, "RANKING - TOP 10");
 
         // Cabeçalhos da tabela
         int y = 140;
