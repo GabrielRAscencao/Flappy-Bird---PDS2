@@ -8,20 +8,27 @@
 class Bird : public GameObject {
 private:
     ALLEGRO_BITMAP* sprite;
-    float scale;
-    float velocityY;           // velocidade pra baixo
-    float gravity;             // aceleração puxa pra baixo
-    float flapForce;           // força do pulo
+    float scaleX;
+    float scaleY;
+    float velocityY;
+    float gravity;
+    float flapForce;
+    float screenHeight;   // altura da tela
 
 public:
-    Bird(ALLEGRO_BITMAP* sprite, float x, float y, float scale = 1.0f);
+    // construtorzinho
+    Bird(ALLEGRO_BITMAP* sprite, float x, float y, float screenHeight, float scaleX = 1.0f, float scaleY = 1.0f);
+
+    // destrutor
     ~Bird();
 
-    void update(float deltaTime) override; // agora atualiza com gravidade
-    void render() override;                // desenha o bicho
+    void update(float deltaTime) override;
+    void render() override;
 
-    void move(float dx, float dy);         // movimenta o passarim
-    void flap();                           // faz o passarim subir
+    void move(float dx, float dy);
+    void flap();
+
+    ALLEGRO_BITMAP* getBitmap() const;  // método pra pegar o sprite
 };
 
 #endif

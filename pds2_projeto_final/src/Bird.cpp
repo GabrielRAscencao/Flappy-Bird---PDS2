@@ -1,38 +1,49 @@
 #include "Bird.hpp"
 #include <allegro5/allegro.h>
 
-Bird::Bird(ALLEGRO_BITMAP* sprite, float x, float y, float scale)
-    : GameObject(x, y, 0, 0), sprite(sprite), scale(scale) {
-    width = al_get_bitmap_width(sprite) * scale;
-    height = al_get_bitmap_height(sprite) * scale;
+// construtor do passarim
+Bird::Bird(ALLEGRO_BITMAP* sprite, float x, float y, float screenHeight, float scaleX, float scaleY)
+    : GameObject(x, y,
+                 al_get_bitmap_width(sprite) * scaleX,
+                 al_get_bitmap_height(sprite) * scaleY),
+      sprite(sprite), scaleX(scaleX), scaleY(scaleY), screenHeight(screenHeight) {
     velocityY = 0;
-    gravity = 600.0f; // mais alto = cai mais rapido
-    flapForce = -250.0f; // força q sobe qnd aperta espaco
+    gravity = 600.0f * scaleY;
+    flapForce = -250.0f * scaleY;
 }
 
-Bird::~Bird() {}
+// destrutor
+Bird::~Bird() {
+    // nada por enquanto
+}
 
 void Bird::update(float deltaTime) {
-    velocityY += gravity * deltaTime; // aplica gravidade
-    y += velocityY * deltaTime;       // muda a posicao vertical
+    velocityY += gravity * deltaTime;
+    y += velocityY * deltaTime;
 
-    // trava pra n sair da tela
     if (y < height / 2) {
         y = height / 2;
         velocityY = 0;
     }
-    if (y > 600 - height / 2) {
-        y = 600 - height / 2;
+
+    if (y > screenHeight - height / 2) {
+        y = screenHeight - height / 2;
         velocityY = 0;
     }
 }
 
 void Bird::render() {
+    int bmpWidth = al_get_bitmap_width(sprite);
+    int bmpHeight = al_get_bitmap_height(sprite);
+
+    float renderWidth = bmpWidth * scaleX;
+    float renderHeight = bmpHeight * scaleY;
+
     al_draw_scaled_bitmap(sprite,
         0, 0,
-        al_get_bitmap_width(sprite), al_get_bitmap_height(sprite),
-        x - width / 2, y - height / 2,
-        width, height,
+        bmpWidth, bmpHeight,
+        x - renderWidth / 2, y - renderHeight / 2,
+        renderWidth, renderHeight,
         0);
 }
 
@@ -42,6 +53,9 @@ void Bird::move(float dx, float dy) {
 }
 
 void Bird::flap() {
-    velocityY = flapForce; // sobe com a força do pulo
+    velocityY = flapForce;
 }
 
+ALLEGRO_BITMAP* Bird::getBitmap() const {
+    return sprite;
+}

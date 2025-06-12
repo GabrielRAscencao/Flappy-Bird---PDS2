@@ -6,6 +6,12 @@ g++ -I include -I C:\allegro\include src\main.cpp src\Bird.cpp src\GameObject.cp
 
 g++ src/*.cpp -o bin/flappy.exe -IC:/msys64/mingw64/include -LC:/msys64/mingw64/lib -lallegro -lallegro_primitives -lallegro_image -lallegro_font -lallegro_ttf
 
+g++ -I include -I C:\allegro\include ^
+src/main.cpp src/Bird.cpp src/GameObject.cpp src/Pipe.cpp ^
+src/ScoreManager.cpp src/Player.cpp src/PlayerManager.cpp ^
+src/Scenario.cpp src/GameEngine.cpp ^
+-o bin/main.exe C:\allegro\lib\liballegro_monolith.dll.a
+
 executar:
 
 bin\main.exe
