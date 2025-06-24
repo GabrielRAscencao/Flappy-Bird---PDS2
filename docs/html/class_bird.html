@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Traveling Dragon: Referência da Classe Bird</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="dragao (1).png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Traveling Dragon<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Traveling Dragon é uma releitura autoral do clássico Flappy Bird. Neste jogo, você controla um dragão aventureiro que sai de sua caverna para explorar o mundo. A cada novo cenário, o tempo passa mais rápido, o dia clareia, escurece, e por fim o dragão mergulha em uma noite eterna, repleta de obstáculos desafiadores.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#pub-static-attribs">Atributos Públicos Estáticos</a> &#124;
+<a href="class_bird-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle"><div class="title">Referência da Classe Bird</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Representa o personagem principal do jogo, o pássaro.  
+ <a href="#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_bird_8hpp_source.html">Bird.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de hierarquia da classe Bird:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_bird.png" usemap="#Bird_map" alt=""/>
+  <map id="Bird_map" name="Bird_map">
+<area href="class_game_object.html" title="Classe base abstrata para todos os objetos visuais no jogo." alt="GameObject" shape="rect" coords="0,0,81,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:af13285483b45b137948814276b1ee23c" id="r_af13285483b45b137948814276b1ee23c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af13285483b45b137948814276b1ee23c">setRotacionar</a> (bool on)</td></tr>
+<tr class="memdesc:af13285483b45b137948814276b1ee23c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ativa ou desativa a rotação visual do pássaro com base na sua velocidade vertical.  <br /></td></tr>
+<tr class="memitem:a79928bbbbf550c6e6c58679168a9bf24" id="r_a79928bbbbf550c6e6c58679168a9bf24"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79928bbbbf550c6e6c58679168a9bf24">isRotacionando</a> () const</td></tr>
+<tr class="memdesc:a79928bbbbf550c6e6c58679168a9bf24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se a rotação do pássaro está ativa.  <br /></td></tr>
+<tr class="memitem:a38af18ee14aa0252104ab25ae16e5747" id="r_a38af18ee14aa0252104ab25ae16e5747"><td class="memItemLeft" align="right" valign="top">ALLEGRO_BITMAP *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38af18ee14aa0252104ab25ae16e5747">getCurrentFrame</a> () const</td></tr>
+<tr class="memdesc:a38af18ee14aa0252104ab25ae16e5747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o frame (imagem) atual da animação do pássaro.  <br /></td></tr>
+<tr class="memitem:ae7745b87ad76bad73515667edee8ccb6" id="r_ae7745b87ad76bad73515667edee8ccb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7745b87ad76bad73515667edee8ccb6">Bird</a> (ALLEGRO_BITMAP *sheet, float screenW, float screenH, float sX, float sY)</td></tr>
+<tr class="memdesc:ae7745b87ad76bad73515667edee8ccb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="class_bird.html" title="Representa o personagem principal do jogo, o pássaro.">Bird</a>.  <br /></td></tr>
+<tr class="memitem:a7d10693b91a2736611c37f1ef205b911" id="r_a7d10693b91a2736611c37f1ef205b911"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d10693b91a2736611c37f1ef205b911">~Bird</a> ()</td></tr>
+<tr class="memdesc:a7d10693b91a2736611c37f1ef205b911"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe <a class="el" href="class_bird.html" title="Representa o personagem principal do jogo, o pássaro.">Bird</a>. Responsável por liberar quaisquer recursos alocados dinamicamente, se houver.  <br /></td></tr>
+<tr class="memitem:a4065f3bbea46277fc75ebfef79c3f888" id="r_a4065f3bbea46277fc75ebfef79c3f888"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4065f3bbea46277fc75ebfef79c3f888">flap</a> ()</td></tr>
+<tr class="memdesc:a4065f3bbea46277fc75ebfef79c3f888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aplica uma força vertical para cima no pássaro, simulando um "flap" (bater asas). Isso altera a velocidade vertical do pássaro.  <br /></td></tr>
+<tr class="memitem:a0f8d92f11a19492143e6affa2635b0b8" id="r_a0f8d92f11a19492143e6affa2635b0b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f8d92f11a19492143e6affa2635b0b8">update</a> (float deltaTime)</td></tr>
+<tr class="memdesc:a0f8d92f11a19492143e6affa2635b0b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza a lógica do pássaro a cada frame do jogo.  <br /></td></tr>
+<tr class="memitem:adcff7cf22e4e53ebe2325328d79dad2a" id="r_adcff7cf22e4e53ebe2325328d79dad2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcff7cf22e4e53ebe2325328d79dad2a">render</a> ()</td></tr>
+<tr class="memdesc:adcff7cf22e4e53ebe2325328d79dad2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renderiza (desenha) o pássaro na tela na sua posição e com sua rotação atual.  <br /></td></tr>
+<tr class="memitem:a89d40831dcd54751b9507f51bb98b4f6" id="r_a89d40831dcd54751b9507f51bb98b4f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89d40831dcd54751b9507f51bb98b4f6">reset</a> ()</td></tr>
+<tr class="memdesc:a89d40831dcd54751b9507f51bb98b4f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reseta o estado do pássaro para as condições iniciais de uma nova partida. Isso inclui posição, velocidade, ângulo de rotação e estado de animação.  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_game_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Membros Públicos herdados de <a class="el" href="class_game_object.html">GameObject</a></td></tr>
+<tr class="memitem:a0ed671e414015944c33d2512d2749364 inherit pub_methods_class_game_object" id="r_a0ed671e414015944c33d2512d2749364"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a0ed671e414015944c33d2512d2749364">GameObject</a> (float initialX, float initialY, float w, float h)</td></tr>
+<tr class="memdesc:a0ed671e414015944c33d2512d2749364 inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="class_game_object.html" title="Classe base abstrata para todos os objetos visuais no jogo.">GameObject</a>.  <br /></td></tr>
+<tr class="memitem:a67ae2fa6e7916c799700cd659975d8ea inherit pub_methods_class_game_object" id="r_a67ae2fa6e7916c799700cd659975d8ea"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a67ae2fa6e7916c799700cd659975d8ea">~GameObject</a> ()=default</td></tr>
+<tr class="memdesc:a67ae2fa6e7916c799700cd659975d8ea inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual da classe <a class="el" href="class_game_object.html" title="Classe base abstrata para todos os objetos visuais no jogo.">GameObject</a>.  <br /></td></tr>
+<tr class="memitem:abe61df236efb58849b29d242d87fc59f inherit pub_methods_class_game_object" id="r_abe61df236efb58849b29d242d87fc59f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#abe61df236efb58849b29d242d87fc59f">getX</a> () const</td></tr>
+<tr class="memdesc:abe61df236efb58849b29d242d87fc59f inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a coordenada X atual do objeto.  <br /></td></tr>
+<tr class="memitem:a3f55728263b9ce2407459d14b9861b04 inherit pub_methods_class_game_object" id="r_a3f55728263b9ce2407459d14b9861b04"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a3f55728263b9ce2407459d14b9861b04">getY</a> () const</td></tr>
+<tr class="memdesc:a3f55728263b9ce2407459d14b9861b04 inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a coordenada Y atual do objeto.  <br /></td></tr>
+<tr class="memitem:a665147ee46e9b62442b2d6b9835c4dd4 inherit pub_methods_class_game_object" id="r_a665147ee46e9b62442b2d6b9835c4dd4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a665147ee46e9b62442b2d6b9835c4dd4">getWidth</a> () const</td></tr>
+<tr class="memdesc:a665147ee46e9b62442b2d6b9835c4dd4 inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a largura do objeto.  <br /></td></tr>
+<tr class="memitem:a927400453a0989e2f5b765031f4d861c inherit pub_methods_class_game_object" id="r_a927400453a0989e2f5b765031f4d861c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a927400453a0989e2f5b765031f4d861c">getHeight</a> () const</td></tr>
+<tr class="memdesc:a927400453a0989e2f5b765031f4d861c inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a altura do objeto.  <br /></td></tr>
+<tr class="memitem:a3596123a5ace076416382bd400e48923 inherit pub_methods_class_game_object" id="r_a3596123a5ace076416382bd400e48923"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a3596123a5ace076416382bd400e48923">move</a> (float dx, float dy)</td></tr>
+<tr class="memdesc:a3596123a5ace076416382bd400e48923 inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move o objeto pela quantidade especificada.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Atributos Públicos Estáticos</h2></td></tr>
+<tr class="memitem:a2c18444157c7b7b991ef810c95bf6c17" id="r_a2c18444157c7b7b991ef810c95bf6c17"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c18444157c7b7b991ef810c95bf6c17">MAX_UP_ROTATION</a> = -30.0f * (<a class="el" href="_bird_8cpp.html#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a> / 180.0f)</td></tr>
+<tr class="memdesc:a2c18444157c7b7b991ef810c95bf6c17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ângulo máximo de rotação para cima do pássaro.  <br /></td></tr>
+<tr class="memitem:a679cdaf1fefc573fffe74879721f9225" id="r_a679cdaf1fefc573fffe74879721f9225"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a679cdaf1fefc573fffe74879721f9225">MAX_DOWN_ROTATION</a> = 70.0f * (<a class="el" href="_bird_8cpp.html#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a> / 180.0f)</td></tr>
+<tr class="memdesc:a679cdaf1fefc573fffe74879721f9225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ângulo máximo de rotação para baixo do pássaro.  <br /></td></tr>
+<tr class="memitem:a28191754b9718c803f1aed8c728eca18" id="r_a28191754b9718c803f1aed8c728eca18"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28191754b9718c803f1aed8c728eca18">INITIAL_Y_RATIO</a> = 0.4f</td></tr>
+<tr class="memdesc:a28191754b9718c803f1aed8c728eca18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proporção da altura da tela para a posição Y inicial do pássaro.  <br /></td></tr>
+<tr class="memitem:a3846ce795ea319e93a4d24d9434a30d1" id="r_a3846ce795ea319e93a4d24d9434a30d1"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3846ce795ea319e93a4d24d9434a30d1">CENTER_X_OFFSET_RATIO</a> = 0.0f</td></tr>
+<tr class="memdesc:a3846ce795ea319e93a4d24d9434a30d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proporção para o deslocamento X do centro da tela para o pássaro.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Outros membros herdados</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_game_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_game_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Atributos Protegidos herdados de <a class="el" href="class_game_object.html">GameObject</a></td></tr>
+<tr class="memitem:ad4976cd29785cf9bd791148ff397c41e inherit pro_attribs_class_game_object" id="r_ad4976cd29785cf9bd791148ff397c41e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">x</a></td></tr>
+<tr class="memdesc:ad4976cd29785cf9bd791148ff397c41e inherit pro_attribs_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada X da posição do objeto (canto superior esquerdo).  <br /></td></tr>
+<tr class="memitem:a9ac54f1c686ecf5656139a829ed62041 inherit pro_attribs_class_game_object" id="r_a9ac54f1c686ecf5656139a829ed62041"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">y</a></td></tr>
+<tr class="memdesc:a9ac54f1c686ecf5656139a829ed62041 inherit pro_attribs_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada Y da posição do objeto (canto superior esquerdo).  <br /></td></tr>
+<tr class="memitem:af797cec05ff1d3cbc694fc7036add37b inherit pro_attribs_class_game_object" id="r_af797cec05ff1d3cbc694fc7036add37b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">width</a></td></tr>
+<tr class="memdesc:af797cec05ff1d3cbc694fc7036add37b inherit pro_attribs_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largura do objeto.  <br /></td></tr>
+<tr class="memitem:a0ae9c255f47b6148c26d0333a72d0625 inherit pro_attribs_class_game_object" id="r_a0ae9c255f47b6148c26d0333a72d0625"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a0ae9c255f47b6148c26d0333a72d0625">height</a></td></tr>
+<tr class="memdesc:a0ae9c255f47b6148c26d0333a72d0625 inherit pro_attribs_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Altura do objeto.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Representa o personagem principal do jogo, o pássaro. </p>
+<p>A classe <a class="el" href="class_bird.html" title="Representa o personagem principal do jogo, o pássaro.">Bird</a> gerencia a lógica de movimento, física (gravidade, pulo), animação e rotação do pássaro na tela. Herda de <a class="el" href="class_game_object.html" title="Classe base abstrata para todos os objetos visuais no jogo.">GameObject</a> para ter atributos de posição e dimensão. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Construtores e Destrutores</h2>
+<a id="ae7745b87ad76bad73515667edee8ccb6" name="ae7745b87ad76bad73515667edee8ccb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7745b87ad76bad73515667edee8ccb6">&#9670;&#160;</a></span>Bird()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bird::Bird </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_BITMAP *</td>          <td class="paramname"><span class="paramname"><em>sheet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>screenW</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>screenH</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor da classe <a class="el" href="class_bird.html" title="Representa o personagem principal do jogo, o pássaro.">Bird</a>. </p>
+<p>Inicializa o pássaro configurando sua folha de sprites, as dimensões da tela e os fatores de escala para o posicionamento e renderização.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sheet</td><td>A folha de sprites (ALLEGRO_BITMAP) contendo as imagens do pássaro. </td></tr>
+    <tr><td class="paramname">screenW</td><td>Largura da tela de exibição do jogo. </td></tr>
+    <tr><td class="paramname">screenH</td><td>Altura da tela de exibição do jogo. </td></tr>
+    <tr><td class="paramname">sX</td><td>Fator de escala horizontal para o pássaro. </td></tr>
+    <tr><td class="paramname">sY</td><td>Fator de escala vertical para o pássaro.</td></tr>
+    <tr><td class="paramname">sheet</td><td>Ponteiro para o bitmap da folha de sprites do pássaro. </td></tr>
+    <tr><td class="paramname">screenW</td><td>Largura da tela do jogo. </td></tr>
+    <tr><td class="paramname">screenH</td><td>Altura da tela do jogo. </td></tr>
+    <tr><td class="paramname">sX</td><td>Fator de escala X para o pássaro. </td></tr>
+    <tr><td class="paramname">sY</td><td>Fator de escala Y para o pássaro. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    : <a class="code hl_function" href="class_game_object.html#a0ed671e414015944c33d2512d2749364">GameObject</a>(0, <span class="comment">// X inicial será ajustado no construtor</span></div>
+<div class="line"><span class="lineno">   38</span>                     (screenH * <a class="code hl_variable" href="#a28191754b9718c803f1aed8c728eca18">Bird::INITIAL_Y_RATIO</a>), <span class="comment">// Y inicial baseado na proporção da tela</span></div>
+<div class="line"><span class="lineno">   39</span>                     (sheet ? (al_get_bitmap_width(sheet) / 3.0f) * sX * 1.2f : 34.0f * sX * 1.2f), <span class="comment">// Largura do pássaro</span></div>
+<div class="line"><span class="lineno">   40</span>                     (sheet ? al_get_bitmap_height(sheet) * sY * 1.2f : 24.0f * sY * 1.2f)), <span class="comment">// Altura do pássaro</span></div>
+<div class="line"><span class="lineno">   41</span>      spriteSheet(sheet),</div>
+<div class="line"><span class="lineno">   42</span>      screenHeight(screenH),</div>
+<div class="line"><span class="lineno">   43</span>      screenWidth(screenW),</div>
+<div class="line"><span class="lineno">   44</span>      scaleX(sX),</div>
+<div class="line"><span class="lineno">   45</span>      scaleY(sY),</div>
+<div class="line"><span class="lineno">   46</span>      velocityY(0),</div>
+<div class="line"><span class="lineno">   47</span>      gravity(0.2f * sY), <span class="comment">// Gravidade ajustada pela escala Y para consistência</span></div>
+<div class="line"><span class="lineno">   48</span>      flapForce(-6.0f * sY), <span class="comment">// Força do flap ajustada pela escala Y</span></div>
+<div class="line"><span class="lineno">   49</span>      currentFrame(0),</div>
+<div class="line"><span class="lineno">   50</span>      frameTimer(0.0),</div>
+<div class="line"><span class="lineno">   51</span>      animationSpeed(8.0),</div>
+<div class="line"><span class="lineno">   52</span>      rotationAngle(0.0f),</div>
+<div class="line"><span class="lineno">   53</span>      targetRotationAngle(0.0f),</div>
+<div class="line"><span class="lineno">   54</span>      rotationSpeed(0.25f),</div>
+<div class="line"><span class="lineno">   55</span>      frameWidth(1),</div>
+<div class="line"><span class="lineno">   56</span>      frameHeight(1),</div>
+<div class="line"><span class="lineno">   57</span>      rotacionar(<span class="keyword">true</span>)  <span class="comment">// O pássaro começa com a rotação ativada por padrão</span></div>
+<div class="line"><span class="lineno">   58</span>{</div>
+<div class="line"><span class="lineno">   59</span>    <span class="comment">// Verifica se a folha de sprites foi carregada corretamente</span></div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">if</span> (!spriteSheet) {</div>
+<div class="line"><span class="lineno">   61</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;ERRO CRITICO NO BIRD: spriteSheet e NULO! AssetManager falhou ou nao foi passado.\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   62</span>        <span class="comment">// Se a spriteSheet for nula, inicializa os frames como nulos para evitar acessos inválidos</span></div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i) { frames[i] = <span class="keyword">nullptr</span>; }</div>
+<div class="line"><span class="lineno">   64</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   65</span>        <span class="comment">// Calcula a largura e altura de cada frame individual na folha de sprites</span></div>
+<div class="line"><span class="lineno">   66</span>        frameWidth = al_get_bitmap_width(spriteSheet) / 3;</div>
+<div class="line"><span class="lineno">   67</span>        frameHeight = al_get_bitmap_height(spriteSheet);</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>        <span class="comment">// Validação adicional para dimensões dos frames</span></div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (frameWidth &lt;= 0 || frameHeight &lt;= 0 || al_get_bitmap_width(spriteSheet) &lt; (frameWidth * 3)) {</div>
+<div class="line"><span class="lineno">   71</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;AVISO BIRD: Dimensoes invalidas para sub-bitmaps. Redefinindo para 1x1 e frames nulos.\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   72</span>            frameWidth = 1;</div>
+<div class="line"><span class="lineno">   73</span>            frameHeight = 1;</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i) { frames[i] = <span class="keyword">nullptr</span>; }</div>
+<div class="line"><span class="lineno">   75</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="comment">// Cria os sub-bitmaps para cada frame de animação</span></div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i) {</div>
+<div class="line"><span class="lineno">   78</span>                frames[i] = al_create_sub_bitmap(spriteSheet, i * frameWidth, 0, frameWidth, frameHeight);</div>
+<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">if</span> (!frames[i]) {</div>
+<div class="line"><span class="lineno">   80</span>                    std::cerr &lt;&lt; <span class="stringliteral">&quot;ERRO BIRD: Nao foi possivel criar sub-bitmap para o frame &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;. Verifique a area do sub-bitmap e o spriteSheet.\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   81</span>                }</div>
+<div class="line"><span class="lineno">   82</span>            }</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>    <span class="comment">// Centraliza o pássaro horizontalmente na tela, aplicando um offset se necessário</span></div>
+<div class="line"><span class="lineno">   87</span>    this-&gt;<a class="code hl_variable" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">x</a> = (this-&gt;screenWidth / 2.0f) - (this-&gt;<a class="code hl_variable" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">width</a> / 2.0f) + (this-&gt;screenWidth * <a class="code hl_variable" href="#a3846ce795ea319e93a4d24d9434a30d1">Bird::CENTER_X_OFFSET_RATIO</a>);</div>
+<div class="line"><span class="lineno">   88</span>}</div>
+<div class="ttc" id="aclass_bird_html_a28191754b9718c803f1aed8c728eca18"><div class="ttname"><a href="#a28191754b9718c803f1aed8c728eca18">Bird::INITIAL_Y_RATIO</a></div><div class="ttdeci">static const float INITIAL_Y_RATIO</div><div class="ttdoc">Proporção da altura da tela para a posição Y inicial do pássaro.</div><div class="ttdef"><b>Definição</b> Bird.hpp:27</div></div>
+<div class="ttc" id="aclass_bird_html_a3846ce795ea319e93a4d24d9434a30d1"><div class="ttname"><a href="#a3846ce795ea319e93a4d24d9434a30d1">Bird::CENTER_X_OFFSET_RATIO</a></div><div class="ttdeci">static const float CENTER_X_OFFSET_RATIO</div><div class="ttdoc">Proporção para o deslocamento X do centro da tela para o pássaro.</div><div class="ttdef"><b>Definição</b> Bird.hpp:29</div></div>
+<div class="ttc" id="aclass_game_object_html_a0ed671e414015944c33d2512d2749364"><div class="ttname"><a href="class_game_object.html#a0ed671e414015944c33d2512d2749364">GameObject::GameObject</a></div><div class="ttdeci">GameObject(float initialX, float initialY, float w, float h)</div><div class="ttdoc">Construtor da classe GameObject.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:35</div></div>
+<div class="ttc" id="aclass_game_object_html_ad4976cd29785cf9bd791148ff397c41e"><div class="ttname"><a href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">GameObject::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Coordenada X da posição do objeto (canto superior esquerdo).</div><div class="ttdef"><b>Definição</b> GameObject.hpp:18</div></div>
+<div class="ttc" id="aclass_game_object_html_af797cec05ff1d3cbc694fc7036add37b"><div class="ttname"><a href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">GameObject::width</a></div><div class="ttdeci">float width</div><div class="ttdoc">Largura do objeto.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:20</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7d10693b91a2736611c37f1ef205b911" name="a7d10693b91a2736611c37f1ef205b911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d10693b91a2736611c37f1ef205b911">&#9670;&#160;</a></span>~Bird()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bird::~Bird </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destrutor da classe <a class="el" href="class_bird.html" title="Representa o personagem principal do jogo, o pássaro.">Bird</a>. Responsável por liberar quaisquer recursos alocados dinamicamente, se houver. </p>
+<p>Destrutor da classe <a class="el" href="class_bird.html" title="Representa o personagem principal do jogo, o pássaro.">Bird</a>. Libera a memória alocada para os sub-bitmaps dos frames. </p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i) {</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (frames[i]) {</div>
+<div class="line"><span class="lineno">   97</span>            al_destroy_bitmap(frames[i]);</div>
+<div class="line"><span class="lineno">   98</span>            frames[i] = <span class="keyword">nullptr</span>; <span class="comment">// Define o ponteiro como nulo após a destruição</span></div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>    }</div>
+<div class="line"><span class="lineno">  101</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentação das funções</h2>
+<a id="a4065f3bbea46277fc75ebfef79c3f888" name="a4065f3bbea46277fc75ebfef79c3f888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4065f3bbea46277fc75ebfef79c3f888">&#9670;&#160;</a></span>flap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bird::flap </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aplica uma força vertical para cima no pássaro, simulando um "flap" (bater asas). Isso altera a velocidade vertical do pássaro. </p>
+<p>Aplica uma força para cima no pássaro, simulando o "flap" (voo). </p>
+<div class="fragment"><div class="line"><span class="lineno">  188</span>                {</div>
+<div class="line"><span class="lineno">  189</span>    this-&gt;velocityY = this-&gt;flapForce; <span class="comment">// Define a velocidade vertical para a força do flap</span></div>
+<div class="line"><span class="lineno">  190</span>    this-&gt;frameTimer = 0.0; <span class="comment">// Reinicia o temporizador da animação</span></div>
+<div class="line"><span class="lineno">  191</span>    this-&gt;currentFrame = 0; <span class="comment">// Volta para o primeiro frame da animação de flap</span></div>
+<div class="line"><span class="lineno">  192</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a38af18ee14aa0252104ab25ae16e5747" name="a38af18ee14aa0252104ab25ae16e5747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38af18ee14aa0252104ab25ae16e5747">&#9670;&#160;</a></span>getCurrentFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_BITMAP * Bird::getCurrentFrame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retorna o frame (imagem) atual da animação do pássaro. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Um ponteiro para o ALLEGRO_BITMAP correspondente ao frame atual. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>                                            {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> frames[currentFrame];</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a79928bbbbf550c6e6c58679168a9bf24" name="a79928bbbbf550c6e6c58679168a9bf24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79928bbbbf550c6e6c58679168a9bf24">&#9670;&#160;</a></span>isRotacionando()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Bird::isRotacionando </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se a rotação do pássaro está ativa. </p>
+<p>Verifica se a rotação do pássaro está ativada.</p>
+<dl class="section return"><dt>Retorna</dt><dd>true se a rotação estiver ativa, false caso contrário.</dd>
+<dd>
+True se a rotação estiver ativada, false caso contrário. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  206</span>                                {</div>
+<div class="line"><span class="lineno">  207</span>    <span class="keywordflow">return</span> this-&gt;rotacionar;</div>
+<div class="line"><span class="lineno">  208</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adcff7cf22e4e53ebe2325328d79dad2a" name="adcff7cf22e4e53ebe2325328d79dad2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcff7cf22e4e53ebe2325328d79dad2a">&#9670;&#160;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bird::render </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renderiza (desenha) o pássaro na tela na sua posição e com sua rotação atual. </p>
+<p>Renderiza o pássaro na tela. </p>
+<div class="fragment"><div class="line"><span class="lineno">  164</span>                  {</div>
+<div class="line"><span class="lineno">  165</span>    ALLEGRO_BITMAP* currentBitmap = this-&gt;frames[this-&gt;currentFrame];</div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">if</span> (currentBitmap) {</div>
+<div class="line"><span class="lineno">  167</span>        <span class="comment">// Desenha o bitmap atual do pássaro, aplicando escala, rotação e posicionamento</span></div>
+<div class="line"><span class="lineno">  168</span>        al_draw_scaled_rotated_bitmap(</div>
+<div class="line"><span class="lineno">  169</span>            currentBitmap,</div>
+<div class="line"><span class="lineno">  170</span>            al_get_bitmap_width(currentBitmap) / 2.0f, <span class="comment">// Ponto de rotação X (centro do bitmap)</span></div>
+<div class="line"><span class="lineno">  171</span>            al_get_bitmap_height(currentBitmap) / 2.0f, <span class="comment">// Ponto de rotação Y (centro do bitmap)</span></div>
+<div class="line"><span class="lineno">  172</span>            this-&gt;<a class="code hl_variable" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">x</a> + this-&gt;<a class="code hl_variable" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">width</a> / 2.0f, <span class="comment">// Posição X central do objeto na tela</span></div>
+<div class="line"><span class="lineno">  173</span>            this-&gt;<a class="code hl_variable" href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">y</a> + this-&gt;<a class="code hl_variable" href="class_game_object.html#a0ae9c255f47b6148c26d0333a72d0625">height</a> / 2.0f, <span class="comment">// Posição Y central do objeto na tela</span></div>
+<div class="line"><span class="lineno">  174</span>            this-&gt;<a class="code hl_variable" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">width</a> / al_get_bitmap_width(currentBitmap), <span class="comment">// Escala X</span></div>
+<div class="line"><span class="lineno">  175</span>            this-&gt;<a class="code hl_variable" href="class_game_object.html#a0ae9c255f47b6148c26d0333a72d0625">height</a> / al_get_bitmap_height(currentBitmap), <span class="comment">// Escala Y</span></div>
+<div class="line"><span class="lineno">  176</span>            rotacionar ? this-&gt;rotationAngle : 0.0f, <span class="comment">// Ângulo de rotação (se a rotação estiver ativada)</span></div>
+<div class="line"><span class="lineno">  177</span>            0 <span class="comment">// Flags (nenhuma neste caso)</span></div>
+<div class="line"><span class="lineno">  178</span>        );</div>
+<div class="line"><span class="lineno">  179</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  180</span>        <span class="comment">// Fallback: se o bitmap não estiver disponível, desenha um retângulo magenta</span></div>
+<div class="line"><span class="lineno">  181</span>        al_draw_filled_rectangle(this-&gt;<a class="code hl_variable" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">x</a>, this-&gt;<a class="code hl_variable" href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">y</a>, this-&gt;<a class="code hl_variable" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">x</a> + this-&gt;<a class="code hl_variable" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">width</a>, this-&gt;<a class="code hl_variable" href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">y</a> + this-&gt;<a class="code hl_variable" href="class_game_object.html#a0ae9c255f47b6148c26d0333a72d0625">height</a>, al_map_rgb(255, 0, 255));</div>
+<div class="line"><span class="lineno">  182</span>    }</div>
+<div class="line"><span class="lineno">  183</span>}</div>
+<div class="ttc" id="aclass_game_object_html_a0ae9c255f47b6148c26d0333a72d0625"><div class="ttname"><a href="class_game_object.html#a0ae9c255f47b6148c26d0333a72d0625">GameObject::height</a></div><div class="ttdeci">float height</div><div class="ttdoc">Altura do objeto.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:21</div></div>
+<div class="ttc" id="aclass_game_object_html_a9ac54f1c686ecf5656139a829ed62041"><div class="ttname"><a href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">GameObject::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Coordenada Y da posição do objeto (canto superior esquerdo).</div><div class="ttdef"><b>Definição</b> GameObject.hpp:19</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a89d40831dcd54751b9507f51bb98b4f6" name="a89d40831dcd54751b9507f51bb98b4f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d40831dcd54751b9507f51bb98b4f6">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bird::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reseta o estado do pássaro para as condições iniciais de uma nova partida. Isso inclui posição, velocidade, ângulo de rotação e estado de animação. </p>
+<p>Reseta o estado do pássaro para as configurações iniciais do jogo. Usado para reiniciar a fase. </p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>                 {</div>
+<div class="line"><span class="lineno">  108</span>    <span class="comment">// Reposiciona o pássaro no centro X e na altura inicial Y</span></div>
+<div class="line"><span class="lineno">  109</span>    this-&gt;<a class="code hl_variable" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">x</a> = (this-&gt;screenWidth / 2.0f) - (this-&gt;<a class="code hl_variable" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">width</a> / 2.0f) + (this-&gt;screenWidth * <a class="code hl_variable" href="#a3846ce795ea319e93a4d24d9434a30d1">Bird::CENTER_X_OFFSET_RATIO</a>);</div>
+<div class="line"><span class="lineno">  110</span>    this-&gt;<a class="code hl_variable" href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">y</a> = (this-&gt;screenHeight * <a class="code hl_variable" href="#a28191754b9718c803f1aed8c728eca18">Bird::INITIAL_Y_RATIO</a>);</div>
+<div class="line"><span class="lineno">  111</span>    this-&gt;velocityY = 0; <span class="comment">// Zera a velocidade vertical</span></div>
+<div class="line"><span class="lineno">  112</span>    this-&gt;currentFrame = 0; <span class="comment">// Volta para o primeiro frame de animação</span></div>
+<div class="line"><span class="lineno">  113</span>    this-&gt;frameTimer = 0.0; <span class="comment">// Reseta o temporizador da animação</span></div>
+<div class="line"><span class="lineno">  114</span>    this-&gt;rotationAngle = 0.0f; <span class="comment">// Zera o ângulo de rotação</span></div>
+<div class="line"><span class="lineno">  115</span>    this-&gt;targetRotationAngle = 0.0f; <span class="comment">// Reseta o ângulo alvo de rotação</span></div>
+<div class="line"><span class="lineno">  116</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af13285483b45b137948814276b1ee23c" name="af13285483b45b137948814276b1ee23c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af13285483b45b137948814276b1ee23c">&#9670;&#160;</a></span>setRotacionar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bird::setRotacionar </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>on</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ativa ou desativa a rotação visual do pássaro com base na sua velocidade vertical. </p>
+<p>Define se o pássaro deve rotacionar com base na sua velocidade.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">on</td><td>Se true, a rotação é ativada; se false, o pássaro mantém um ângulo fixo.</td></tr>
+    <tr><td class="paramname">on</td><td>True para ativar a rotação, false para desativar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  198</span>                                {</div>
+<div class="line"><span class="lineno">  199</span>    this-&gt;rotacionar = on;</div>
+<div class="line"><span class="lineno">  200</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0f8d92f11a19492143e6affa2635b0b8" name="a0f8d92f11a19492143e6affa2635b0b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f8d92f11a19492143e6affa2635b0b8">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bird::update </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>deltaTime</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Atualiza a lógica do pássaro a cada frame do jogo. </p>
+<p>Atualiza o estado do pássaro a cada frame do jogo.</p>
+<p>Gerencia a aplicação da gravidade, movimento vertical, atualização da animação e a rotação visual do pássaro com base em sua velocidade.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>O tempo decorrido desde a última atualização (em segundos).</td></tr>
+    <tr><td class="paramname">deltaTime</td><td>O tempo decorrido desde a última atualização (não usado diretamente, mas bom para consistência). </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>                                 {</div>
+<div class="line"><span class="lineno">  123</span>    <span class="comment">// Aplica a gravidade à velocidade vertical do pássaro</span></div>
+<div class="line"><span class="lineno">  124</span>    this-&gt;velocityY += this-&gt;gravity;</div>
+<div class="line"><span class="lineno">  125</span>    <span class="comment">// Atualiza a posição Y do pássaro com base na velocidade vertical</span></div>
+<div class="line"><span class="lineno">  126</span>    this-&gt;<a class="code hl_variable" href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">y</a> += this-&gt;velocityY;</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>    <span class="comment">// Limita a velocidade máxima de queda para evitar que o pássaro caia muito rápido</span></div>
+<div class="line"><span class="lineno">  129</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> MAX_FALL_VELOCITY = 10.0f * this-&gt;scaleY;</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">if</span> (this-&gt;velocityY &gt; MAX_FALL_VELOCITY) {</div>
+<div class="line"><span class="lineno">  131</span>        this-&gt;velocityY = MAX_FALL_VELOCITY;</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>    <span class="comment">// Atualiza o temporizador da animação e muda o frame quando atinge o limite</span></div>
+<div class="line"><span class="lineno">  135</span>    this-&gt;frameTimer++;</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">if</span> (this-&gt;frameTimer &gt;= this-&gt;animationSpeed) {</div>
+<div class="line"><span class="lineno">  137</span>        this-&gt;currentFrame = (this-&gt;currentFrame + 1) % 3; <span class="comment">// Cicla entre os 3 frames</span></div>
+<div class="line"><span class="lineno">  138</span>        this-&gt;frameTimer = 0.0; <span class="comment">// Reseta o temporizador</span></div>
+<div class="line"><span class="lineno">  139</span>    }</div>
+<div class="line"><span class="lineno">  140</span> </div>
+<div class="line"><span class="lineno">  141</span>    <span class="comment">// Gerencia a rotação do pássaro com base na sua velocidade vertical, se a rotação estiver ativada</span></div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">if</span> (rotacionar) {</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (this-&gt;velocityY &lt; 0) {</div>
+<div class="line"><span class="lineno">  144</span>            <span class="comment">// Se o pássaro está subindo, o alvo de rotação é para cima</span></div>
+<div class="line"><span class="lineno">  145</span>            this-&gt;targetRotationAngle = <a class="code hl_variable" href="#a2c18444157c7b7b991ef810c95bf6c17">Bird::MAX_UP_ROTATION</a>;</div>
+<div class="line"><span class="lineno">  146</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  147</span>            <span class="comment">// Se o pássaro está caindo ou parado, o alvo de rotação é para baixo</span></div>
+<div class="line"><span class="lineno">  148</span>            this-&gt;targetRotationAngle = <a class="code hl_variable" href="#a679cdaf1fefc573fffe74879721f9225">Bird::MAX_DOWN_ROTATION</a>;</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>        <span class="comment">// Interpola suavemente o ângulo de rotação atual em direção ao ângulo alvo</span></div>
+<div class="line"><span class="lineno">  152</span>        this-&gt;rotationAngle += (this-&gt;targetRotationAngle - this-&gt;rotationAngle) * this-&gt;rotationSpeed;</div>
+<div class="line"><span class="lineno">  153</span>        <span class="comment">// Garante que o ângulo de rotação permaneça dentro dos limites definidos</span></div>
+<div class="line"><span class="lineno">  154</span>        this-&gt;rotationAngle = std::clamp(this-&gt;rotationAngle, <a class="code hl_variable" href="#a2c18444157c7b7b991ef810c95bf6c17">Bird::MAX_UP_ROTATION</a>, <a class="code hl_variable" href="#a679cdaf1fefc573fffe74879721f9225">Bird::MAX_DOWN_ROTATION</a>);</div>
+<div class="line"><span class="lineno">  155</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  156</span>        <span class="comment">// Se a rotação está desativada, mantém o ângulo em 0</span></div>
+<div class="line"><span class="lineno">  157</span>        this-&gt;rotationAngle = 0.0f;</div>
+<div class="line"><span class="lineno">  158</span>    }</div>
+<div class="line"><span class="lineno">  159</span>}</div>
+<div class="ttc" id="aclass_bird_html_a2c18444157c7b7b991ef810c95bf6c17"><div class="ttname"><a href="#a2c18444157c7b7b991ef810c95bf6c17">Bird::MAX_UP_ROTATION</a></div><div class="ttdeci">static const float MAX_UP_ROTATION</div><div class="ttdoc">Ângulo máximo de rotação para cima do pássaro.</div><div class="ttdef"><b>Definição</b> Bird.hpp:22</div></div>
+<div class="ttc" id="aclass_bird_html_a679cdaf1fefc573fffe74879721f9225"><div class="ttname"><a href="#a679cdaf1fefc573fffe74879721f9225">Bird::MAX_DOWN_ROTATION</a></div><div class="ttdeci">static const float MAX_DOWN_ROTATION</div><div class="ttdoc">Ângulo máximo de rotação para baixo do pássaro.</div><div class="ttdef"><b>Definição</b> Bird.hpp:24</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Atributos</h2>
+<a id="a3846ce795ea319e93a4d24d9434a30d1" name="a3846ce795ea319e93a4d24d9434a30d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3846ce795ea319e93a4d24d9434a30d1">&#9670;&#160;</a></span>CENTER_X_OFFSET_RATIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Bird::CENTER_X_OFFSET_RATIO = 0.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Proporção para o deslocamento X do centro da tela para o pássaro. </p>
+<p>Proporção do deslocamento horizontal do centro da tela para o pássaro. </p>
+
+</div>
+</div>
+<a id="a28191754b9718c803f1aed8c728eca18" name="a28191754b9718c803f1aed8c728eca18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28191754b9718c803f1aed8c728eca18">&#9670;&#160;</a></span>INITIAL_Y_RATIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Bird::INITIAL_Y_RATIO = 0.4f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Proporção da altura da tela para a posição Y inicial do pássaro. </p>
+<p>Proporção inicial da altura da tela para a posição Y do pássaro. </p>
+
+</div>
+</div>
+<a id="a679cdaf1fefc573fffe74879721f9225" name="a679cdaf1fefc573fffe74879721f9225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a679cdaf1fefc573fffe74879721f9225">&#9670;&#160;</a></span>MAX_DOWN_ROTATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Bird::MAX_DOWN_ROTATION = 70.0f * (<a class="el" href="_bird_8cpp.html#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a> / 180.0f)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ângulo máximo de rotação para baixo do pássaro. </p>
+<p>Rotação máxima para baixo (em radianos) quando o pássaro está caindo. </p>
+
+</div>
+</div>
+<a id="a2c18444157c7b7b991ef810c95bf6c17" name="a2c18444157c7b7b991ef810c95bf6c17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c18444157c7b7b991ef810c95bf6c17">&#9670;&#160;</a></span>MAX_UP_ROTATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Bird::MAX_UP_ROTATION = -30.0f * (<a class="el" href="_bird_8cpp.html#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a> / 180.0f)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ângulo máximo de rotação para cima do pássaro. </p>
+<p>Rotação máxima para cima (em radianos) quando o pássaro está subindo. </p>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
+<li>include/<a class="el" href="_bird_8hpp_source.html">Bird.hpp</a></li>
+<li>src/<a class="el" href="_bird_8cpp.html">Bird.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

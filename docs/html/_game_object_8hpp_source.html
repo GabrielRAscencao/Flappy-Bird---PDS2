@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Traveling Dragon: Código-Fonte de include/GameObject.hpp</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="dragao (1).png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Traveling Dragon<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Traveling Dragon é uma releitura autoral do clássico Flappy Bird. Neste jogo, você controla um dragão aventureiro que sai de sua caverna para explorar o mundo. A cada novo cenário, o tempo passa mais rápido, o dia clareia, escurece, e por fim o dragão mergulha em uma noite eterna, repleta de obstáculos desafiadores.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">GameObject.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_object_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef GAMEOBJECT_HPP</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define GAMEOBJECT_HPP</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_game_object.html">   16</a></span><span class="keyword">class </span><a class="code hl_function" href="class_game_object.html#a0ed671e414015944c33d2512d2749364">GameObject</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">   18</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">x</a>;        </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">   19</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">y</a>;        </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">   20</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">width</a>;    </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_game_object.html#a0ae9c255f47b6148c26d0333a72d0625">   21</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_game_object.html#a0ae9c255f47b6148c26d0333a72d0625">height</a>;   </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_game_object.html#a0ed671e414015944c33d2512d2749364">   35</a></span>    <a class="code hl_function" href="class_game_object.html#a0ed671e414015944c33d2512d2749364">GameObject</a>(<span class="keywordtype">float</span> initialX, <span class="keywordtype">float</span> initialY, <span class="keywordtype">float</span> w, <span class="keywordtype">float</span> h)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        : <a class="code hl_variable" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">x</a>(initialX), <a class="code hl_variable" href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">y</a>(initialY), <a class="code hl_variable" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">width</a>(w), <a class="code hl_variable" href="class_game_object.html#a0ae9c255f47b6148c26d0333a72d0625">height</a>(h) {}</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_game_object.html#a67ae2fa6e7916c799700cd659975d8ea">   46</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_game_object.html#a67ae2fa6e7916c799700cd659975d8ea">~GameObject</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_game_object.html#abe61df236efb58849b29d242d87fc59f">   52</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_game_object.html#abe61df236efb58849b29d242d87fc59f">getX</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">x</a>; }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_game_object.html#a3f55728263b9ce2407459d14b9861b04">   58</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_game_object.html#a3f55728263b9ce2407459d14b9861b04">getY</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">y</a>; }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_game_object.html#a665147ee46e9b62442b2d6b9835c4dd4">   64</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_game_object.html#a665147ee46e9b62442b2d6b9835c4dd4">getWidth</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">width</a>; }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_game_object.html#a927400453a0989e2f5b765031f4d861c">   70</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_game_object.html#a927400453a0989e2f5b765031f4d861c">getHeight</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#a0ae9c255f47b6148c26d0333a72d0625">height</a>; }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_game_object.html#a3596123a5ace076416382bd400e48923">   83</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a3596123a5ace076416382bd400e48923">move</a>(<span class="keywordtype">float</span> dx, <span class="keywordtype">float</span> dy) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_variable" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">x</a> += dx;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_variable" href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">y</a> += dy;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif </span><span class="comment">// GAMEOBJECT_HPP</span></div>
+<div class="ttc" id="aclass_game_object_html_a0ae9c255f47b6148c26d0333a72d0625"><div class="ttname"><a href="class_game_object.html#a0ae9c255f47b6148c26d0333a72d0625">GameObject::height</a></div><div class="ttdeci">float height</div><div class="ttdoc">Altura do objeto.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:21</div></div>
+<div class="ttc" id="aclass_game_object_html_a0ed671e414015944c33d2512d2749364"><div class="ttname"><a href="class_game_object.html#a0ed671e414015944c33d2512d2749364">GameObject::GameObject</a></div><div class="ttdeci">GameObject(float initialX, float initialY, float w, float h)</div><div class="ttdoc">Construtor da classe GameObject.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:35</div></div>
+<div class="ttc" id="aclass_game_object_html_a3596123a5ace076416382bd400e48923"><div class="ttname"><a href="class_game_object.html#a3596123a5ace076416382bd400e48923">GameObject::move</a></div><div class="ttdeci">virtual void move(float dx, float dy)</div><div class="ttdoc">Move o objeto pela quantidade especificada.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:83</div></div>
+<div class="ttc" id="aclass_game_object_html_a3f55728263b9ce2407459d14b9861b04"><div class="ttname"><a href="class_game_object.html#a3f55728263b9ce2407459d14b9861b04">GameObject::getY</a></div><div class="ttdeci">float getY() const</div><div class="ttdoc">Retorna a coordenada Y atual do objeto.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:58</div></div>
+<div class="ttc" id="aclass_game_object_html_a665147ee46e9b62442b2d6b9835c4dd4"><div class="ttname"><a href="class_game_object.html#a665147ee46e9b62442b2d6b9835c4dd4">GameObject::getWidth</a></div><div class="ttdeci">float getWidth() const</div><div class="ttdoc">Retorna a largura do objeto.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:64</div></div>
+<div class="ttc" id="aclass_game_object_html_a67ae2fa6e7916c799700cd659975d8ea"><div class="ttname"><a href="class_game_object.html#a67ae2fa6e7916c799700cd659975d8ea">GameObject::~GameObject</a></div><div class="ttdeci">virtual ~GameObject()=default</div><div class="ttdoc">Destrutor virtual da classe GameObject.</div></div>
+<div class="ttc" id="aclass_game_object_html_a927400453a0989e2f5b765031f4d861c"><div class="ttname"><a href="class_game_object.html#a927400453a0989e2f5b765031f4d861c">GameObject::getHeight</a></div><div class="ttdeci">float getHeight() const</div><div class="ttdoc">Retorna a altura do objeto.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:70</div></div>
+<div class="ttc" id="aclass_game_object_html_a9ac54f1c686ecf5656139a829ed62041"><div class="ttname"><a href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">GameObject::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Coordenada Y da posição do objeto (canto superior esquerdo).</div><div class="ttdef"><b>Definição</b> GameObject.hpp:19</div></div>
+<div class="ttc" id="aclass_game_object_html_abe61df236efb58849b29d242d87fc59f"><div class="ttname"><a href="class_game_object.html#abe61df236efb58849b29d242d87fc59f">GameObject::getX</a></div><div class="ttdeci">float getX() const</div><div class="ttdoc">Retorna a coordenada X atual do objeto.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:52</div></div>
+<div class="ttc" id="aclass_game_object_html_ad4976cd29785cf9bd791148ff397c41e"><div class="ttname"><a href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">GameObject::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Coordenada X da posição do objeto (canto superior esquerdo).</div><div class="ttdef"><b>Definição</b> GameObject.hpp:18</div></div>
+<div class="ttc" id="aclass_game_object_html_af797cec05ff1d3cbc694fc7036add37b"><div class="ttname"><a href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">GameObject::width</a></div><div class="ttdeci">float width</div><div class="ttdoc">Largura do objeto.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

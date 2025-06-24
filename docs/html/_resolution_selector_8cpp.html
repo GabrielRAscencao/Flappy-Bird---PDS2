@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Traveling Dragon: Referência do Arquivo src/ResolutionSelector.cpp</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="dragao (1).png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Traveling Dragon<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Traveling Dragon é uma releitura autoral do clássico Flappy Bird. Neste jogo, você controla um dragão aventureiro que sai de sua caverna para explorar o mundo. A cada novo cenário, o tempo passa mais rápido, o dia clareia, escurece, e por fim o dragão mergulha em uma noite eterna, repleta de obstáculos desafiadores.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Componentes</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo ResolutionSelector.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>ResolutionSelectorimplementação do projeto Traveling Dragon.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_resolution_selector_8hpp_source.html">ResolutionSelector.hpp</a>&quot;</code><br />
+<code>#include &lt;allegro5/allegro.h&gt;</code><br />
+<code>#include &lt;allegro5/allegro_font.h&gt;</code><br />
+<code>#include &lt;allegro5/allegro_ttf.h&gt;</code><br />
+<code>#include &lt;allegro5/allegro_primitives.h&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
+<code>#include &lt;cstdio&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Componentes</h2></td></tr>
+<tr class="memitem:Option" id="r_Option"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_option.html">Option</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estrutura interna para armazenar detalhes de cada opção de resolução na tela.  <a href="struct_option.html#details">Mais...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:ae51c563ab4db2020e017fb7d9c5a16ab" id="r_ae51c563ab4db2020e017fb7d9c5a16ab"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_resolution_config.html">ResolutionConfig</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae51c563ab4db2020e017fb7d9c5a16ab">showResolutionSelector</a> ()</td></tr>
+<tr class="memdesc:ae51c563ab4db2020e017fb7d9c5a16ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe uma janela de seleção de resolução para o usuário.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>ResolutionSelectorimplementação do projeto Traveling Dragon. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Funções</h2>
+<a id="ae51c563ab4db2020e017fb7d9c5a16ab" name="ae51c563ab4db2020e017fb7d9c5a16ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae51c563ab4db2020e017fb7d9c5a16ab">&#9670;&#160;</a></span>showResolutionSelector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="struct_resolution_config.html">ResolutionConfig</a> &gt; showResolutionSelector </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exibe uma janela de seleção de resolução para o usuário. </p>
+<p>Exibe uma interface para o usuário selecionar a resolução e o modo de janela.</p>
+<p>Esta função inicializa partes básicas do Allegro, cria uma janela temporária para a seleção e aguarda a interação do usuário.</p>
+<dl class="section return"><dt>Retorna</dt><dd>Um <span class="tt">std::optional&lt;<a class="el" href="struct_resolution_config.html" title="Estrutura que armazena as configurações de resolução e modo de janela.">ResolutionConfig</a>&gt;</span> contendo a configuração selecionada se o usuário escolher uma opção, ou <span class="tt">std::nullopt</span> se a janela for fechada ou a seleção for cancelada (ex: ESC). </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>                                                       {</div>
+<div class="line"><span class="lineno">   37</span>    <span class="comment">// Inicializa os módulos básicos do Allegro. Se falhar, retorna nullopt.</span></div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">if</span> (!al_init()) {</div>
+<div class="line"><span class="lineno">   39</span>        fprintf(stderr, <span class="stringliteral">&quot;Falha ao inicializar Allegro\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="line"><span class="lineno">   42</span>    <span class="comment">// Instala os add-ons de mouse, teclado, fonte e primitivas.</span></div>
+<div class="line"><span class="lineno">   43</span>    al_install_mouse();</div>
+<div class="line"><span class="lineno">   44</span>    al_install_keyboard();</div>
+<div class="line"><span class="lineno">   45</span>    al_init_font_addon();</div>
+<div class="line"><span class="lineno">   46</span>    al_init_ttf_addon();</div>
+<div class="line"><span class="lineno">   47</span>    al_init_primitives_addon();</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>    <span class="comment">// Cria um display temporário para a tela de seleção de resolução.</span></div>
+<div class="line"><span class="lineno">   50</span>    <span class="comment">// As dimensões são fixas para esta tela.</span></div>
+<div class="line"><span class="lineno">   51</span>    ALLEGRO_DISPLAY* disp = al_create_display(600, 550);</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">if</span> (!disp) {</div>
+<div class="line"><span class="lineno">   53</span>        fprintf(stderr, <span class="stringliteral">&quot;Falha ao criar display\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    <span class="comment">// Carrega a fonte para o texto das opções.</span></div>
+<div class="line"><span class="lineno">   58</span>    ALLEGRO_FONT* font = al_load_ttf_font(<span class="stringliteral">&quot;assets/editundo.ttf&quot;</span>, 20, 0);</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span> (!font) {</div>
+<div class="line"><span class="lineno">   60</span>        fprintf(stderr, <span class="stringliteral">&quot;Falha ao carregar fonte\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>        al_destroy_display(disp); <span class="comment">// Destrói o display antes de sair</span></div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>    <span class="comment">// Cria a fila de eventos e o timer para a renderização.</span></div>
+<div class="line"><span class="lineno">   66</span>    ALLEGRO_EVENT_QUEUE* queue = al_create_event_queue();</div>
+<div class="line"><span class="lineno">   67</span>    ALLEGRO_TIMER* timer = al_create_timer(1.0 / 60); <span class="comment">// Timer para 60 FPS</span></div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>    <span class="comment">// Registra as fontes de eventos relevantes.</span></div>
+<div class="line"><span class="lineno">   70</span>    al_register_event_source(queue, al_get_mouse_event_source());</div>
+<div class="line"><span class="lineno">   71</span>    al_register_event_source(queue, al_get_keyboard_event_source());</div>
+<div class="line"><span class="lineno">   72</span>    al_register_event_source(queue, al_get_display_event_source(disp));</div>
+<div class="line"><span class="lineno">   73</span>    al_register_event_source(queue, al_get_timer_event_source(timer));</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>    <span class="comment">// Define as opções de resolução disponíveis.</span></div>
+<div class="line"><span class="lineno">   76</span>    std::vector&lt;Option&gt; options = {</div>
+<div class="line"><span class="lineno">   77</span>        {{1280, 720, <a class="code hl_enumvalue" href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3a5885827a5db464de0321547c22400ea2">WINDOWED</a>}, <span class="stringliteral">&quot;1280x720 (Janela)&quot;</span>},</div>
+<div class="line"><span class="lineno">   78</span>        {{1600, 900, <a class="code hl_enumvalue" href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3a5885827a5db464de0321547c22400ea2">WINDOWED</a>}, <span class="stringliteral">&quot;1600x900 (Janela)&quot;</span>},</div>
+<div class="line"><span class="lineno">   79</span>        {{1920, 1080, <a class="code hl_enumvalue" href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3a5885827a5db464de0321547c22400ea2">WINDOWED</a>}, <span class="stringliteral">&quot;1920x1080 (Janela)&quot;</span>},</div>
+<div class="line"><span class="lineno">   80</span>        {{1280, 720, <a class="code hl_enumvalue" href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3a5f039f23ee85ddea038ca1ab88ca6755">FULLSCREEN</a>}, <span class="stringliteral">&quot;1280x720 (Tela Cheia)&quot;</span>},</div>
+<div class="line"><span class="lineno">   81</span>        {{1600, 900, <a class="code hl_enumvalue" href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3a5f039f23ee85ddea038ca1ab88ca6755">FULLSCREEN</a>}, <span class="stringliteral">&quot;1600x900 (Tela Cheia)&quot;</span>},</div>
+<div class="line"><span class="lineno">   82</span>        {{1920, 1080, <a class="code hl_enumvalue" href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3a5f039f23ee85ddea038ca1ab88ca6755">FULLSCREEN</a>}, <span class="stringliteral">&quot;1920x1080 (Tela Cheia)&quot;</span>},</div>
+<div class="line"><span class="lineno">   83</span>        {{1280, 720, <a class="code hl_enumvalue" href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3ab7082f9adb8069bbe07af09901457834">BORDERLESS</a>}, <span class="stringliteral">&quot;1280x720 (Sem Borda)&quot;</span>},</div>
+<div class="line"><span class="lineno">   84</span>        {{1600, 900, <a class="code hl_enumvalue" href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3ab7082f9adb8069bbe07af09901457834">BORDERLESS</a>}, <span class="stringliteral">&quot;1600x900 (Sem Borda)&quot;</span>},</div>
+<div class="line"><span class="lineno">   85</span>        {{1920, 1080, <a class="code hl_enumvalue" href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3ab7082f9adb8069bbe07af09901457834">BORDERLESS</a>}, <span class="stringliteral">&quot;1920x1080 (Sem Borda)&quot;</span>},</div>
+<div class="line"><span class="lineno">   86</span>    };</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    <span class="comment">// Calcula a posição e tamanho de cada opção (botão) na tela.</span></div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; options.size(); ++i) {</div>
+<div class="line"><span class="lineno">   90</span>        options[i].x = 50;</div>
+<div class="line"><span class="lineno">   91</span>        options[i].y = 50 + i * 50; <span class="comment">// Cada opção 50 pixels abaixo da anterior</span></div>
+<div class="line"><span class="lineno">   92</span>        options[i].w = 500;</div>
+<div class="line"><span class="lineno">   93</span>        options[i].h = 40;</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordtype">int</span> selected = 0; <span class="comment">// Índice da opção atualmente selecionada (padrão: primeira)</span></div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordtype">bool</span> running = <span class="keyword">true</span>; <span class="comment">// Flag para controlar o loop principal da tela de seleção</span></div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordtype">bool</span> redraw = <span class="keyword">true</span>; <span class="comment">// Flag para indicar se a tela precisa ser redesenhada</span></div>
+<div class="line"><span class="lineno">   99</span>    <a class="code hl_struct" href="struct_resolution_config.html">ResolutionConfig</a> chosen = options[0].config; <span class="comment">// Configuração escolhida pelo usuário (padrão: primeira opção)</span></div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    al_start_timer(timer); <span class="comment">// Inicia o timer</span></div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>    <span class="comment">// Loop principal da tela de seleção de resolução</span></div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">while</span> (running) {</div>
+<div class="line"><span class="lineno">  105</span>        ALLEGRO_EVENT ev;</div>
+<div class="line"><span class="lineno">  106</span>        al_wait_for_event(queue, &amp;ev); <span class="comment">// Espera por um evento</span></div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">switch</span> (ev.type) {</div>
+<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">case</span> ALLEGRO_EVENT_DISPLAY_CLOSE:</div>
+<div class="line"><span class="lineno">  110</span>                running = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  111</span>                chosen = {-1, -1, <a class="code hl_enumvalue" href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3a5885827a5db464de0321547c22400ea2">WINDOWED</a>}; <span class="comment">// Define valores inválidos para indicar cancelamento</span></div>
+<div class="line"><span class="lineno">  112</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">case</span> ALLEGRO_EVENT_KEY_DOWN:</div>
+<div class="line"><span class="lineno">  115</span>                <span class="keywordflow">if</span> (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE) {</div>
+<div class="line"><span class="lineno">  116</span>                    running = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  117</span>                    chosen = {-1, -1, <a class="code hl_enumvalue" href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3a5885827a5db464de0321547c22400ea2">WINDOWED</a>}; <span class="comment">// Define valores inválidos para indicar cancelamento</span></div>
+<div class="line"><span class="lineno">  118</span>                }</div>
+<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ev.keyboard.keycode == ALLEGRO_KEY_DOWN) {</div>
+<div class="line"><span class="lineno">  120</span>                    selected = (selected + 1) % <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(options.size()); <span class="comment">// Move seleção para baixo</span></div>
+<div class="line"><span class="lineno">  121</span>                    redraw = <span class="keyword">true</span>; <span class="comment">// Força redesenho</span></div>
+<div class="line"><span class="lineno">  122</span>                }</div>
+<div class="line"><span class="lineno">  123</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ev.keyboard.keycode == ALLEGRO_KEY_UP) {</div>
+<div class="line"><span class="lineno">  124</span>                    selected = (selected - 1 + <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(options.size())) % <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(options.size()); <span class="comment">// Move seleção para cima</span></div>
+<div class="line"><span class="lineno">  125</span>                    redraw = <span class="keyword">true</span>; <span class="comment">// Força redesenho</span></div>
+<div class="line"><span class="lineno">  126</span>                }</div>
+<div class="line"><span class="lineno">  127</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ev.keyboard.keycode == ALLEGRO_KEY_ENTER) {</div>
+<div class="line"><span class="lineno">  128</span>                    chosen = options[selected].config; <span class="comment">// Seleciona a opção atual</span></div>
+<div class="line"><span class="lineno">  129</span>                    running = <span class="keyword">false</span>; <span class="comment">// Sai do loop</span></div>
+<div class="line"><span class="lineno">  130</span>                }</div>
+<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">case</span> ALLEGRO_EVENT_MOUSE_AXES: <span class="comment">// Movimento do mouse</span></div>
+<div class="line"><span class="lineno">  134</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; options.size(); ++i) {</div>
+<div class="line"><span class="lineno">  135</span>                    <span class="comment">// Verifica se o mouse está sobre uma opção</span></div>
+<div class="line"><span class="lineno">  136</span>                    <span class="keywordflow">if</span> (ev.mouse.x &gt;= options[i].x &amp;&amp; ev.mouse.x &lt;= options[i].x + options[i].w &amp;&amp;</div>
+<div class="line"><span class="lineno">  137</span>                        ev.mouse.y &gt;= options[i].y &amp;&amp; ev.mouse.y &lt;= options[i].y + options[i].h) {</div>
+<div class="line"><span class="lineno">  138</span>                        <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(i) != selected) {</div>
+<div class="line"><span class="lineno">  139</span>                            selected = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(i); <span class="comment">// Atualiza a opção selecionada pelo mouse</span></div>
+<div class="line"><span class="lineno">  140</span>                            redraw = <span class="keyword">true</span>; <span class="comment">// Força redesenho</span></div>
+<div class="line"><span class="lineno">  141</span>                        }</div>
+<div class="line"><span class="lineno">  142</span>                        <span class="keywordflow">break</span>; <span class="comment">// Já encontrou, pode sair do loop</span></div>
+<div class="line"><span class="lineno">  143</span>                    }</div>
+<div class="line"><span class="lineno">  144</span>                }</div>
+<div class="line"><span class="lineno">  145</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">case</span> ALLEGRO_EVENT_MOUSE_BUTTON_DOWN: <span class="comment">// Clique do mouse</span></div>
+<div class="line"><span class="lineno">  148</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; options.size(); ++i) {</div>
+<div class="line"><span class="lineno">  149</span>                    <span class="comment">// Verifica se clicou em uma opção</span></div>
+<div class="line"><span class="lineno">  150</span>                    <span class="keywordflow">if</span> (ev.mouse.x &gt;= options[i].x &amp;&amp; ev.mouse.x &lt;= options[i].x + options[i].w &amp;&amp;</div>
+<div class="line"><span class="lineno">  151</span>                        ev.mouse.y &gt;= options[i].y &amp;&amp; ev.mouse.y &lt;= options[i].y + options[i].h) {</div>
+<div class="line"><span class="lineno">  152</span>                        chosen = options[i].config; <span class="comment">// Define a configuração escolhida</span></div>
+<div class="line"><span class="lineno">  153</span>                        running = <span class="keyword">false</span>; <span class="comment">// Sai do loop</span></div>
+<div class="line"><span class="lineno">  154</span>                        <span class="keywordflow">break</span>; <span class="comment">// Já encontrou, pode sair do loop</span></div>
+<div class="line"><span class="lineno">  155</span>                    }</div>
+<div class="line"><span class="lineno">  156</span>                }</div>
+<div class="line"><span class="lineno">  157</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">case</span> ALLEGRO_EVENT_TIMER:</div>
+<div class="line"><span class="lineno">  160</span>                redraw = <span class="keyword">true</span>; <span class="comment">// O timer força o redesenho para a animação (se houver, como o hover)</span></div>
+<div class="line"><span class="lineno">  161</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>        <span class="comment">// Se precisa redesenhar e a fila de eventos está vazia (otimização)</span></div>
+<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">if</span> (redraw &amp;&amp; al_is_event_queue_empty(queue)) {</div>
+<div class="line"><span class="lineno">  166</span>            redraw = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>            al_clear_to_color(al_map_rgb(30, 30, 30)); <span class="comment">// Limpa a tela com um fundo escuro</span></div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>            <span class="comment">// Desenha cada opção de resolução como um botão</span></div>
+<div class="line"><span class="lineno">  171</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; options.size(); ++i) {</div>
+<div class="line"><span class="lineno">  172</span>                ALLEGRO_COLOR bgColor = (<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(i) == selected) ? al_map_rgb(80, 80, 30) : al_map_rgb(50, 50, 50); <span class="comment">// Cor de fundo do botão (destacado se selecionado)</span></div>
+<div class="line"><span class="lineno">  173</span>                ALLEGRO_COLOR textColor = (<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(i) == selected) ? al_map_rgb(255, 255, 0) : al_map_rgb(255, 255, 255); <span class="comment">// Cor do texto (destacado se selecionado)</span></div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>                <span class="comment">// Desenha o retângulo preenchido do botão</span></div>
+<div class="line"><span class="lineno">  176</span>                al_draw_filled_rectangle(options[i].x, options[i].y, options[i].x + options[i].w, options[i].y + options[i].h, bgColor);</div>
+<div class="line"><span class="lineno">  177</span>                <span class="comment">// Desenha o texto da opção</span></div>
+<div class="line"><span class="lineno">  178</span>                al_draw_text(font, textColor, options[i].x + 10, options[i].y + 10, 0, options[i].label.c_str());</div>
+<div class="line"><span class="lineno">  179</span>            }</div>
+<div class="line"><span class="lineno">  180</span>            al_flip_display(); <span class="comment">// Troca os buffers para exibir o que foi desenhado</span></div>
+<div class="line"><span class="lineno">  181</span>        }</div>
+<div class="line"><span class="lineno">  182</span>    }</div>
+<div class="line"><span class="lineno">  183</span> </div>
+<div class="line"><span class="lineno">  184</span>    <span class="comment">// Limpeza: destrói os recursos do Allegro antes de sair da função.</span></div>
+<div class="line"><span class="lineno">  185</span>    al_destroy_font(font);</div>
+<div class="line"><span class="lineno">  186</span>    al_destroy_timer(timer);</div>
+<div class="line"><span class="lineno">  187</span>    al_destroy_event_queue(queue);</div>
+<div class="line"><span class="lineno">  188</span>    al_destroy_display(disp);</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>    <span class="comment">// Retorna nullopt se o usuário fechou a janela ou cancelou a seleção.</span></div>
+<div class="line"><span class="lineno">  191</span>    <span class="keywordflow">if</span> (chosen.<a class="code hl_variable" href="struct_resolution_config.html#a19ba415ebf43f5818b506b7d3721e8cb">width</a> == -1 || chosen.<a class="code hl_variable" href="struct_resolution_config.html#aac6223b976bab26d05de78825923cf97">height</a> == -1)</div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>    <span class="keywordflow">return</span> chosen; <span class="comment">// Retorna a configuração de resolução escolhida</span></div>
+<div class="line"><span class="lineno">  195</span>}</div>
+<div class="ttc" id="a_resolution_selector_8hpp_html_a5773202ab7ffd1746de9d527927198a3a5885827a5db464de0321547c22400ea2"><div class="ttname"><a href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3a5885827a5db464de0321547c22400ea2">WINDOWED</a></div><div class="ttdeci">@ WINDOWED</div><div class="ttdoc">Janela com bordas, redimensionável (padrão).</div><div class="ttdef"><b>Definição</b> ResolutionSelector.hpp:16</div></div>
+<div class="ttc" id="a_resolution_selector_8hpp_html_a5773202ab7ffd1746de9d527927198a3a5f039f23ee85ddea038ca1ab88ca6755"><div class="ttname"><a href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3a5f039f23ee85ddea038ca1ab88ca6755">FULLSCREEN</a></div><div class="ttdeci">@ FULLSCREEN</div><div class="ttdoc">Modo tela cheia exclusivo (ocupa a tela inteira, geralmente com resolução fixa).</div><div class="ttdef"><b>Definição</b> ResolutionSelector.hpp:17</div></div>
+<div class="ttc" id="a_resolution_selector_8hpp_html_a5773202ab7ffd1746de9d527927198a3ab7082f9adb8069bbe07af09901457834"><div class="ttname"><a href="_resolution_selector_8hpp.html#a5773202ab7ffd1746de9d527927198a3ab7082f9adb8069bbe07af09901457834">BORDERLESS</a></div><div class="ttdeci">@ BORDERLESS</div><div class="ttdoc">Janela sem bordas que ocupa a tela inteira, comportando-se como uma janela maximizada.</div><div class="ttdef"><b>Definição</b> ResolutionSelector.hpp:18</div></div>
+<div class="ttc" id="astruct_resolution_config_html"><div class="ttname"><a href="struct_resolution_config.html">ResolutionConfig</a></div><div class="ttdoc">Estrutura que armazena as configurações de resolução e modo de janela.</div><div class="ttdef"><b>Definição</b> ResolutionSelector.hpp:24</div></div>
+<div class="ttc" id="astruct_resolution_config_html_a19ba415ebf43f5818b506b7d3721e8cb"><div class="ttname"><a href="struct_resolution_config.html#a19ba415ebf43f5818b506b7d3721e8cb">ResolutionConfig::width</a></div><div class="ttdeci">int width</div><div class="ttdoc">Largura da resolução desejada (em pixels).</div><div class="ttdef"><b>Definição</b> ResolutionSelector.hpp:25</div></div>
+<div class="ttc" id="astruct_resolution_config_html_aac6223b976bab26d05de78825923cf97"><div class="ttname"><a href="struct_resolution_config.html#aac6223b976bab26d05de78825923cf97">ResolutionConfig::height</a></div><div class="ttdeci">int height</div><div class="ttdoc">Altura da resolução desejada (em pixels).</div><div class="ttdef"><b>Definição</b> ResolutionSelector.hpp:26</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Traveling Dragon: Código-Fonte de include/Menu.hpp</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="dragao (1).png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Traveling Dragon<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Traveling Dragon é uma releitura autoral do clássico Flappy Bird. Neste jogo, você controla um dragão aventureiro que sai de sua caverna para explorar o mundo. A cada novo cenário, o tempo passa mais rápido, o dia clareia, escurece, e por fim o dragão mergulha em uma noite eterna, repleta de obstáculos desafiadores.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">Menu.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_menu_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef MENU_HPP</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define MENU_HPP</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;allegro5/allegro.h&gt;</span>          <span class="comment">// Para funcionalidades básicas do Allegro</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;allegro5/allegro_font.h&gt;</span>     <span class="comment">// Para renderizar texto com fontes</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;allegro5/allegro_primitives.h&gt;</span> <span class="comment">// Para desenhar formas geométricas (caixa de input, botões)</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;allegro5/allegro_audio.h&gt;</span>    <span class="comment">// Para tocar efeitos sonoros</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string&gt;</span>                       <span class="comment">// Para usar std::string (apelido, mensagens)</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;array&gt;</span>                        <span class="comment">// Para usar std::array (seções de botões)</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;vector&gt;</span>                       <span class="comment">// Para usar std::vector (posições dos botões)</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_menu.html">   23</a></span><span class="keyword">class </span><a class="code hl_function" href="class_menu.html#a2f8443c20e9484825b59da2b2dc1d9e3">Menu</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="class_menu.html#a2f8443c20e9484825b59da2b2dc1d9e3">Menu</a>(ALLEGRO_FONT* font, ALLEGRO_FONT* fontlarge, ALLEGRO_BITMAP* bg);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_menu.html#af1b34ade09ba86978b7ea58981203796">update</a>(<span class="keywordtype">double</span> deltaTime);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_menu.html#ab714de8d7efd0a2bdf8b04fa0809eb4b">render</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_menu.html#a3a03d7f0981f2ca4e60f67b96ff62212">onClick</a>(<span class="keywordtype">int</span> mx, <span class="keywordtype">int</span> my);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_menu.html#a0a5011c53858f4f86d12f582f363a05c">onChar</a>(<span class="keywordtype">int</span> unichar, <span class="keywordtype">int</span> keycode);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    std::string <a class="code hl_function" href="class_menu.html#ac2db5faecbf7a815e7775559d3575deb">getApelido</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_menu.html#a1468eccd19151df8d8ed73b5d2c5445a">getSelectedAction</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_menu.html#ac08759ae35905ec5c34746d8dd39eafb">resetAction</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_menu.html#ab7d7dc3c4480bb015ce7cbdd3d2e0218">displayWarning</a>(<span class="keyword">const</span> std::string&amp; message);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_menu.html#ac28ec5e00ee2c7fb37b27495311bc53a">setInputActive</a>(<span class="keywordtype">bool</span> active);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_menu.html#abd3a3443efead4bfd08cfd7eb77fcf2d">isInputActive</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_menu.html#ad18a40cf025d3acc0eae3373deafc6be">setHoverSound</a>(ALLEGRO_SAMPLE* som);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    ALLEGRO_FONT* font;             </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    ALLEGRO_FONT* fontlarge;        </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    ALLEGRO_BITMAP* background;     </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    std::string apelido;            </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">int</span> selectedAction;             </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">bool</span> inputActive;               </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">bool</span> cursorVisible;             </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordtype">double</span> cursorTimer;             </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">float</span> scroll;                   </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    std::string currentWarningMessage; </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">double</span> warningDisplayTimer;        </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">float</span> SCREEN_W, SCREEN_H;       </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">float</span> scale_x, scale_y;         </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">float</span> buttonWidth;              </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordtype">float</span> buttonHeight;             </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    ALLEGRO_FONT* buttonFont;       </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    std::vector&lt;std::array&lt;float, 2&gt;&gt; buttonPositions; </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> WARNING_DURATION;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">void</span> updateCursor(<span class="keywordtype">double</span> deltaTime);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordtype">void</span> drawButtonText(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keyword">const</span> std::string&amp; text, <span class="keywordtype">bool</span> hover);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    std::string getButtonLabel(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordtype">void</span> trimApelido();</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    ALLEGRO_SAMPLE* somHover;       </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordtype">bool</span> lastHoverState[4];         </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="comment">// @note `previousHoverStates` parece ser redundante com `lastHoverState`.</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="comment">// Considerar remover ou unificar.</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    std::vector&lt;bool&gt; previousHoverStates;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>};</div>
+</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">#endif </span><span class="comment">// MENU_HPP</span></div>
+<div class="ttc" id="aclass_menu_html_a0a5011c53858f4f86d12f582f363a05c"><div class="ttname"><a href="class_menu.html#a0a5011c53858f4f86d12f582f363a05c">Menu::onChar</a></div><div class="ttdeci">void onChar(int unichar, int keycode)</div><div class="ttdoc">Processa um evento de caractere digitado (input de texto) e um keycode. Usado principalmente para pre...</div><div class="ttdef"><b>Definição</b> Menu.cpp:316</div></div>
+<div class="ttc" id="aclass_menu_html_a1468eccd19151df8d8ed73b5d2c5445a"><div class="ttname"><a href="class_menu.html#a1468eccd19151df8d8ed73b5d2c5445a">Menu::getSelectedAction</a></div><div class="ttdeci">int getSelectedAction() const</div><div class="ttdoc">Retorna a ação que foi selecionada pelo usuário no menu.</div><div class="ttdef"><b>Definição</b> Menu.cpp:372</div></div>
+<div class="ttc" id="aclass_menu_html_a2f8443c20e9484825b59da2b2dc1d9e3"><div class="ttname"><a href="class_menu.html#a2f8443c20e9484825b59da2b2dc1d9e3">Menu::Menu</a></div><div class="ttdeci">Menu(ALLEGRO_FONT *font, ALLEGRO_FONT *fontlarge, ALLEGRO_BITMAP *bg)</div><div class="ttdoc">Construtor da classe Menu.</div><div class="ttdef"><b>Definição</b> Menu.cpp:24</div></div>
+<div class="ttc" id="aclass_menu_html_a3a03d7f0981f2ca4e60f67b96ff62212"><div class="ttname"><a href="class_menu.html#a3a03d7f0981f2ca4e60f67b96ff62212">Menu::onClick</a></div><div class="ttdeci">void onClick(int mx, int my)</div><div class="ttdoc">Processa um evento de clique do mouse nas áreas dos botões do menu.</div><div class="ttdef"><b>Definição</b> Menu.cpp:260</div></div>
+<div class="ttc" id="aclass_menu_html_ab714de8d7efd0a2bdf8b04fa0809eb4b"><div class="ttname"><a href="class_menu.html#ab714de8d7efd0a2bdf8b04fa0809eb4b">Menu::render</a></div><div class="ttdeci">void render()</div><div class="ttdoc">Renderiza (desenha) todos os elementos visuais do menu na tela. Inclui o fundo, o campo de input de a...</div><div class="ttdef"><b>Definição</b> Menu.cpp:102</div></div>
+<div class="ttc" id="aclass_menu_html_ab7d7dc3c4480bb015ce7cbdd3d2e0218"><div class="ttname"><a href="class_menu.html#ab7d7dc3c4480bb015ce7cbdd3d2e0218">Menu::displayWarning</a></div><div class="ttdeci">void displayWarning(const std::string &amp;message)</div><div class="ttdoc">Exibe uma mensagem de aviso temporária na tela do menu.</div><div class="ttdef"><b>Definição</b> Menu.cpp:380</div></div>
+<div class="ttc" id="aclass_menu_html_abd3a3443efead4bfd08cfd7eb77fcf2d"><div class="ttname"><a href="class_menu.html#abd3a3443efead4bfd08cfd7eb77fcf2d">Menu::isInputActive</a></div><div class="ttdeci">bool isInputActive() const</div><div class="ttdoc">Verifica se a entrada de texto para o apelido está ativa.</div><div class="ttdef"><b>Definição</b> Menu.cpp:397</div></div>
+<div class="ttc" id="aclass_menu_html_ac08759ae35905ec5c34746d8dd39eafb"><div class="ttname"><a href="class_menu.html#ac08759ae35905ec5c34746d8dd39eafb">Menu::resetAction</a></div><div class="ttdeci">void resetAction()</div><div class="ttdoc">Reseta o estado da ação selecionada para um valor padrão. Útil para garantir que uma ação não seja ac...</div><div class="ttdef"><b>Definição</b> Menu.cpp:356</div></div>
+<div class="ttc" id="aclass_menu_html_ac28ec5e00ee2c7fb37b27495311bc53a"><div class="ttname"><a href="class_menu.html#ac28ec5e00ee2c7fb37b27495311bc53a">Menu::setInputActive</a></div><div class="ttdeci">void setInputActive(bool active)</div><div class="ttdoc">Ativa ou desativa a capacidade de o usuário digitar no campo de apelido.</div><div class="ttdef"><b>Definição</b> Menu.cpp:389</div></div>
+<div class="ttc" id="aclass_menu_html_ac2db5faecbf7a815e7775559d3575deb"><div class="ttname"><a href="class_menu.html#ac2db5faecbf7a815e7775559d3575deb">Menu::getApelido</a></div><div class="ttdeci">std::string getApelido() const</div><div class="ttdoc">Retorna o apelido atualmente digitado ou selecionado no menu.</div><div class="ttdef"><b>Definição</b> Menu.cpp:364</div></div>
+<div class="ttc" id="aclass_menu_html_ad18a40cf025d3acc0eae3373deafc6be"><div class="ttname"><a href="class_menu.html#ad18a40cf025d3acc0eae3373deafc6be">Menu::setHoverSound</a></div><div class="ttdeci">void setHoverSound(ALLEGRO_SAMPLE *som)</div><div class="ttdoc">Define o som que será reproduzido quando o mouse passar sobre os botões do menu.</div><div class="ttdef"><b>Definição</b> Menu.cpp:416</div></div>
+<div class="ttc" id="aclass_menu_html_af1b34ade09ba86978b7ea58981203796"><div class="ttname"><a href="class_menu.html#af1b34ade09ba86978b7ea58981203796">Menu::update</a></div><div class="ttdeci">void update(double deltaTime)</div><div class="ttdoc">Atualiza a lógica interna do menu a cada frame.</div><div class="ttdef"><b>Definição</b> Menu.cpp:68</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

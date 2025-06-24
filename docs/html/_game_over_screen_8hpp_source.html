@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Traveling Dragon: Código-Fonte de include/GameOverScreen.hpp</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="dragao (1).png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Traveling Dragon<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Traveling Dragon é uma releitura autoral do clássico Flappy Bird. Neste jogo, você controla um dragão aventureiro que sai de sua caverna para explorar o mundo. A cada novo cenário, o tempo passa mais rápido, o dia clareia, escurece, e por fim o dragão mergulha em uma noite eterna, repleta de obstáculos desafiadores.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">GameOverScreen.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_over_screen_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef GAMEOVERSCREEN_HPP</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define GAMEOVERSCREEN_HPP</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;allegro5/allegro.h&gt;</span>          <span class="comment">// Para usar tipos e funções básicas do Allegro</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;allegro5/allegro_font.h&gt;</span>     <span class="comment">// Para renderizar texto com fontes</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;allegro5/allegro_primitives.h&gt;</span> <span class="comment">// Para desenhar formas como retângulos (para botões)</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;allegro5/allegro_audio.h&gt;</span>    <span class="comment">// Para tocar efeitos sonoros</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string&gt;</span>                       <span class="comment">// Para usar std::string para textos</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;array&gt;</span>                        <span class="comment">// Para usar std::array para definir retângulos de botões</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_game_over_screen.html">   23</a></span><span class="keyword">class </span><a class="code hl_function" href="class_game_over_screen.html#aff10018d1d2ea05ded82bd818cd914b5">GameOverScreen</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="class_game_over_screen.html#aff10018d1d2ea05ded82bd818cd914b5">GameOverScreen</a>(ALLEGRO_FONT* f, ALLEGRO_BITMAP* gameOverBackground);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="class_game_over_screen.html#ad9762d95fbfc4967ebde5e7d5a1b3499">~GameOverScreen</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_over_screen.html#a4495fdd8c8f441fc94c93262be967d58">render</a>(<span class="keywordtype">int</span> score, <span class="keywordtype">int</span> recordPessoal, <span class="keywordtype">int</span> recordGeral, <span class="keywordtype">bool</span> r1, <span class="keywordtype">bool</span> r2);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_game_over_screen.html#ab4f1d436b8aab11c67bf30019648ea0d">handleEvent</a>(ALLEGRO_EVENT* ev);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_over_screen.html#a453213912d6ee8ec7f482a73cdbb61d7">setHoverSound</a>(ALLEGRO_SAMPLE* som);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    ALLEGRO_FONT* font;             </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    ALLEGRO_FONT* fontLarge;        </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    ALLEGRO_BITMAP* background;     </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    ALLEGRO_BITMAP* gameOverBackground; </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">float</span> scroll;                   </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">float</span> SCREEN_W, SCREEN_H;       </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">float</span> scale_x, scale_y;         </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    std::array&lt;float, 4&gt; replayBtn; </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    std::array&lt;float, 4&gt; menuBtn;   </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> drawButton(<span class="keyword">const</span> std::string&amp; text, <span class="keyword">const</span> std::array&lt;float, 4&gt;&amp; rect, <span class="keywordtype">bool</span> hover);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">bool</span> isMouseOver(<span class="keyword">const</span> std::array&lt;float, 4&gt;&amp; rect, <span class="keywordtype">float</span> mx, <span class="keywordtype">float</span> my);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">int</span> selected;                   </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    ALLEGRO_SAMPLE* somHover;       </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">bool</span> lastHoverReplay;           </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">bool</span> lastHoverMenu;             </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="comment">// @note `previousHoverStates` parece ser redundante com `lastHoverReplay` e `lastHoverMenu`.</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">// Considerar remover ou unificar.</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    std::array&lt;bool, 2&gt; previousHoverStates;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>};</div>
+</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#endif </span><span class="comment">// GAMEOVERSCREEN_HPP</span></div>
+<div class="ttc" id="aclass_game_over_screen_html_a4495fdd8c8f441fc94c93262be967d58"><div class="ttname"><a href="class_game_over_screen.html#a4495fdd8c8f441fc94c93262be967d58">GameOverScreen::render</a></div><div class="ttdeci">void render(int score, int recordPessoal, int recordGeral, bool r1, bool r2)</div><div class="ttdoc">Renderiza todos os elementos visuais da tela de Game Over.</div><div class="ttdef"><b>Definição</b> GameOverScreen.cpp:128</div></div>
+<div class="ttc" id="aclass_game_over_screen_html_a453213912d6ee8ec7f482a73cdbb61d7"><div class="ttname"><a href="class_game_over_screen.html#a453213912d6ee8ec7f482a73cdbb61d7">GameOverScreen::setHoverSound</a></div><div class="ttdeci">void setHoverSound(ALLEGRO_SAMPLE *som)</div><div class="ttdoc">Define o som que será reproduzido quando o mouse passar sobre os botões.</div><div class="ttdef"><b>Definição</b> GameOverScreen.cpp:250</div></div>
+<div class="ttc" id="aclass_game_over_screen_html_ab4f1d436b8aab11c67bf30019648ea0d"><div class="ttname"><a href="class_game_over_screen.html#ab4f1d436b8aab11c67bf30019648ea0d">GameOverScreen::handleEvent</a></div><div class="ttdeci">int handleEvent(ALLEGRO_EVENT *ev)</div><div class="ttdoc">Processa um evento do Allegro específico para a tela de Game Over.</div><div class="ttdef"><b>Definição</b> GameOverScreen.cpp:232</div></div>
+<div class="ttc" id="aclass_game_over_screen_html_ad9762d95fbfc4967ebde5e7d5a1b3499"><div class="ttname"><a href="class_game_over_screen.html#ad9762d95fbfc4967ebde5e7d5a1b3499">GameOverScreen::~GameOverScreen</a></div><div class="ttdeci">~GameOverScreen()</div><div class="ttdoc">Destrutor da classe GameOverScreen. Libera quaisquer recursos alocados pela tela de Game Over.</div><div class="ttdef"><b>Definição</b> GameOverScreen.cpp:54</div></div>
+<div class="ttc" id="aclass_game_over_screen_html_aff10018d1d2ea05ded82bd818cd914b5"><div class="ttname"><a href="class_game_over_screen.html#aff10018d1d2ea05ded82bd818cd914b5">GameOverScreen::GameOverScreen</a></div><div class="ttdeci">GameOverScreen(ALLEGRO_FONT *f, ALLEGRO_BITMAP *gameOverBackground)</div><div class="ttdoc">Construtor da classe GameOverScreen.</div><div class="ttdef"><b>Definição</b> GameOverScreen.cpp:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

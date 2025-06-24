@@ -1,0 +1,600 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Traveling Dragon: Referência da Classe Pipe</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="dragao (1).png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Traveling Dragon<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Traveling Dragon é uma releitura autoral do clássico Flappy Bird. Neste jogo, você controla um dragão aventureiro que sai de sua caverna para explorar o mundo. A cada novo cenário, o tempo passa mais rápido, o dia clareia, escurece, e por fim o dragão mergulha em uma noite eterna, repleta de obstáculos desafiadores.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="class_pipe-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle"><div class="title">Referência da Classe Pipe</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Representa um par de obstáculos (cano superior e inferior) no jogo.  
+ <a href="#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_pipe_8hpp_source.html">Pipe.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de hierarquia da classe Pipe:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_pipe.png" usemap="#Pipe_map" alt=""/>
+  <map id="Pipe_map" name="Pipe_map">
+<area href="class_game_object.html" title="Classe base abstrata para todos os objetos visuais no jogo." alt="GameObject" shape="rect" coords="0,0,81,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:a4acdb8bf32b92145ef03d37203ba2fb4" id="r_a4acdb8bf32b92145ef03d37203ba2fb4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4acdb8bf32b92145ef03d37203ba2fb4">Pipe</a> (float x_start, float gap_center_y, float gap_h, ALLEGRO_BITMAP *pipe_bmp, float screenHeight, float sX, float sY)</td></tr>
+<tr class="memdesc:a4acdb8bf32b92145ef03d37203ba2fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="class_pipe.html" title="Representa um par de obstáculos (cano superior e inferior) no jogo.">Pipe</a>.  <br /></td></tr>
+<tr class="memitem:a7711297e02a68ec1f369a74d56e2095b" id="r_a7711297e02a68ec1f369a74d56e2095b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7711297e02a68ec1f369a74d56e2095b">update</a> (float deltaTime)</td></tr>
+<tr class="memdesc:a7711297e02a68ec1f369a74d56e2095b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza a posição horizontal do cano. O cano se move da direita para a esquerda. O <span class="tt">deltaTime</span> é ignorado aqui, pois a velocidade é tratada como fixa por frame, uma escolha comum em jogos com pixel art.  <br /></td></tr>
+<tr class="memitem:a230d57c4af874836893fdac051d60058" id="r_a230d57c4af874836893fdac051d60058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a230d57c4af874836893fdac051d60058">render</a> ()</td></tr>
+<tr class="memdesc:a230d57c4af874836893fdac051d60058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renderiza (desenha) o cano superior e o cano inferior na tela.  <br /></td></tr>
+<tr class="memitem:ad48c36bce2518c96e9c637266764a0b6" id="r_ad48c36bce2518c96e9c637266764a0b6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad48c36bce2518c96e9c637266764a0b6">getTopPipeY</a> () const</td></tr>
+<tr class="memdesc:ad48c36bce2518c96e9c637266764a0b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a coordenada Y do topo do cano superior.  <br /></td></tr>
+<tr class="memitem:aa5707d604dca4eb6056ea0a84540c86f" id="r_aa5707d604dca4eb6056ea0a84540c86f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5707d604dca4eb6056ea0a84540c86f">getBottomPipeY</a> () const</td></tr>
+<tr class="memdesc:aa5707d604dca4eb6056ea0a84540c86f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a coordenada Y da base do cano inferior.  <br /></td></tr>
+<tr class="memitem:a07c8818139f34d857378d59325e676a5" id="r_a07c8818139f34d857378d59325e676a5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07c8818139f34d857378d59325e676a5">getTopPipeBottomY</a> () const</td></tr>
+<tr class="memdesc:a07c8818139f34d857378d59325e676a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a coordenada Y da borda inferior do cano superior.  <br /></td></tr>
+<tr class="memitem:a0dc58aab344e37de89afb0ba38397188" id="r_a0dc58aab344e37de89afb0ba38397188"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dc58aab344e37de89afb0ba38397188">getBottomPipeTopY</a> () const</td></tr>
+<tr class="memdesc:a0dc58aab344e37de89afb0ba38397188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a coordenada Y da borda superior do cano inferior.  <br /></td></tr>
+<tr class="memitem:a9dcaaad913e888c190b838a3a81d89be" id="r_a9dcaaad913e888c190b838a3a81d89be"><td class="memItemLeft" align="right" valign="top">ALLEGRO_BITMAP *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dcaaad913e888c190b838a3a81d89be">getPipeSprite</a> () const</td></tr>
+<tr class="memdesc:a9dcaaad913e888c190b838a3a81d89be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o bitmap (sprite) usado para desenhar o cano.  <br /></td></tr>
+<tr class="memitem:a5487a21a8b4b00be754582a5cc9d14e3" id="r_a5487a21a8b4b00be754582a5cc9d14e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5487a21a8b4b00be754582a5cc9d14e3">hasScored</a> () const</td></tr>
+<tr class="memdesc:a5487a21a8b4b00be754582a5cc9d14e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o pássaro já marcou ponto ao passar por este cano.  <br /></td></tr>
+<tr class="memitem:a1f436e349894a1bd6641302facfe6646" id="r_a1f436e349894a1bd6641302facfe6646"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f436e349894a1bd6641302facfe6646">setScored</a> (bool s)</td></tr>
+<tr class="memdesc:a1f436e349894a1bd6641302facfe6646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o estado de pontuação do cano. Usado para marcar o cano como "pontuado" uma vez que o pássaro o atravessa.  <br /></td></tr>
+<tr class="memitem:a3fd60e0469222eab47b551c9f49c6e3b" id="r_a3fd60e0469222eab47b551c9f49c6e3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fd60e0469222eab47b551c9f49c6e3b">setSpeed</a> (float newSpeedX)</td></tr>
+<tr class="memdesc:a3fd60e0469222eab47b551c9f49c6e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a nova velocidade horizontal do cano.  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_game_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Membros Públicos herdados de <a class="el" href="class_game_object.html">GameObject</a></td></tr>
+<tr class="memitem:a0ed671e414015944c33d2512d2749364 inherit pub_methods_class_game_object" id="r_a0ed671e414015944c33d2512d2749364"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a0ed671e414015944c33d2512d2749364">GameObject</a> (float initialX, float initialY, float w, float h)</td></tr>
+<tr class="memdesc:a0ed671e414015944c33d2512d2749364 inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="class_game_object.html" title="Classe base abstrata para todos os objetos visuais no jogo.">GameObject</a>.  <br /></td></tr>
+<tr class="memitem:a67ae2fa6e7916c799700cd659975d8ea inherit pub_methods_class_game_object" id="r_a67ae2fa6e7916c799700cd659975d8ea"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a67ae2fa6e7916c799700cd659975d8ea">~GameObject</a> ()=default</td></tr>
+<tr class="memdesc:a67ae2fa6e7916c799700cd659975d8ea inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual da classe <a class="el" href="class_game_object.html" title="Classe base abstrata para todos os objetos visuais no jogo.">GameObject</a>.  <br /></td></tr>
+<tr class="memitem:abe61df236efb58849b29d242d87fc59f inherit pub_methods_class_game_object" id="r_abe61df236efb58849b29d242d87fc59f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#abe61df236efb58849b29d242d87fc59f">getX</a> () const</td></tr>
+<tr class="memdesc:abe61df236efb58849b29d242d87fc59f inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a coordenada X atual do objeto.  <br /></td></tr>
+<tr class="memitem:a3f55728263b9ce2407459d14b9861b04 inherit pub_methods_class_game_object" id="r_a3f55728263b9ce2407459d14b9861b04"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a3f55728263b9ce2407459d14b9861b04">getY</a> () const</td></tr>
+<tr class="memdesc:a3f55728263b9ce2407459d14b9861b04 inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a coordenada Y atual do objeto.  <br /></td></tr>
+<tr class="memitem:a665147ee46e9b62442b2d6b9835c4dd4 inherit pub_methods_class_game_object" id="r_a665147ee46e9b62442b2d6b9835c4dd4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a665147ee46e9b62442b2d6b9835c4dd4">getWidth</a> () const</td></tr>
+<tr class="memdesc:a665147ee46e9b62442b2d6b9835c4dd4 inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a largura do objeto.  <br /></td></tr>
+<tr class="memitem:a927400453a0989e2f5b765031f4d861c inherit pub_methods_class_game_object" id="r_a927400453a0989e2f5b765031f4d861c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a927400453a0989e2f5b765031f4d861c">getHeight</a> () const</td></tr>
+<tr class="memdesc:a927400453a0989e2f5b765031f4d861c inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a altura do objeto.  <br /></td></tr>
+<tr class="memitem:a3596123a5ace076416382bd400e48923 inherit pub_methods_class_game_object" id="r_a3596123a5ace076416382bd400e48923"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a3596123a5ace076416382bd400e48923">move</a> (float dx, float dy)</td></tr>
+<tr class="memdesc:a3596123a5ace076416382bd400e48923 inherit pub_methods_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move o objeto pela quantidade especificada.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Outros membros herdados</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_game_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_game_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Atributos Protegidos herdados de <a class="el" href="class_game_object.html">GameObject</a></td></tr>
+<tr class="memitem:ad4976cd29785cf9bd791148ff397c41e inherit pro_attribs_class_game_object" id="r_ad4976cd29785cf9bd791148ff397c41e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">x</a></td></tr>
+<tr class="memdesc:ad4976cd29785cf9bd791148ff397c41e inherit pro_attribs_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada X da posição do objeto (canto superior esquerdo).  <br /></td></tr>
+<tr class="memitem:a9ac54f1c686ecf5656139a829ed62041 inherit pro_attribs_class_game_object" id="r_a9ac54f1c686ecf5656139a829ed62041"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a9ac54f1c686ecf5656139a829ed62041">y</a></td></tr>
+<tr class="memdesc:a9ac54f1c686ecf5656139a829ed62041 inherit pro_attribs_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada Y da posição do objeto (canto superior esquerdo).  <br /></td></tr>
+<tr class="memitem:af797cec05ff1d3cbc694fc7036add37b inherit pro_attribs_class_game_object" id="r_af797cec05ff1d3cbc694fc7036add37b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">width</a></td></tr>
+<tr class="memdesc:af797cec05ff1d3cbc694fc7036add37b inherit pro_attribs_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largura do objeto.  <br /></td></tr>
+<tr class="memitem:a0ae9c255f47b6148c26d0333a72d0625 inherit pro_attribs_class_game_object" id="r_a0ae9c255f47b6148c26d0333a72d0625"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a0ae9c255f47b6148c26d0333a72d0625">height</a></td></tr>
+<tr class="memdesc:a0ae9c255f47b6148c26d0333a72d0625 inherit pro_attribs_class_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Altura do objeto.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Representa um par de obstáculos (cano superior e inferior) no jogo. </p>
+<p>A classe <a class="el" href="class_pipe.html" title="Representa um par de obstáculos (cano superior e inferior) no jogo.">Pipe</a> gerencia a posição, movimento e detecção de pontuação para um par de canos que o pássaro deve atravessar. Herda de <a class="el" href="class_game_object.html" title="Classe base abstrata para todos os objetos visuais no jogo.">GameObject</a>. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Construtores e Destrutores</h2>
+<a id="a4acdb8bf32b92145ef03d37203ba2fb4" name="a4acdb8bf32b92145ef03d37203ba2fb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4acdb8bf32b92145ef03d37203ba2fb4">&#9670;&#160;</a></span>Pipe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pipe::Pipe </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x_start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>gap_center_y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>gap_h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_BITMAP *</td>          <td class="paramname"><span class="paramname"><em>pipe_bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>screenHeight</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor da classe <a class="el" href="class_pipe.html" title="Representa um par de obstáculos (cano superior e inferior) no jogo.">Pipe</a>. </p>
+<p>Inicializa um par de canos com sua posição horizontal de início, a posição vertical do centro do espaço entre eles e a altura desse espaço. Também recebe o bitmap do cano, altura da tela e fatores de escala.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x_start</td><td>A coordenada X inicial do cano na tela (direita). </td></tr>
+    <tr><td class="paramname">gap_center_y</td><td>A coordenada Y do centro do espaço (buraco) entre o cano superior e inferior. </td></tr>
+    <tr><td class="paramname">gap_h</td><td>A altura do espaço (buraco) entre os canos. </td></tr>
+    <tr><td class="paramname">pipe_bmp</td><td>O bitmap (imagem) a ser usado para desenhar os canos. </td></tr>
+    <tr><td class="paramname">screenHeight</td><td>A altura da tela de exibição do jogo. </td></tr>
+    <tr><td class="paramname">sX</td><td>Fator de escala horizontal para os canos. </td></tr>
+    <tr><td class="paramname">sY</td><td>Fator de escala vertical para os canos.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cria um novo par de canos com uma lacuna (gap) específica.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x_start</td><td>Posição X inicial do cano. </td></tr>
+    <tr><td class="paramname">gap_center_y</td><td>Posição Y central da lacuna entre os canos. </td></tr>
+    <tr><td class="paramname">gap_h</td><td>Altura da lacuna entre os canos. </td></tr>
+    <tr><td class="paramname">pipe_bmp</td><td>Ponteiro para o bitmap da imagem do cano. </td></tr>
+    <tr><td class="paramname">screenHeight</td><td>Altura total da tela do jogo. </td></tr>
+    <tr><td class="paramname">sX</td><td>Fator de escala X para o cano. </td></tr>
+    <tr><td class="paramname">sY</td><td>Fator de escala Y para o cano. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    : <a class="code hl_function" href="class_game_object.html#a0ed671e414015944c33d2512d2749364">GameObject</a>(x_start, 0.0f, <span class="comment">// Posição Y inicial é 0, altura total da tela</span></div>
+<div class="line"><span class="lineno">   27</span>                     538.0f * sX, <span class="comment">// Largura inicial baseada na imagem original e escala</span></div>
+<div class="line"><span class="lineno">   28</span>                     screenHeight), <span class="comment">// Altura do GameObject é a altura da tela</span></div>
+<div class="line"><span class="lineno">   29</span>      pipeSprite(pipe_bmp),</div>
+<div class="line"><span class="lineno">   30</span>      gapY(gap_center_y),</div>
+<div class="line"><span class="lineno">   31</span>      gapHeight(gap_h),</div>
+<div class="line"><span class="lineno">   32</span>      <span class="comment">// A velocidade e a escala são ajustadas abaixo, mas inicializadas aqui</span></div>
+<div class="line"><span class="lineno">   33</span>      speedX(-2.0f * sX),</div>
+<div class="line"><span class="lineno">   34</span>      scale_x(sX),</div>
+<div class="line"><span class="lineno">   35</span>      scale_y(sY),</div>
+<div class="line"><span class="lineno">   36</span>      scored(<span class="keyword">false</span>) <span class="comment">// Flag para controlar se o pássaro já marcou ponto passando por este cano</span></div>
+<div class="line"><span class="lineno">   37</span>{</div>
+<div class="line"><span class="lineno">   38</span>    <span class="comment">// Sobrescreve os valores recebidos para garantir uma escala padrão de design, se necessário.</span></div>
+<div class="line"><span class="lineno">   39</span>    <span class="comment">// Isso é útil se os assets foram desenhados para uma escala específica e queremos forçar essa escala.</span></div>
+<div class="line"><span class="lineno">   40</span>    sX = 0.25f;</div>
+<div class="line"><span class="lineno">   41</span>    sY = 0.25f;</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>    <span class="comment">// Atualiza os fatores de escala internos com os valores forçados.</span></div>
+<div class="line"><span class="lineno">   44</span>    scale_x = sX;</div>
+<div class="line"><span class="lineno">   45</span>    scale_y = sY;</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    <span class="comment">// E também atualiza os valores dependentes da escala:</span></div>
+<div class="line"><span class="lineno">   48</span>    this-&gt;<a class="code hl_variable" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">width</a> = 538.0f * scale_x; <span class="comment">// Recalcula a largura com a nova escala</span></div>
+<div class="line"><span class="lineno">   49</span>    <span class="comment">// Recalcula a velocidade horizontal com a nova escala, para consistência de movimento</span></div>
+<div class="line"><span class="lineno">   50</span>    speedX = -150.0f * scale_x;</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>    <span class="comment">// Verifica se o sprite do cano foi carregado corretamente</span></div>
+<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">if</span> (!pipeSprite) {</div>
+<div class="line"><span class="lineno">   54</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;AVISO: Sprite do cano não carregado. Usando dimensões padrão.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="line"><span class="lineno">   56</span>}</div>
+<div class="ttc" id="aclass_game_object_html_a0ed671e414015944c33d2512d2749364"><div class="ttname"><a href="class_game_object.html#a0ed671e414015944c33d2512d2749364">GameObject::GameObject</a></div><div class="ttdeci">GameObject(float initialX, float initialY, float w, float h)</div><div class="ttdoc">Construtor da classe GameObject.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:35</div></div>
+<div class="ttc" id="aclass_game_object_html_af797cec05ff1d3cbc694fc7036add37b"><div class="ttname"><a href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">GameObject::width</a></div><div class="ttdeci">float width</div><div class="ttdoc">Largura do objeto.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:20</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentação das funções</h2>
+<a id="a0dc58aab344e37de89afb0ba38397188" name="a0dc58aab344e37de89afb0ba38397188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dc58aab344e37de89afb0ba38397188">&#9670;&#160;</a></span>getBottomPipeTopY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Pipe::getBottomPipeTopY </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna a coordenada Y da borda superior do cano inferior. </p>
+<p>Obtém a coordenada Y da parte superior do cano inferior. Esta é a borda superior do cano inferior, ou seja, a base da lacuna.</p>
+<dl class="section return"><dt>Retorna</dt><dd>A coordenada Y onde o cano inferior começa.</dd>
+<dd>
+A coordenada Y da parte superior do cano inferior. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  153</span>                                    {</div>
+<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">return</span> gapY + (gapHeight / 2.0f);</div>
+<div class="line"><span class="lineno">  155</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa5707d604dca4eb6056ea0a84540c86f" name="aa5707d604dca4eb6056ea0a84540c86f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5707d604dca4eb6056ea0a84540c86f">&#9670;&#160;</a></span>getBottomPipeY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Pipe::getBottomPipeY </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna a coordenada Y da base do cano inferior. </p>
+<p>Obtém a coordenada Y da base do cano inferior.</p>
+<dl class="section return"><dt>Retorna</dt><dd>A coordenada Y inferior do cano de baixo.</dd>
+<dd>
+A coordenada Y da base do cano inferior. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>                                 {</div>
+<div class="line"><span class="lineno">  135</span>    <span class="comment">// A base do cano inferior está na altura da lacuna mais metade da altura da lacuna</span></div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">return</span> gapY + (gapHeight / 2.0f);</div>
+<div class="line"><span class="lineno">  137</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9dcaaad913e888c190b838a3a81d89be" name="a9dcaaad913e888c190b838a3a81d89be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dcaaad913e888c190b838a3a81d89be">&#9670;&#160;</a></span>getPipeSprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_BITMAP * Pipe::getPipeSprite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retorna o bitmap (sprite) usado para desenhar o cano. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Um ponteiro para o ALLEGRO_BITMAP do sprite do cano. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                                          {</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> pipeSprite;</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a07c8818139f34d857378d59325e676a5" name="a07c8818139f34d857378d59325e676a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07c8818139f34d857378d59325e676a5">&#9670;&#160;</a></span>getTopPipeBottomY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Pipe::getTopPipeBottomY </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna a coordenada Y da borda inferior do cano superior. </p>
+<p>Obtém a coordenada Y da parte inferior do cano superior. Esta é a borda inferior do cano superior, ou seja, o topo da lacuna.</p>
+<dl class="section return"><dt>Retorna</dt><dd>A coordenada Y onde o cano superior termina.</dd>
+<dd>
+A coordenada Y da parte inferior do cano superior. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>                                    {</div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">return</span> gapY - (gapHeight / 2.0f);</div>
+<div class="line"><span class="lineno">  146</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad48c36bce2518c96e9c637266764a0b6" name="ad48c36bce2518c96e9c637266764a0b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad48c36bce2518c96e9c637266764a0b6">&#9670;&#160;</a></span>getTopPipeY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Pipe::getTopPipeY </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna a coordenada Y do topo do cano superior. </p>
+<p>Obtém a coordenada Y do topo do cano superior.</p>
+<dl class="section return"><dt>Retorna</dt><dd>A coordenada Y superior do cano de cima.</dd>
+<dd>
+Sempre 0.0f, pois o cano superior se estende do topo da tela. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>                              {</div>
+<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">return</span> 0.0f;</div>
+<div class="line"><span class="lineno">  128</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5487a21a8b4b00be754582a5cc9d14e3" name="a5487a21a8b4b00be754582a5cc9d14e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5487a21a8b4b00be754582a5cc9d14e3">&#9670;&#160;</a></span>hasScored()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Pipe::hasScored </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se o pássaro já marcou ponto ao passar por este cano. </p>
+<p>Verifica se o pássaro já marcou ponto passando por este cano.</p>
+<dl class="section return"><dt>Retorna</dt><dd>true se o cano já foi contabilizado para a pontuação, false caso contrário.</dd>
+<dd>
+True se o ponto já foi marcado, false caso contrário. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>                           {</div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">return</span> scored;</div>
+<div class="line"><span class="lineno">  163</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a230d57c4af874836893fdac051d60058" name="a230d57c4af874836893fdac051d60058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a230d57c4af874836893fdac051d60058">&#9670;&#160;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pipe::render </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renderiza (desenha) o cano superior e o cano inferior na tela. </p>
+<p>Renderiza o par de canos na tela. Desenha o cano superior e o cano inferior, aplicando as transformações necessárias. </p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>                  {</div>
+<div class="line"><span class="lineno">   72</span>    <span class="comment">// Arredonda a posição X para um pixel inteiro para evitar artefatos de renderização</span></div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordtype">int</span> drawX = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::round(this-&gt;<a class="code hl_variable" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">x</a>));</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">if</span> (pipeSprite) {</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordtype">int</span> bmpW = al_get_bitmap_width(pipeSprite); <span class="comment">// Deve ser 538 (largura original do asset)</span></div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordtype">int</span> bmpH = al_get_bitmap_height(pipeSprite); <span class="comment">// Deve ser 3310 (altura original do asset)</span></div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>        <span class="comment">// Prevenção de divisão por zero ou dimensões inválidas</span></div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (bmpW &lt;= 0) bmpW = 1;</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (bmpH &lt;= 0) bmpH = 1;</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>        <span class="comment">// Calcula a largura e altura do cano após aplicar a escala</span></div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordtype">float</span> pipeDrawWidth = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bmpW) * scale_x;</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordtype">float</span> pipeDrawHeight = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bmpH) * scale_y;</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>        <span class="comment">// --- CANO DE CIMA ---</span></div>
+<div class="line"><span class="lineno">   88</span>        <span class="comment">// Calcula a coordenada Y da parte inferior do cano de cima</span></div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordtype">float</span> topPipeBottomY = <a class="code hl_function" href="#a07c8818139f34d857378d59325e676a5">getTopPipeBottomY</a>();</div>
+<div class="line"><span class="lineno">   90</span>        <span class="comment">// Calcula a coordenada Y do topo do cano de cima (onde ele começa a ser desenhado)</span></div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordtype">float</span> topPipeY = topPipeBottomY - pipeDrawHeight;</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>        <span class="comment">// Desenha o cano de cima, escalado, na posição correta e espelhado verticalmente</span></div>
+<div class="line"><span class="lineno">   94</span>        al_draw_scaled_bitmap(</div>
+<div class="line"><span class="lineno">   95</span>            pipeSprite,</div>
+<div class="line"><span class="lineno">   96</span>            0, 0, bmpW, bmpH, <span class="comment">// Região do bitmap de origem</span></div>
+<div class="line"><span class="lineno">   97</span>            drawX, topPipeY, <span class="comment">// Posição de destino na tela</span></div>
+<div class="line"><span class="lineno">   98</span>            pipeDrawWidth, pipeDrawHeight, <span class="comment">// Dimensões de destino</span></div>
+<div class="line"><span class="lineno">   99</span>            ALLEGRO_FLIP_VERTICAL <span class="comment">// Inverte verticalmente para o cano superior</span></div>
+<div class="line"><span class="lineno">  100</span>        );</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>        <span class="comment">// --- CANO DE BAIXO ---</span></div>
+<div class="line"><span class="lineno">  103</span>        <span class="comment">// Calcula a coordenada Y da parte superior do cano de baixo</span></div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordtype">float</span> bottomPipeTopY = <a class="code hl_function" href="#a0dc58aab344e37de89afb0ba38397188">getBottomPipeTopY</a>();</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>        <span class="comment">// Desenha o cano de baixo, escalado, na posição correta</span></div>
+<div class="line"><span class="lineno">  107</span>        al_draw_scaled_bitmap(</div>
+<div class="line"><span class="lineno">  108</span>            pipeSprite,</div>
+<div class="line"><span class="lineno">  109</span>            0, 0, bmpW, bmpH, <span class="comment">// Região do bitmap de origem</span></div>
+<div class="line"><span class="lineno">  110</span>            drawX, bottomPipeTopY, <span class="comment">// Posição de destino na tela</span></div>
+<div class="line"><span class="lineno">  111</span>            pipeDrawWidth, pipeDrawHeight, <span class="comment">// Dimensões de destino</span></div>
+<div class="line"><span class="lineno">  112</span>            0 <span class="comment">// Sem flags de inversão</span></div>
+<div class="line"><span class="lineno">  113</span>        );</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  116</span>        <span class="comment">// Fallback: se o sprite não for carregado, desenha retângulos verdes</span></div>
+<div class="line"><span class="lineno">  117</span>        al_draw_filled_rectangle(drawX, 0, drawX + this-&gt;<a class="code hl_variable" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">width</a>, <a class="code hl_function" href="#a07c8818139f34d857378d59325e676a5">getTopPipeBottomY</a>(), al_map_rgb(0, 255, 0));</div>
+<div class="line"><span class="lineno">  118</span>        al_draw_filled_rectangle(drawX, <a class="code hl_function" href="#a0dc58aab344e37de89afb0ba38397188">getBottomPipeTopY</a>(), drawX + this-&gt;<a class="code hl_variable" href="class_game_object.html#af797cec05ff1d3cbc694fc7036add37b">width</a>, this-&gt;<a class="code hl_variable" href="class_game_object.html#a0ae9c255f47b6148c26d0333a72d0625">height</a>, al_map_rgb(0, 255, 0));</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span>}</div>
+<div class="ttc" id="aclass_game_object_html_a0ae9c255f47b6148c26d0333a72d0625"><div class="ttname"><a href="class_game_object.html#a0ae9c255f47b6148c26d0333a72d0625">GameObject::height</a></div><div class="ttdeci">float height</div><div class="ttdoc">Altura do objeto.</div><div class="ttdef"><b>Definição</b> GameObject.hpp:21</div></div>
+<div class="ttc" id="aclass_game_object_html_ad4976cd29785cf9bd791148ff397c41e"><div class="ttname"><a href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">GameObject::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Coordenada X da posição do objeto (canto superior esquerdo).</div><div class="ttdef"><b>Definição</b> GameObject.hpp:18</div></div>
+<div class="ttc" id="aclass_pipe_html_a07c8818139f34d857378d59325e676a5"><div class="ttname"><a href="#a07c8818139f34d857378d59325e676a5">Pipe::getTopPipeBottomY</a></div><div class="ttdeci">float getTopPipeBottomY() const</div><div class="ttdoc">Retorna a coordenada Y da borda inferior do cano superior.</div><div class="ttdef"><b>Definição</b> Pipe.cpp:144</div></div>
+<div class="ttc" id="aclass_pipe_html_a0dc58aab344e37de89afb0ba38397188"><div class="ttname"><a href="#a0dc58aab344e37de89afb0ba38397188">Pipe::getBottomPipeTopY</a></div><div class="ttdeci">float getBottomPipeTopY() const</div><div class="ttdoc">Retorna a coordenada Y da borda superior do cano inferior.</div><div class="ttdef"><b>Definição</b> Pipe.cpp:153</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1f436e349894a1bd6641302facfe6646" name="a1f436e349894a1bd6641302facfe6646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f436e349894a1bd6641302facfe6646">&#9670;&#160;</a></span>setScored()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pipe::setScored </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define o estado de pontuação do cano. Usado para marcar o cano como "pontuado" uma vez que o pássaro o atravessa. </p>
+<p>Define o status de pontuação do cano.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>O novo estado de pontuação (true para pontuado, false caso contrário).</td></tr>
+    <tr><td class="paramname">s</td><td>True para marcar que o ponto foi feito, false caso contrário. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  169</span>                           {</div>
+<div class="line"><span class="lineno">  170</span>    scored = s;</div>
+<div class="line"><span class="lineno">  171</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3fd60e0469222eab47b551c9f49c6e3b" name="a3fd60e0469222eab47b551c9f49c6e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd60e0469222eab47b551c9f49c6e3b">&#9670;&#160;</a></span>setSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pipe::setSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>newSpeedX</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define a nova velocidade horizontal do cano. </p>
+<p>Define a velocidade horizontal de movimento do cano.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newSpeedX</td><td>A nova velocidade em pixels por frame (negativo para mover para a esquerda).</td></tr>
+    <tr><td class="paramname">newSpeedX</td><td>A nova velocidade no eixo X (normalmente um valor negativo para mover para a esquerda). </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  177</span>                                   {</div>
+<div class="line"><span class="lineno">  178</span>    speedX = newSpeedX;</div>
+<div class="line"><span class="lineno">  179</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7711297e02a68ec1f369a74d56e2095b" name="a7711297e02a68ec1f369a74d56e2095b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7711297e02a68ec1f369a74d56e2095b">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pipe::update </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>deltaTime</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Atualiza a posição horizontal do cano. O cano se move da direita para a esquerda. O <span class="tt">deltaTime</span> é ignorado aqui, pois a velocidade é tratada como fixa por frame, uma escolha comum em jogos com pixel art. </p>
+<p>Atualiza o estado do cano a cada frame do jogo.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>O tempo decorrido desde a última atualização (em segundos).</td></tr>
+    <tr><td class="paramname">deltaTime</td><td>O tempo decorrido desde a última atualização, para movimento baseado em tempo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                                 {</div>
+<div class="line"><span class="lineno">   63</span>    <span class="comment">// Move o cano horizontalmente para a esquerda com base na sua velocidade</span></div>
+<div class="line"><span class="lineno">   64</span>    <a class="code hl_variable" href="class_game_object.html#ad4976cd29785cf9bd791148ff397c41e">x</a> += speedX * deltaTime;</div>
+<div class="line"><span class="lineno">   65</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
+<li>include/<a class="el" href="_pipe_8hpp_source.html">Pipe.hpp</a></li>
+<li>src/<a class="el" href="_pipe_8cpp.html">Pipe.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Traveling Dragon: Código-Fonte de include/Scenario.hpp</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="dragao (1).png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Traveling Dragon<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Traveling Dragon é uma releitura autoral do clássico Flappy Bird. Neste jogo, você controla um dragão aventureiro que sai de sua caverna para explorar o mundo. A cada novo cenário, o tempo passa mais rápido, o dia clareia, escurece, e por fim o dragão mergulha em uma noite eterna, repleta de obstáculos desafiadores.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">Scenario.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_scenario_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef SCENARIO_HPP</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define SCENARIO_HPP</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_bird_8hpp.html">Bird.hpp</a>&quot;</span>          <span class="comment">// Para usar a classe Bird (o personagem do jogador)</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_pipe_8hpp.html">Pipe.hpp</a>&quot;</span>          <span class="comment">// Para usar a classe Pipe (os obstáculos)</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;allegro5/allegro_font.h&gt;</span> <span class="comment">// Para renderizar texto (como a pontuação)</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;allegro5/allegro.h&gt;</span>      <span class="comment">// Para funcionalidades básicas do Allegro</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;allegro5/allegro_audio.h&gt;</span> <span class="comment">// Para tocar sons (ponto, morte)</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;vector&gt;</span>                  <span class="comment">// Para usar std::vector (para armazenar os canos)</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;cmath&gt;</span>                   <span class="comment">// Para funções matemáticas, se necessário (ex: para calcular distâncias)</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_scenario.html">   24</a></span><span class="keyword">class </span><a class="code hl_function" href="class_scenario.html#a03fcc4dbd9c400813ef7841d2158682a">Scenario</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_scenario.html#aa4c4621a468293de629e51bfa5ba9aa5">   27</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_scenario.html#aa4c4621a468293de629e51bfa5ba9aa5">PIPE_SPACING_DESIGN</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_scenario.html#a8d3989e5f59efa3ee74b25b462cd436c">   29</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_scenario.html#a8d3989e5f59efa3ee74b25b462cd436c">INITIAL_PIPE_DESIGN_SPEED_PER_FRAME</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_scenario.html#a24f052bb4c4f48a47b61e791e3e1df39">   31</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_scenario.html#a24f052bb4c4f48a47b61e791e3e1df39">PIPE_SPEED_INCREASE_PER_SCORE_PER_FRAME</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_function" href="class_scenario.html#a03fcc4dbd9c400813ef7841d2158682a">Scenario</a>(ALLEGRO_BITMAP* bg, ALLEGRO_BITMAP* bird_bmp, ALLEGRO_BITMAP* pipe_bmp, ALLEGRO_FONT* fontlarge,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>             <span class="keywordtype">int</span> screenW, <span class="keywordtype">int</span> screenH, ALLEGRO_SAMPLE* pointSound, ALLEGRO_SAMPLE* dieSound);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_function" href="class_scenario.html#aa7e7548858cbc52614d46723c0333038">~Scenario</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scenario.html#af6328a01f94a219fc558fca9545da7c1">update</a>(<span class="keywordtype">float</span> deltaTime);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scenario.html#a2ed6646fb9b11e12bfcfc89949030c33">changeBackgroundAndPipe</a>(ALLEGRO_BITMAP* newBackground, ALLEGRO_BITMAP* newPipe);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scenario.html#aace7f025079a1b8ef3cf36f9494ae775">render</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scenario.html#a5a2201cff446cd8722d47930851654ff">reset</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_scenario.html#ad144b1bf6ef1f002153e719dd9525a5a">isGameOver</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_scenario.html#ab66180ec4015536e2ef14b40a78a6616">getScore</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_class" href="class_bird.html">Bird</a>&amp; <a class="code hl_function" href="class_scenario.html#ad99529800629284fbb421adb3c55ef1a">getBird</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_scenario.html#aac9d276514b80ce646d3a89059785ab3">hasScoredPoint</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scenario.html#af89f8c0590f1d4049ffd50a879b4fc34">resetPointFlag</a>();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scenario.html#a566523d30a8f01dcf2e85643a0267145">increaseSpeedByPercent</a>(<span class="keywordtype">float</span> percent);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="class_scenario.html#a8caab7a399d2d7f451b702b287a804cd">  133</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scenario.html#a8caab7a399d2d7f451b702b287a804cd">setInfinitePipes</a>(<span class="keywordtype">bool</span> val) { infinitePipes = val; }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="class_scenario.html#a37103d4ad3e12a0b5d4a5a2cd619fbb5">  140</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scenario.html#a37103d4ad3e12a0b5d4a5a2cd619fbb5">setCurrentLevel</a>(<span class="keywordtype">int</span> level) { currentLevel = level; }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    ALLEGRO_BITMAP* background;     </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    ALLEGRO_BITMAP* birdBitmap;     </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    ALLEGRO_BITMAP* pipeBitmap;     </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    ALLEGRO_FONT* fontlarge;        </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">float</span> SCREEN_W, SCREEN_H;       </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordtype">float</span> scale_x, scale_y;         </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> MAX_PIPES = 15;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <a class="code hl_class" href="class_bird.html">Bird</a> bird;                      </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    std::vector&lt;Pipe&gt; pipes;        </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">float</span> pipeSpawnTimer;           </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordtype">float</span> pipeSpawnInterval;        </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordtype">int</span> score;                      </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordtype">bool</span> gameOver;                  </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordtype">float</span> backgroundScrollOffset;   </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordtype">float</span> currentPipeSpeed;         </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    ALLEGRO_SAMPLE* somPoint;       </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    ALLEGRO_SAMPLE* somDie;         </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordtype">bool</span> scoredPointFlag;           </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordtype">bool</span> checkCollision(<span class="keyword">const</span> <a class="code hl_class" href="class_bird.html">Bird</a>&amp; b, <span class="keyword">const</span> <a class="code hl_class" href="class_pipe.html">Pipe</a>&amp; p);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordtype">void</span> spawnPipe();</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordtype">void</span> cleanUpPipes();</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordtype">int</span> totalPipesSpawnedThisLevel; </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordtype">bool</span> infinitePipes = <span class="keyword">false</span>;     </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordtype">int</span> currentLevel = 0;           </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>};</div>
+</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">#endif </span><span class="comment">// SCENARIO_HPP</span></div>
+<div class="ttc" id="a_bird_8hpp_html"><div class="ttname"><a href="_bird_8hpp.html">Bird.hpp</a></div><div class="ttdoc">Birdheader do projeto Traveling Dragon.</div></div>
+<div class="ttc" id="a_pipe_8hpp_html"><div class="ttname"><a href="_pipe_8hpp.html">Pipe.hpp</a></div><div class="ttdoc">Pipeheader do projeto Traveling Dragon.</div></div>
+<div class="ttc" id="aclass_bird_html"><div class="ttname"><a href="class_bird.html">Bird</a></div><div class="ttdoc">Representa o personagem principal do jogo, o pássaro.</div><div class="ttdef"><b>Definição</b> Bird.hpp:19</div></div>
+<div class="ttc" id="aclass_pipe_html"><div class="ttname"><a href="class_pipe.html">Pipe</a></div><div class="ttdoc">Representa um par de obstáculos (cano superior e inferior) no jogo.</div><div class="ttdef"><b>Definição</b> Pipe.hpp:19</div></div>
+<div class="ttc" id="aclass_scenario_html_a03fcc4dbd9c400813ef7841d2158682a"><div class="ttname"><a href="class_scenario.html#a03fcc4dbd9c400813ef7841d2158682a">Scenario::Scenario</a></div><div class="ttdeci">Scenario(ALLEGRO_BITMAP *bg, ALLEGRO_BITMAP *bird_bmp, ALLEGRO_BITMAP *pipe_bmp, ALLEGRO_FONT *fontlarge, int screenW, int screenH, ALLEGRO_SAMPLE *pointSound, ALLEGRO_SAMPLE *dieSound)</div><div class="ttdoc">Construtor da classe Scenario.</div><div class="ttdef"><b>Definição</b> Scenario.cpp:40</div></div>
+<div class="ttc" id="aclass_scenario_html_a24f052bb4c4f48a47b61e791e3e1df39"><div class="ttname"><a href="class_scenario.html#a24f052bb4c4f48a47b61e791e3e1df39">Scenario::PIPE_SPEED_INCREASE_PER_SCORE_PER_FRAME</a></div><div class="ttdeci">static const float PIPE_SPEED_INCREASE_PER_SCORE_PER_FRAME</div><div class="ttdoc">Aumento da velocidade dos canos por ponto marcado, por frame.</div><div class="ttdef"><b>Definição</b> Scenario.hpp:31</div></div>
+<div class="ttc" id="aclass_scenario_html_a2ed6646fb9b11e12bfcfc89949030c33"><div class="ttname"><a href="class_scenario.html#a2ed6646fb9b11e12bfcfc89949030c33">Scenario::changeBackgroundAndPipe</a></div><div class="ttdeci">void changeBackgroundAndPipe(ALLEGRO_BITMAP *newBackground, ALLEGRO_BITMAP *newPipe)</div><div class="ttdoc">Altera os bitmaps usados para o fundo e os canos do cenário. Usado principalmente para transições ent...</div><div class="ttdef"><b>Definição</b> Scenario.cpp:406</div></div>
+<div class="ttc" id="aclass_scenario_html_a37103d4ad3e12a0b5d4a5a2cd619fbb5"><div class="ttname"><a href="class_scenario.html#a37103d4ad3e12a0b5d4a5a2cd619fbb5">Scenario::setCurrentLevel</a></div><div class="ttdeci">void setCurrentLevel(int level)</div><div class="ttdoc">Define o nível atual do jogo. Usado para controlar a lógica de geração de canos e transições entre ní...</div><div class="ttdef"><b>Definição</b> Scenario.hpp:140</div></div>
+<div class="ttc" id="aclass_scenario_html_a566523d30a8f01dcf2e85643a0267145"><div class="ttname"><a href="class_scenario.html#a566523d30a8f01dcf2e85643a0267145">Scenario::increaseSpeedByPercent</a></div><div class="ttdeci">void increaseSpeedByPercent(float percent)</div><div class="ttdoc">Aumenta a velocidade de movimento dos canos em uma porcentagem específica. Usado para aumentar a difi...</div><div class="ttdef"><b>Definição</b> Scenario.cpp:417</div></div>
+<div class="ttc" id="aclass_scenario_html_a5a2201cff446cd8722d47930851654ff"><div class="ttname"><a href="class_scenario.html#a5a2201cff446cd8722d47930851654ff">Scenario::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reseta o estado do cenário para o início de uma nova partida. Reinicializa o pássaro,...</div><div class="ttdef"><b>Definição</b> Scenario.cpp:109</div></div>
+<div class="ttc" id="aclass_scenario_html_a8caab7a399d2d7f451b702b287a804cd"><div class="ttname"><a href="class_scenario.html#a8caab7a399d2d7f451b702b287a804cd">Scenario::setInfinitePipes</a></div><div class="ttdeci">void setInfinitePipes(bool val)</div><div class="ttdoc">Define se os canos devem ser gerados indefinidamente. Útil para o último nível, onde não há um número...</div><div class="ttdef"><b>Definição</b> Scenario.hpp:133</div></div>
+<div class="ttc" id="aclass_scenario_html_a8d3989e5f59efa3ee74b25b462cd436c"><div class="ttname"><a href="class_scenario.html#a8d3989e5f59efa3ee74b25b462cd436c">Scenario::INITIAL_PIPE_DESIGN_SPEED_PER_FRAME</a></div><div class="ttdeci">static const float INITIAL_PIPE_DESIGN_SPEED_PER_FRAME</div><div class="ttdoc">Velocidade inicial dos canos no design do jogo, por frame.</div><div class="ttdef"><b>Definição</b> Scenario.hpp:29</div></div>
+<div class="ttc" id="aclass_scenario_html_aa4c4621a468293de629e51bfa5ba9aa5"><div class="ttname"><a href="class_scenario.html#aa4c4621a468293de629e51bfa5ba9aa5">Scenario::PIPE_SPACING_DESIGN</a></div><div class="ttdeci">static const float PIPE_SPACING_DESIGN</div><div class="ttdoc">Espaçamento horizontal padrão entre os canos no design do jogo.</div><div class="ttdef"><b>Definição</b> Scenario.hpp:27</div></div>
+<div class="ttc" id="aclass_scenario_html_aa7e7548858cbc52614d46723c0333038"><div class="ttname"><a href="class_scenario.html#aa7e7548858cbc52614d46723c0333038">Scenario::~Scenario</a></div><div class="ttdeci">~Scenario()</div><div class="ttdoc">Destrutor da classe Scenario. Libera quaisquer recursos alocados dinamicamente (como objetos Pipe).</div><div class="ttdef"><b>Definição</b> Scenario.cpp:103</div></div>
+<div class="ttc" id="aclass_scenario_html_aac9d276514b80ce646d3a89059785ab3"><div class="ttname"><a href="class_scenario.html#aac9d276514b80ce646d3a89059785ab3">Scenario::hasScoredPoint</a></div><div class="ttdeci">bool hasScoredPoint() const</div><div class="ttdoc">Verifica se um ponto acabou de ser marcado. Usado para detectar o momento exato em que o pássaro atra...</div><div class="ttdef"><b>Definição</b> Scenario.cpp:167</div></div>
+<div class="ttc" id="aclass_scenario_html_aace7f025079a1b8ef3cf36f9494ae775"><div class="ttname"><a href="class_scenario.html#aace7f025079a1b8ef3cf36f9494ae775">Scenario::render</a></div><div class="ttdeci">void render()</div><div class="ttdoc">Renderiza (desenha) todos os elementos do cenário na tela. Inclui o fundo, os canos,...</div><div class="ttdef"><b>Definição</b> Scenario.cpp:342</div></div>
+<div class="ttc" id="aclass_scenario_html_ab66180ec4015536e2ef14b40a78a6616"><div class="ttname"><a href="class_scenario.html#ab66180ec4015536e2ef14b40a78a6616">Scenario::getScore</a></div><div class="ttdeci">int getScore() const</div><div class="ttdoc">Retorna a pontuação atual do jogador.</div><div class="ttdef"><b>Definição</b> Scenario.cpp:150</div></div>
+<div class="ttc" id="aclass_scenario_html_ad144b1bf6ef1f002153e719dd9525a5a"><div class="ttname"><a href="class_scenario.html#ad144b1bf6ef1f002153e719dd9525a5a">Scenario::isGameOver</a></div><div class="ttdeci">bool isGameOver() const</div><div class="ttdoc">Verifica se o jogo está no estado de &quot;Game Over&quot;.</div><div class="ttdef"><b>Definição</b> Scenario.cpp:142</div></div>
+<div class="ttc" id="aclass_scenario_html_ad99529800629284fbb421adb3c55ef1a"><div class="ttname"><a href="class_scenario.html#ad99529800629284fbb421adb3c55ef1a">Scenario::getBird</a></div><div class="ttdeci">Bird &amp; getBird()</div><div class="ttdoc">Retorna uma referência para o objeto Bird (o pássaro do jogador). Permite que outras partes do sistem...</div><div class="ttdef"><b>Definição</b> Scenario.cpp:159</div></div>
+<div class="ttc" id="aclass_scenario_html_af6328a01f94a219fc558fca9545da7c1"><div class="ttname"><a href="class_scenario.html#af6328a01f94a219fc558fca9545da7c1">Scenario::update</a></div><div class="ttdeci">void update(float deltaTime)</div><div class="ttdoc">Atualiza a lógica de todo o cenário a cada frame do jogo.</div><div class="ttdef"><b>Definição</b> Scenario.cpp:269</div></div>
+<div class="ttc" id="aclass_scenario_html_af89f8c0590f1d4049ffd50a879b4fc34"><div class="ttname"><a href="class_scenario.html#af89f8c0590f1d4049ffd50a879b4fc34">Scenario::resetPointFlag</a></div><div class="ttdeci">void resetPointFlag()</div><div class="ttdoc">Reseta a flag que indica que um ponto foi marcado. Deve ser chamado após o som de pontuação ser tocad...</div><div class="ttdef"><b>Definição</b> Scenario.cpp:175</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

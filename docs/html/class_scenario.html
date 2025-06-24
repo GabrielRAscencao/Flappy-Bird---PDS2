@@ -1,0 +1,867 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Traveling Dragon: Referência da Classe Scenario</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="dragao (1).png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Traveling Dragon<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Traveling Dragon é uma releitura autoral do clássico Flappy Bird. Neste jogo, você controla um dragão aventureiro que sai de sua caverna para explorar o mundo. A cada novo cenário, o tempo passa mais rápido, o dia clareia, escurece, e por fim o dragão mergulha em uma noite eterna, repleta de obstáculos desafiadores.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#pub-static-attribs">Atributos Públicos Estáticos</a> &#124;
+<a href="class_scenario-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle"><div class="title">Referência da Classe Scenario</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Gerencia todo o ambiente de jogo, incluindo o pássaro, os canos e a pontuação.  
+ <a href="#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_scenario_8hpp_source.html">Scenario.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:a03fcc4dbd9c400813ef7841d2158682a" id="r_a03fcc4dbd9c400813ef7841d2158682a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03fcc4dbd9c400813ef7841d2158682a">Scenario</a> (ALLEGRO_BITMAP *bg, ALLEGRO_BITMAP *bird_bmp, ALLEGRO_BITMAP *pipe_bmp, ALLEGRO_FONT *fontlarge, int screenW, int screenH, ALLEGRO_SAMPLE *pointSound, ALLEGRO_SAMPLE *dieSound)</td></tr>
+<tr class="memdesc:a03fcc4dbd9c400813ef7841d2158682a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="class_scenario.html" title="Gerencia todo o ambiente de jogo, incluindo o pássaro, os canos e a pontuação.">Scenario</a>.  <br /></td></tr>
+<tr class="memitem:aa7e7548858cbc52614d46723c0333038" id="r_aa7e7548858cbc52614d46723c0333038"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7e7548858cbc52614d46723c0333038">~Scenario</a> ()</td></tr>
+<tr class="memdesc:aa7e7548858cbc52614d46723c0333038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe <a class="el" href="class_scenario.html" title="Gerencia todo o ambiente de jogo, incluindo o pássaro, os canos e a pontuação.">Scenario</a>. Libera quaisquer recursos alocados dinamicamente (como objetos <a class="el" href="class_pipe.html" title="Representa um par de obstáculos (cano superior e inferior) no jogo.">Pipe</a>).  <br /></td></tr>
+<tr class="memitem:af6328a01f94a219fc558fca9545da7c1" id="r_af6328a01f94a219fc558fca9545da7c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6328a01f94a219fc558fca9545da7c1">update</a> (float deltaTime)</td></tr>
+<tr class="memdesc:af6328a01f94a219fc558fca9545da7c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza a lógica de todo o cenário a cada frame do jogo.  <br /></td></tr>
+<tr class="memitem:a2ed6646fb9b11e12bfcfc89949030c33" id="r_a2ed6646fb9b11e12bfcfc89949030c33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ed6646fb9b11e12bfcfc89949030c33">changeBackgroundAndPipe</a> (ALLEGRO_BITMAP *newBackground, ALLEGRO_BITMAP *newPipe)</td></tr>
+<tr class="memdesc:a2ed6646fb9b11e12bfcfc89949030c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Altera os bitmaps usados para o fundo e os canos do cenário. Usado principalmente para transições entre diferentes níveis ou fases visuais.  <br /></td></tr>
+<tr class="memitem:aace7f025079a1b8ef3cf36f9494ae775" id="r_aace7f025079a1b8ef3cf36f9494ae775"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aace7f025079a1b8ef3cf36f9494ae775">render</a> ()</td></tr>
+<tr class="memdesc:aace7f025079a1b8ef3cf36f9494ae775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renderiza (desenha) todos os elementos do cenário na tela. Inclui o fundo, os canos, o pássaro e a pontuação.  <br /></td></tr>
+<tr class="memitem:a5a2201cff446cd8722d47930851654ff" id="r_a5a2201cff446cd8722d47930851654ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a2201cff446cd8722d47930851654ff">reset</a> ()</td></tr>
+<tr class="memdesc:a5a2201cff446cd8722d47930851654ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reseta o estado do cenário para o início de uma nova partida. Reinicializa o pássaro, limpa e gera novos canos, zera a pontuação e redefine o estado de "Game Over".  <br /></td></tr>
+<tr class="memitem:ad144b1bf6ef1f002153e719dd9525a5a" id="r_ad144b1bf6ef1f002153e719dd9525a5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad144b1bf6ef1f002153e719dd9525a5a">isGameOver</a> () const</td></tr>
+<tr class="memdesc:ad144b1bf6ef1f002153e719dd9525a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o jogo está no estado de "Game Over".  <br /></td></tr>
+<tr class="memitem:ab66180ec4015536e2ef14b40a78a6616" id="r_ab66180ec4015536e2ef14b40a78a6616"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab66180ec4015536e2ef14b40a78a6616">getScore</a> () const</td></tr>
+<tr class="memdesc:ab66180ec4015536e2ef14b40a78a6616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a pontuação atual do jogador.  <br /></td></tr>
+<tr class="memitem:ad99529800629284fbb421adb3c55ef1a" id="r_ad99529800629284fbb421adb3c55ef1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bird.html">Bird</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad99529800629284fbb421adb3c55ef1a">getBird</a> ()</td></tr>
+<tr class="memdesc:ad99529800629284fbb421adb3c55ef1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma referência para o objeto <a class="el" href="class_bird.html" title="Representa o personagem principal do jogo, o pássaro.">Bird</a> (o pássaro do jogador). Permite que outras partes do sistema interajam diretamente com o pássaro.  <br /></td></tr>
+<tr class="memitem:aac9d276514b80ce646d3a89059785ab3" id="r_aac9d276514b80ce646d3a89059785ab3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac9d276514b80ce646d3a89059785ab3">hasScoredPoint</a> () const</td></tr>
+<tr class="memdesc:aac9d276514b80ce646d3a89059785ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se um ponto acabou de ser marcado. Usado para detectar o momento exato em que o pássaro atravessa um cano e tocar um som de pontuação.  <br /></td></tr>
+<tr class="memitem:af89f8c0590f1d4049ffd50a879b4fc34" id="r_af89f8c0590f1d4049ffd50a879b4fc34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af89f8c0590f1d4049ffd50a879b4fc34">resetPointFlag</a> ()</td></tr>
+<tr class="memdesc:af89f8c0590f1d4049ffd50a879b4fc34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reseta a flag que indica que um ponto foi marcado. Deve ser chamado após o som de pontuação ser tocado.  <br /></td></tr>
+<tr class="memitem:a566523d30a8f01dcf2e85643a0267145" id="r_a566523d30a8f01dcf2e85643a0267145"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a566523d30a8f01dcf2e85643a0267145">increaseSpeedByPercent</a> (float percent)</td></tr>
+<tr class="memdesc:a566523d30a8f01dcf2e85643a0267145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aumenta a velocidade de movimento dos canos em uma porcentagem específica. Usado para aumentar a dificuldade do jogo com o tempo ou em novos níveis.  <br /></td></tr>
+<tr class="memitem:a8caab7a399d2d7f451b702b287a804cd" id="r_a8caab7a399d2d7f451b702b287a804cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8caab7a399d2d7f451b702b287a804cd">setInfinitePipes</a> (bool val)</td></tr>
+<tr class="memdesc:a8caab7a399d2d7f451b702b287a804cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define se os canos devem ser gerados indefinidamente. Útil para o último nível, onde não há um número fixo de canos.  <br /></td></tr>
+<tr class="memitem:a37103d4ad3e12a0b5d4a5a2cd619fbb5" id="r_a37103d4ad3e12a0b5d4a5a2cd619fbb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37103d4ad3e12a0b5d4a5a2cd619fbb5">setCurrentLevel</a> (int level)</td></tr>
+<tr class="memdesc:a37103d4ad3e12a0b5d4a5a2cd619fbb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o nível atual do jogo. Usado para controlar a lógica de geração de canos e transições entre níveis.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Atributos Públicos Estáticos</h2></td></tr>
+<tr class="memitem:aa4c4621a468293de629e51bfa5ba9aa5" id="r_aa4c4621a468293de629e51bfa5ba9aa5"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4c4621a468293de629e51bfa5ba9aa5">PIPE_SPACING_DESIGN</a> = 420.0f</td></tr>
+<tr class="memdesc:aa4c4621a468293de629e51bfa5ba9aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Espaçamento horizontal padrão entre os canos no design do jogo.  <br /></td></tr>
+<tr class="memitem:a8d3989e5f59efa3ee74b25b462cd436c" id="r_a8d3989e5f59efa3ee74b25b462cd436c"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d3989e5f59efa3ee74b25b462cd436c">INITIAL_PIPE_DESIGN_SPEED_PER_FRAME</a> = -150.0f</td></tr>
+<tr class="memdesc:a8d3989e5f59efa3ee74b25b462cd436c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocidade inicial dos canos no design do jogo, por frame.  <br /></td></tr>
+<tr class="memitem:a24f052bb4c4f48a47b61e791e3e1df39" id="r_a24f052bb4c4f48a47b61e791e3e1df39"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24f052bb4c4f48a47b61e791e3e1df39">PIPE_SPEED_INCREASE_PER_SCORE_PER_FRAME</a> = -0.05f</td></tr>
+<tr class="memdesc:a24f052bb4c4f48a47b61e791e3e1df39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aumento da velocidade dos canos por ponto marcado, por frame.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Gerencia todo o ambiente de jogo, incluindo o pássaro, os canos e a pontuação. </p>
+<p>A classe <a class="el" href="class_scenario.html" title="Gerencia todo o ambiente de jogo, incluindo o pássaro, os canos e a pontuação.">Scenario</a> é responsável pela lógica principal do gameplay: movimento de elementos, detecção de colisões, geração de canos, atualização da pontuação e controle do estado de "Game Over". </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Construtores e Destrutores</h2>
+<a id="a03fcc4dbd9c400813ef7841d2158682a" name="a03fcc4dbd9c400813ef7841d2158682a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03fcc4dbd9c400813ef7841d2158682a">&#9670;&#160;</a></span>Scenario()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scenario::Scenario </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_BITMAP *</td>          <td class="paramname"><span class="paramname"><em>bird_bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_BITMAP *</td>          <td class="paramname"><span class="paramname"><em>pipe_bmp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_FONT *</td>          <td class="paramname"><span class="paramname"><em>fontlarge</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>screenW</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>screenH</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_SAMPLE *</td>          <td class="paramname"><span class="paramname"><em>pointSound</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_SAMPLE *</td>          <td class="paramname"><span class="paramname"><em>dieSound</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor da classe <a class="el" href="class_scenario.html" title="Gerencia todo o ambiente de jogo, incluindo o pássaro, os canos e a pontuação.">Scenario</a>. </p>
+<p>Inicializa o cenário do jogo com os recursos visuais (fundos, pássaro, canos), a fonte para a pontuação, as dimensões da tela e os efeitos sonoros.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bg</td><td>Ponteiro para o bitmap de fundo do cenário. </td></tr>
+    <tr><td class="paramname">bird_bmp</td><td>Ponteiro para o bitmap (folha de sprites) do pássaro. </td></tr>
+    <tr><td class="paramname">pipe_bmp</td><td>Ponteiro para o bitmap do cano. </td></tr>
+    <tr><td class="paramname">fontlarge</td><td>Ponteiro para a fonte Allegro grande, usada para a pontuação. </td></tr>
+    <tr><td class="paramname">screenW</td><td>Largura da tela de exibição do jogo. </td></tr>
+    <tr><td class="paramname">screenH</td><td>Altura da tela de exibição do jogo. </td></tr>
+    <tr><td class="paramname">pointSound</td><td>Ponteiro para o ALLEGRO_SAMPLE do som de pontuação. </td></tr>
+    <tr><td class="paramname">dieSound</td><td>Ponteiro para o ALLEGRO_SAMPLE do som de morte do pássaro.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Inicializa todos os elementos do cenário, como o pássaro, os canos, a pontuação, e configura os parâmetros de jogo como velocidade e sons.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bg</td><td>Ponteiro para o bitmap de fundo do cenário. </td></tr>
+    <tr><td class="paramname">bird_bmp</td><td>Ponteiro para o bitmap da folha de sprites do pássaro. </td></tr>
+    <tr><td class="paramname">pipe_bmp</td><td>Ponteiro para o bitmap da imagem do cano. </td></tr>
+    <tr><td class="paramname">fontlarge</td><td>Ponteiro para a fonte grande para exibir a pontuação. </td></tr>
+    <tr><td class="paramname">screenW</td><td>Largura da tela do jogo. </td></tr>
+    <tr><td class="paramname">screenH</td><td>Altura da tela do jogo. </td></tr>
+    <tr><td class="paramname">pointSound</td><td>Ponteiro para o som de ponto (quando o pássaro passa por um cano). </td></tr>
+    <tr><td class="paramname">dieSound</td><td>Ponteiro para o som de morte (colisão). </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    : background(bg),</div>
+<div class="line"><span class="lineno">   43</span>      birdBitmap(bird_bmp),</div>
+<div class="line"><span class="lineno">   44</span>      pipeBitmap(pipe_bmp),</div>
+<div class="line"><span class="lineno">   45</span>      fontlarge(fontlarge),</div>
+<div class="line"><span class="lineno">   46</span>      SCREEN_W(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(screenW)), <span class="comment">// Converte para float para cálculos precisos</span></div>
+<div class="line"><span class="lineno">   47</span>      SCREEN_H(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(screenH)), <span class="comment">// Converte para float para cálculos precisos</span></div>
+<div class="line"><span class="lineno">   48</span>      <span class="comment">// Inicializa o pássaro com a imagem e dimensões da tela, aplicando escala</span></div>
+<div class="line"><span class="lineno">   49</span>      bird(bird_bmp, (<span class="keywordtype">float</span>)screenW, (<span class="keywordtype">float</span>)screenH, (<span class="keywordtype">float</span>)screenW / 1280.0f, (<span class="keywordtype">float</span>)screenH / 720.0f),</div>
+<div class="line"><span class="lineno">   50</span>      pipeSpawnTimer(0.0f),</div>
+<div class="line"><span class="lineno">   51</span>      pipeSpawnInterval(0.0f),</div>
+<div class="line"><span class="lineno">   52</span>      score(0),</div>
+<div class="line"><span class="lineno">   53</span>      gameOver(<span class="keyword">false</span>),</div>
+<div class="line"><span class="lineno">   54</span>      backgroundScrollOffset(0.0f),</div>
+<div class="line"><span class="lineno">   55</span>      currentPipeSpeed(<a class="code hl_variable" href="#a8d3989e5f59efa3ee74b25b462cd436c">INITIAL_PIPE_DESIGN_SPEED_PER_FRAME</a>), <span class="comment">// Inicializa com a velocidade de design</span></div>
+<div class="line"><span class="lineno">   56</span>      somPoint(pointSound), <span class="comment">// Atribui o som de ponto</span></div>
+<div class="line"><span class="lineno">   57</span>      somDie(dieSound),     <span class="comment">// Atribui o som de morte</span></div>
+<div class="line"><span class="lineno">   58</span>      scoredPointFlag(<span class="keyword">false</span>), <span class="comment">// Flag para indicar se um ponto foi marcado neste frame</span></div>
+<div class="line"><span class="lineno">   59</span>      totalPipesSpawnedThisLevel(0) <span class="comment">// Contador de canos gerados na fase atual</span></div>
+<div class="line"><span class="lineno">   60</span>{</div>
+<div class="line"><span class="lineno">   61</span>    <span class="comment">// Define as dimensões de design para calcular os fatores de escala.</span></div>
+<div class="line"><span class="lineno">   62</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> DESIGN_W = 1280.0f;</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> DESIGN_H = 720.0f;</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>    scale_x = SCREEN_W / DESIGN_W; <span class="comment">// Calcula o fator de escala horizontal</span></div>
+<div class="line"><span class="lineno">   66</span>    scale_y = SCREEN_H / DESIGN_H; <span class="comment">// Calcula o fator de escala vertical</span></div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    bird.reset();           <span class="comment">// Reseta a posição e estado inicial do pássaro</span></div>
+<div class="line"><span class="lineno">   69</span>    bird.setRotacionar(<span class="keyword">false</span>); <span class="comment">// Desativa a rotação do pássaro no início do jogo (tela inicial)</span></div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    <span class="comment">// Ajusta a velocidade dos canos e o intervalo de spawn com base na escala X</span></div>
+<div class="line"><span class="lineno">   72</span>    currentPipeSpeed = <a class="code hl_variable" href="#a8d3989e5f59efa3ee74b25b462cd436c">INITIAL_PIPE_DESIGN_SPEED_PER_FRAME</a> * scale_x;</div>
+<div class="line"><span class="lineno">   73</span>    pipeSpawnInterval = (<a class="code hl_variable" href="#aa4c4621a468293de629e51bfa5ba9aa5">PIPE_SPACING_DESIGN</a> * scale_x) / std::abs(currentPipeSpeed);</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>    <span class="comment">// Altura da lacuna entre os canos, ajustada pela escala Y</span></div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordtype">float</span> gap_h = 250.0f * scale_y;</div>
+<div class="line"><span class="lineno">   77</span>    <span class="comment">// Posição X inicial do primeiro cano, começando mais à direita da tela</span></div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordtype">float</span> startX = SCREEN_W * 0.75f;</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>    <span class="comment">// Gera o número inicial de canos para preencher a tela no começo</span></div>
+<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; MAX_PIPES; ++i) {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="comment">// Define limites para a posição Y da lacuna dos canos (para evitar que saiam da tela)</span></div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordtype">float</span> min_gap_y = 100.0f * scale_y;</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordtype">float</span> max_gap_y = SCREEN_H - 100.0f * scale_y;</div>
+<div class="line"><span class="lineno">   85</span>        std::uniform_real_distribution&lt;float&gt; dist_gap_y(min_gap_y, max_gap_y);</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordtype">float</span> gap_y = dist_gap_y(rng); <span class="comment">// Gera um Y aleatório para a lacuna</span></div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>        <span class="comment">// Calcula a posição X de cada cano, espaçando-os uniformemente</span></div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordtype">float</span> pipe_x = startX + i * (<a class="code hl_variable" href="#aa4c4621a468293de629e51bfa5ba9aa5">PIPE_SPACING_DESIGN</a> * scale_x);</div>
+<div class="line"><span class="lineno">   90</span>        <span class="comment">// Adiciona um novo objeto Pipe ao vetor de canos</span></div>
+<div class="line"><span class="lineno">   91</span>        pipes.emplace_back(pipe_x, gap_y, gap_h, pipeBitmap, SCREEN_H, scale_x, scale_y);</div>
+<div class="line"><span class="lineno">   92</span>        ++totalPipesSpawnedThisLevel; <span class="comment">// Incrementa o contador de canos gerados</span></div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>    pipeSpawnTimer = pipeSpawnInterval; <span class="comment">// Inicializa o timer para o próximo spawn de cano</span></div>
+<div class="line"><span class="lineno">   96</span>}</div>
+<div class="ttc" id="aclass_scenario_html_a8d3989e5f59efa3ee74b25b462cd436c"><div class="ttname"><a href="#a8d3989e5f59efa3ee74b25b462cd436c">Scenario::INITIAL_PIPE_DESIGN_SPEED_PER_FRAME</a></div><div class="ttdeci">static const float INITIAL_PIPE_DESIGN_SPEED_PER_FRAME</div><div class="ttdoc">Velocidade inicial dos canos no design do jogo, por frame.</div><div class="ttdef"><b>Definição</b> Scenario.hpp:29</div></div>
+<div class="ttc" id="aclass_scenario_html_aa4c4621a468293de629e51bfa5ba9aa5"><div class="ttname"><a href="#aa4c4621a468293de629e51bfa5ba9aa5">Scenario::PIPE_SPACING_DESIGN</a></div><div class="ttdeci">static const float PIPE_SPACING_DESIGN</div><div class="ttdoc">Espaçamento horizontal padrão entre os canos no design do jogo.</div><div class="ttdef"><b>Definição</b> Scenario.hpp:27</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa7e7548858cbc52614d46723c0333038" name="aa7e7548858cbc52614d46723c0333038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7e7548858cbc52614d46723c0333038">&#9670;&#160;</a></span>~Scenario()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scenario::~Scenario </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destrutor da classe <a class="el" href="class_scenario.html" title="Gerencia todo o ambiente de jogo, incluindo o pássaro, os canos e a pontuação.">Scenario</a>. Libera quaisquer recursos alocados dinamicamente (como objetos <a class="el" href="class_pipe.html" title="Representa um par de obstáculos (cano superior e inferior) no jogo.">Pipe</a>). </p>
+<p>Destrutor da classe <a class="el" href="class_scenario.html" title="Gerencia todo o ambiente de jogo, incluindo o pássaro, os canos e a pontuação.">Scenario</a>. Não precisa fazer nada especial aqui, pois os recursos ALLEGRO_BITMAP* e ALLEGRO_SAMPLE* são gerenciados externamente (provavelmente por um AssetManager). </p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>{}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentação das funções</h2>
+<a id="a2ed6646fb9b11e12bfcfc89949030c33" name="a2ed6646fb9b11e12bfcfc89949030c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ed6646fb9b11e12bfcfc89949030c33">&#9670;&#160;</a></span>changeBackgroundAndPipe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scenario::changeBackgroundAndPipe </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_BITMAP *</td>          <td class="paramname"><span class="paramname"><em>newBackground</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_BITMAP *</td>          <td class="paramname"><span class="paramname"><em>newPipe</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Altera os bitmaps usados para o fundo e os canos do cenário. Usado principalmente para transições entre diferentes níveis ou fases visuais. </p>
+<p>Altera os bitmaps de fundo e cano do cenário e reseta o jogo.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newBackground</td><td>Ponteiro para o novo bitmap de fundo. </td></tr>
+    <tr><td class="paramname">newPipe</td><td>Ponteiro para o novo bitmap dos canos.</td></tr>
+    <tr><td class="paramname">newBackground</td><td>Novo bitmap para o fundo. </td></tr>
+    <tr><td class="paramname">newPipe</td><td>Novo bitmap para os canos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  406</span>                                                                                             {</div>
+<div class="line"><span class="lineno">  407</span>    background = newBackground; <span class="comment">// Atualiza o bitmap de fundo</span></div>
+<div class="line"><span class="lineno">  408</span>    pipeBitmap = newPipe;     <span class="comment">// Atualiza o bitmap do cano</span></div>
+<div class="line"><span class="lineno">  409</span>    <a class="code hl_function" href="#a5a2201cff446cd8722d47930851654ff">reset</a>(); <span class="comment">// Reseta o cenário para aplicar as novas texturas</span></div>
+<div class="line"><span class="lineno">  410</span>}</div>
+<div class="ttc" id="aclass_scenario_html_a5a2201cff446cd8722d47930851654ff"><div class="ttname"><a href="#a5a2201cff446cd8722d47930851654ff">Scenario::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reseta o estado do cenário para o início de uma nova partida. Reinicializa o pássaro,...</div><div class="ttdef"><b>Definição</b> Scenario.cpp:109</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad99529800629284fbb421adb3c55ef1a" name="ad99529800629284fbb421adb3c55ef1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad99529800629284fbb421adb3c55ef1a">&#9670;&#160;</a></span>getBird()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bird.html">Bird</a> &amp; Scenario::getBird </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna uma referência para o objeto <a class="el" href="class_bird.html" title="Representa o personagem principal do jogo, o pássaro.">Bird</a> (o pássaro do jogador). Permite que outras partes do sistema interajam diretamente com o pássaro. </p>
+<p>Retorna uma referência para o objeto <a class="el" href="class_bird.html" title="Representa o personagem principal do jogo, o pássaro.">Bird</a>. Permite que outras partes do código acessem e manipulem o pássaro.</p>
+<dl class="section return"><dt>Retorna</dt><dd>Uma referência para o objeto <a class="el" href="class_bird.html" title="Representa o personagem principal do jogo, o pássaro.">Bird</a>. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>                        {</div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">return</span> bird;</div>
+<div class="line"><span class="lineno">  161</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab66180ec4015536e2ef14b40a78a6616" name="ab66180ec4015536e2ef14b40a78a6616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab66180ec4015536e2ef14b40a78a6616">&#9670;&#160;</a></span>getScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Scenario::getScore </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna a pontuação atual do jogador. </p>
+<dl class="section return"><dt>Retorna</dt><dd>O valor inteiro da pontuação.</dd>
+<dd>
+A pontuação. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>                             {</div>
+<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">return</span> score;</div>
+<div class="line"><span class="lineno">  152</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aac9d276514b80ce646d3a89059785ab3" name="aac9d276514b80ce646d3a89059785ab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac9d276514b80ce646d3a89059785ab3">&#9670;&#160;</a></span>hasScoredPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Scenario::hasScoredPoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se um ponto acabou de ser marcado. Usado para detectar o momento exato em que o pássaro atravessa um cano e tocar um som de pontuação. </p>
+<p>Verifica se um ponto foi marcado no frame atual.</p>
+<dl class="section return"><dt>Retorna</dt><dd>true se um ponto foi marcado no último frame, false caso contrário.</dd>
+<dd>
+True se um ponto foi marcado, false caso contrário. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  167</span>                                    {</div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">return</span> scoredPointFlag;</div>
+<div class="line"><span class="lineno">  169</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a566523d30a8f01dcf2e85643a0267145" name="a566523d30a8f01dcf2e85643a0267145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a566523d30a8f01dcf2e85643a0267145">&#9670;&#160;</a></span>increaseSpeedByPercent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scenario::increaseSpeedByPercent </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>percent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aumenta a velocidade de movimento dos canos em uma porcentagem específica. Usado para aumentar a dificuldade do jogo com o tempo ou em novos níveis. </p>
+<p>Aumenta a velocidade dos canos em uma porcentagem. Recalcula o intervalo de spawn dos canos para manter a consistência.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">percent</td><td>A porcentagem de aumento (ex: 0.10 para 10%).</td></tr>
+    <tr><td class="paramname">percent</td><td>A porcentagem de aumento (ex: 10 para aumentar em 10%). </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  417</span>                                                   {</div>
+<div class="line"><span class="lineno">  418</span>    <span class="keywordtype">float</span> factor = 1.0f + (percent / 100.0f); <span class="comment">// Calcula o fator de aumento</span></div>
+<div class="line"><span class="lineno">  419</span>    currentPipeSpeed *= factor; <span class="comment">// Aplica o aumento na velocidade atual</span></div>
+<div class="line"><span class="lineno">  420</span>    <span class="comment">// Recalcula o intervalo de spawn para manter a distância entre os canos consistente</span></div>
+<div class="line"><span class="lineno">  421</span>    pipeSpawnInterval = (<a class="code hl_variable" href="#aa4c4621a468293de629e51bfa5ba9aa5">PIPE_SPACING_DESIGN</a> * scale_x) / std::abs(currentPipeSpeed);</div>
+<div class="line"><span class="lineno">  422</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad144b1bf6ef1f002153e719dd9525a5a" name="ad144b1bf6ef1f002153e719dd9525a5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad144b1bf6ef1f002153e719dd9525a5a">&#9670;&#160;</a></span>isGameOver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Scenario::isGameOver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se o jogo está no estado de "Game Over". </p>
+<p>Verifica se o jogo terminou.</p>
+<dl class="section return"><dt>Retorna</dt><dd>true se o pássaro colidiu ou saiu da tela, false caso contrário.</dd>
+<dd>
+True se o jogo está em Game Over, false caso contrário. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>                                {</div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">return</span> gameOver;</div>
+<div class="line"><span class="lineno">  144</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aace7f025079a1b8ef3cf36f9494ae775" name="aace7f025079a1b8ef3cf36f9494ae775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace7f025079a1b8ef3cf36f9494ae775">&#9670;&#160;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scenario::render </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renderiza (desenha) todos os elementos do cenário na tela. Inclui o fundo, os canos, o pássaro e a pontuação. </p>
+<p>Renderiza todos os elementos do cenário na tela. Desenha o fundo, os canos e o pássaro, além da pontuação e mensagens de Game Over. </p>
+<div class="fragment"><div class="line"><span class="lineno">  342</span>                      {</div>
+<div class="line"><span class="lineno">  343</span>    <span class="comment">// Desenha o fundo do cenário</span></div>
+<div class="line"><span class="lineno">  344</span>    <span class="keywordflow">if</span> (background) {</div>
+<div class="line"><span class="lineno">  345</span>        <span class="keywordtype">int</span> bg_w = al_get_bitmap_width(background);</div>
+<div class="line"><span class="lineno">  346</span>        <span class="keywordtype">int</span> bg_h = al_get_bitmap_height(background);</div>
+<div class="line"><span class="lineno">  347</span> </div>
+<div class="line"><span class="lineno">  348</span>        <span class="keywordflow">if</span> (bg_w &lt;= 0) bg_w = 1; <span class="comment">// Prevenção de divisão por zero</span></div>
+<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">if</span> (bg_h &lt;= 0) bg_h = 1;</div>
+<div class="line"><span class="lineno">  350</span> </div>
+<div class="line"><span class="lineno">  351</span>        <span class="comment">// Calcula a escala e dimensões finais do fundo</span></div>
+<div class="line"><span class="lineno">  352</span>        <span class="keywordtype">float</span> bg_scale_to_fill = std::max(SCREEN_W / (<span class="keywordtype">float</span>)bg_w, SCREEN_H / (<span class="keywordtype">float</span>)bg_h);</div>
+<div class="line"><span class="lineno">  353</span>        <span class="keywordtype">float</span> final_bg_width = bg_w * bg_scale_to_fill;</div>
+<div class="line"><span class="lineno">  354</span>        <span class="keywordtype">float</span> final_bg_height = bg_h * bg_scale_to_fill;</div>
+<div class="line"><span class="lineno">  355</span> </div>
+<div class="line"><span class="lineno">  356</span>        <span class="comment">// Desenha duas cópias do fundo para criar um efeito de rolagem contínuo</span></div>
+<div class="line"><span class="lineno">  357</span>        al_draw_scaled_bitmap(background, 0, 0, bg_w, bg_h,</div>
+<div class="line"><span class="lineno">  358</span>                              backgroundScrollOffset, 0, final_bg_width, final_bg_height, 0);</div>
+<div class="line"><span class="lineno">  359</span>        al_draw_scaled_bitmap(background, 0, 0, bg_w, bg_h,</div>
+<div class="line"><span class="lineno">  360</span>                              backgroundScrollOffset + final_bg_width, 0, final_bg_width, final_bg_height, 0);</div>
+<div class="line"><span class="lineno">  361</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  362</span>        <span class="comment">// Fallback: se o background for nulo, pinta a tela de preto</span></div>
+<div class="line"><span class="lineno">  363</span>        al_clear_to_color(al_map_rgb(0, 0, 0));</div>
+<div class="line"><span class="lineno">  364</span>    }</div>
+<div class="line"><span class="lineno">  365</span> </div>
+<div class="line"><span class="lineno">  366</span>    <span class="comment">// Renderiza todos os canos</span></div>
+<div class="line"><span class="lineno">  367</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; p : pipes) {</div>
+<div class="line"><span class="lineno">  368</span>        p.render();</div>
+<div class="line"><span class="lineno">  369</span>    }</div>
+<div class="line"><span class="lineno">  370</span> </div>
+<div class="line"><span class="lineno">  371</span>    bird.render(); <span class="comment">// Renderiza o pássaro</span></div>
+<div class="line"><span class="lineno">  372</span> </div>
+<div class="line"><span class="lineno">  373</span>    <span class="comment">// Exibe a pontuação na tela</span></div>
+<div class="line"><span class="lineno">  374</span>    <span class="keywordflow">if</span> (fontlarge) {</div>
+<div class="line"><span class="lineno">  375</span>        std::string pontuacao = <span class="stringliteral">&quot;PONTOS: &quot;</span> + std::to_string(score);</div>
+<div class="line"><span class="lineno">  376</span>        <span class="keywordtype">float</span> x = SCREEN_W / 2;</div>
+<div class="line"><span class="lineno">  377</span>        <span class="keywordtype">float</span> y = 50 * scale_y;</div>
+<div class="line"><span class="lineno">  378</span> </div>
+<div class="line"><span class="lineno">  379</span>        ALLEGRO_COLOR corContorno = al_map_rgb(0, 0, 0); <span class="comment">// Cor para o contorno do texto (sombra)</span></div>
+<div class="line"><span class="lineno">  380</span>        ALLEGRO_COLOR corTexto = al_map_rgb(255, 255, 255); <span class="comment">// Cor principal do texto</span></div>
+<div class="line"><span class="lineno">  381</span> </div>
+<div class="line"><span class="lineno">  382</span>        <span class="comment">// Desenha o contorno do texto para dar mais destaque (efeito de sombra)</span></div>
+<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dx = -3; dx &lt;= 3; ++dx) {</div>
+<div class="line"><span class="lineno">  384</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dy = -3; dy &lt;= 3; ++dy) {</div>
+<div class="line"><span class="lineno">  385</span>                <span class="keywordflow">if</span> (dx == 0 &amp;&amp; dy == 0) <span class="keywordflow">continue</span>; <span class="comment">// Pula o centro</span></div>
+<div class="line"><span class="lineno">  386</span>                al_draw_text(fontlarge, corContorno, x + dx, y + dy, ALLEGRO_ALIGN_CENTER, pontuacao.c_str());</div>
+<div class="line"><span class="lineno">  387</span>            }</div>
+<div class="line"><span class="lineno">  388</span>        }</div>
+<div class="line"><span class="lineno">  389</span> </div>
+<div class="line"><span class="lineno">  390</span>        <span class="comment">// Desenha o texto principal da pontuação (branco centralizado)</span></div>
+<div class="line"><span class="lineno">  391</span>        al_draw_text(fontlarge, corTexto, x, y, ALLEGRO_ALIGN_CENTER, pontuacao.c_str());</div>
+<div class="line"><span class="lineno">  392</span>    }</div>
+<div class="line"><span class="lineno">  393</span> </div>
+<div class="line"><span class="lineno">  394</span>    <span class="comment">// Se o jogo acabou, exibe a mensagem de Game Over</span></div>
+<div class="line"><span class="lineno">  395</span>    <span class="keywordflow">if</span> (gameOver &amp;&amp; fontlarge) {</div>
+<div class="line"><span class="lineno">  396</span>        al_draw_text(fontlarge, al_map_rgb(255, 0, 0), SCREEN_W / 2, SCREEN_H / 2 - 20 * scale_y, ALLEGRO_ALIGN_CENTER, <span class="stringliteral">&quot;GAME OVER&quot;</span>);</div>
+<div class="line"><span class="lineno">  397</span>        al_draw_text(fontlarge, al_map_rgb(255, 255, 255), SCREEN_W / 2, SCREEN_H / 2 + 20 * scale_y, ALLEGRO_ALIGN_CENTER, <span class="stringliteral">&quot;Pressione ESC para voltar ao menu&quot;</span>);</div>
+<div class="line"><span class="lineno">  398</span>    }</div>
+<div class="line"><span class="lineno">  399</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5a2201cff446cd8722d47930851654ff" name="a5a2201cff446cd8722d47930851654ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a2201cff446cd8722d47930851654ff">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scenario::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reseta o estado do cenário para o início de uma nova partida. Reinicializa o pássaro, limpa e gera novos canos, zera a pontuação e redefine o estado de "Game Over". </p>
+<p>Reseta o estado do cenário para iniciar uma nova partida. Limpa os canos existentes, reseta o pássaro, a pontuação e os timers. </p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>                     {</div>
+<div class="line"><span class="lineno">  110</span>    bird.reset(); <span class="comment">// Reseta o pássaro para a posição inicial</span></div>
+<div class="line"><span class="lineno">  111</span>    pipes.clear(); <span class="comment">// Remove todos os canos existentes</span></div>
+<div class="line"><span class="lineno">  112</span>    gameOver = <span class="keyword">false</span>; <span class="comment">// Reseta o estado de game over</span></div>
+<div class="line"><span class="lineno">  113</span>    backgroundScrollOffset = 0.0f; <span class="comment">// Reseta o offset de rolagem do fundo</span></div>
+<div class="line"><span class="lineno">  114</span>    <span class="comment">// currentPipeSpeed = INITIAL_PIPE_DESIGN_SPEED_PER_FRAME * scale_x; // Comentado, talvez para manter a velocidade atual</span></div>
+<div class="line"><span class="lineno">  115</span>    pipeSpawnInterval = (<a class="code hl_variable" href="#aa4c4621a468293de629e51bfa5ba9aa5">PIPE_SPACING_DESIGN</a> * scale_x) / std::abs(currentPipeSpeed); <span class="comment">// Recalcula o intervalo de spawn</span></div>
+<div class="line"><span class="lineno">  116</span>    totalPipesSpawnedThisLevel = 0; <span class="comment">// Reseta o contador de canos gerados</span></div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordtype">float</span> gap_h = 250.0f * scale_y; <span class="comment">// Altura da lacuna entre os canos, ajustada pela escala</span></div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordtype">float</span> startX = SCREEN_W * 0.75f; <span class="comment">// Posição X inicial para o primeiro cano</span></div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>    <span class="comment">// Gera um novo conjunto inicial de canos para a nova partida</span></div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; MAX_PIPES; ++i) {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="comment">// Limites para a posição Y da lacuna, um pouco mais restritivos para o reset</span></div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordtype">float</span> min_gap_y = 200.0f * scale_y;</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordtype">float</span> max_gap_y = SCREEN_H - 200.0f * scale_y;</div>
+<div class="line"><span class="lineno">  126</span>        std::uniform_real_distribution&lt;float&gt; dist_gap_y(min_gap_y, max_gap_y);</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordtype">float</span> gap_y = dist_gap_y(rng); <span class="comment">// Gera um Y aleatório para a lacuna</span></div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">float</span> pipe_x = startX + i * (<a class="code hl_variable" href="#aa4c4621a468293de629e51bfa5ba9aa5">PIPE_SPACING_DESIGN</a> * scale_x);</div>
+<div class="line"><span class="lineno">  130</span>        pipes.emplace_back(pipe_x, gap_y, gap_h, pipeBitmap, SCREEN_H, scale_x, scale_y);</div>
+<div class="line"><span class="lineno">  131</span>        ++totalPipesSpawnedThisLevel; <span class="comment">// Incrementa o contador</span></div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>    pipeSpawnTimer = pipeSpawnInterval; <span class="comment">// Reinicia o timer para o próximo spawn</span></div>
+<div class="line"><span class="lineno">  135</span>    scoredPointFlag = <span class="keyword">false</span>; <span class="comment">// Reseta a flag de ponto marcado</span></div>
+<div class="line"><span class="lineno">  136</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af89f8c0590f1d4049ffd50a879b4fc34" name="af89f8c0590f1d4049ffd50a879b4fc34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89f8c0590f1d4049ffd50a879b4fc34">&#9670;&#160;</a></span>resetPointFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scenario::resetPointFlag </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reseta a flag que indica que um ponto foi marcado. Deve ser chamado após o som de pontuação ser tocado. </p>
+<p>Reseta a flag de ponto marcado. Deve ser chamado após processar um ponto para que a flag possa ser definida novamente no próximo ponto. </p>
+<div class="fragment"><div class="line"><span class="lineno">  175</span>                              {</div>
+<div class="line"><span class="lineno">  176</span>    scoredPointFlag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  177</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a37103d4ad3e12a0b5d4a5a2cd619fbb5" name="a37103d4ad3e12a0b5d4a5a2cd619fbb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37103d4ad3e12a0b5d4a5a2cd619fbb5">&#9670;&#160;</a></span>setCurrentLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scenario::setCurrentLevel </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>level</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define o nível atual do jogo. Usado para controlar a lógica de geração de canos e transições entre níveis. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>O número do nível atual. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>{ currentLevel = level; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8caab7a399d2d7f451b702b287a804cd" name="a8caab7a399d2d7f451b702b287a804cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8caab7a399d2d7f451b702b287a804cd">&#9670;&#160;</a></span>setInfinitePipes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scenario::setInfinitePipes </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define se os canos devem ser gerados indefinidamente. Útil para o último nível, onde não há um número fixo de canos. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>Se true, gera canos sem parar; se false, respeita um limite. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  133</span>{ infinitePipes = val; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af6328a01f94a219fc558fca9545da7c1" name="af6328a01f94a219fc558fca9545da7c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6328a01f94a219fc558fca9545da7c1">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scenario::update </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>deltaTime</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Atualiza a lógica de todo o cenário a cada frame do jogo. </p>
+<p>Atualiza o estado de todos os elementos do cenário a cada frame do jogo. Gerencia o movimento do pássaro, canos, colisões, pontuação e rolagem do fundo.</p>
+<p>Isso inclui o movimento do pássaro e dos canos, detecção de colisões, atualização da pontuação e gerenciamento da geração de novos canos.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>O tempo decorrido desde a última atualização (em segundos).</td></tr>
+    <tr><td class="paramname">deltaTime</td><td>O tempo decorrido desde a última atualização, para movimento baseado em tempo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  269</span>                                     {</div>
+<div class="line"><span class="lineno">  270</span>    <span class="keywordflow">if</span> (gameOver) <span class="keywordflow">return</span>; <span class="comment">// Se o jogo acabou, não atualiza mais nada.</span></div>
+<div class="line"><span class="lineno">  271</span> </div>
+<div class="line"><span class="lineno">  272</span>    <span class="keywordtype">float</span> marginTop = bird.getHeight() * 0.35f; <span class="comment">// Margem superior do pássaro (para colisão com o teto)</span></div>
+<div class="line"><span class="lineno">  273</span> </div>
+<div class="line"><span class="lineno">  274</span>    bird.update(deltaTime); <span class="comment">// Atualiza o estado do pássaro</span></div>
+<div class="line"><span class="lineno">  275</span> </div>
+<div class="line"><span class="lineno">  276</span>    <span class="comment">// Recalcula o intervalo de spawn dos canos e decremente o timer</span></div>
+<div class="line"><span class="lineno">  277</span>    pipeSpawnInterval = (<a class="code hl_variable" href="#aa4c4621a468293de629e51bfa5ba9aa5">PIPE_SPACING_DESIGN</a> * scale_x) / std::abs(currentPipeSpeed);</div>
+<div class="line"><span class="lineno">  278</span>    pipeSpawnTimer--;</div>
+<div class="line"><span class="lineno">  279</span> </div>
+<div class="line"><span class="lineno">  280</span>    <span class="comment">// Se o timer de spawn zerou, gera um novo cano e reinicia o timer</span></div>
+<div class="line"><span class="lineno">  281</span>    <span class="keywordflow">if</span> (pipeSpawnTimer &lt;= 0.0f) {</div>
+<div class="line"><span class="lineno">  282</span>        spawnPipe();</div>
+<div class="line"><span class="lineno">  283</span>        pipeSpawnTimer = pipeSpawnInterval;</div>
+<div class="line"><span class="lineno">  284</span>    }</div>
+<div class="line"><span class="lineno">  285</span> </div>
+<div class="line"><span class="lineno">  286</span>    <span class="comment">// Itera sobre todos os canos para atualizar seu estado e verificar colisões/pontuação</span></div>
+<div class="line"><span class="lineno">  287</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; p : pipes) {</div>
+<div class="line"><span class="lineno">  288</span>        p.setSpeed(currentPipeSpeed); <span class="comment">// Define a velocidade do cano</span></div>
+<div class="line"><span class="lineno">  289</span>        p.update(deltaTime); <span class="comment">// Atualiza o cano (movimenta-o)</span></div>
+<div class="line"><span class="lineno">  290</span> </div>
+<div class="line"><span class="lineno">  291</span>        <span class="comment">// Verifica se o pássaro passou pelo cano e ainda não pontuou com ele</span></div>
+<div class="line"><span class="lineno">  292</span>        <span class="keywordflow">if</span> (!p.hasScored() &amp;&amp; bird.getX() &gt; p.getX() + p.getWidth() / 2) {</div>
+<div class="line"><span class="lineno">  293</span>            score++; <span class="comment">// Incrementa a pontuação</span></div>
+<div class="line"><span class="lineno">  294</span>            p.setScored(<span class="keyword">true</span>); <span class="comment">// Marca o cano como pontuado</span></div>
+<div class="line"><span class="lineno">  295</span>            scoredPointFlag = <span class="keyword">true</span>; <span class="comment">// Ativa a flag para indicar que um ponto foi feito neste frame</span></div>
+<div class="line"><span class="lineno">  296</span>            <span class="keywordflow">if</span> (somPoint) al_play_sample(somPoint, 1.0, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, NULL); <span class="comment">// Toca o som de ponto</span></div>
+<div class="line"><span class="lineno">  297</span>        }</div>
+<div class="line"><span class="lineno">  298</span> </div>
+<div class="line"><span class="lineno">  299</span>        <span class="comment">// Verifica colisão entre o pássaro e o cano</span></div>
+<div class="line"><span class="lineno">  300</span>        <span class="keywordflow">if</span> (checkCollision(bird, p)) {</div>
+<div class="line"><span class="lineno">  301</span>            gameOver = <span class="keyword">true</span>; <span class="comment">// Define o jogo como Game Over</span></div>
+<div class="line"><span class="lineno">  302</span>            <span class="keywordflow">if</span> (somDie) al_play_sample(somDie, 1.0, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, NULL); <span class="comment">// Toca o som de morte</span></div>
+<div class="line"><span class="lineno">  303</span>            <span class="keywordflow">return</span>; <span class="comment">// Sai da função update, pois o jogo acabou</span></div>
+<div class="line"><span class="lineno">  304</span>        }</div>
+<div class="line"><span class="lineno">  305</span>    }</div>
+<div class="line"><span class="lineno">  306</span> </div>
+<div class="line"><span class="lineno">  307</span>    <span class="comment">// Verifica colisão do pássaro com o chão ou o teto</span></div>
+<div class="line"><span class="lineno">  308</span>    <span class="keywordflow">if</span> (bird.getY() + bird.getHeight() &gt;= SCREEN_H || bird.getY() + marginTop &lt;= 0) {</div>
+<div class="line"><span class="lineno">  309</span>        gameOver = <span class="keyword">true</span>; <span class="comment">// Define o jogo como Game Over</span></div>
+<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">if</span> (somDie) al_play_sample(somDie, 1.0, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, NULL); <span class="comment">// Toca o som de morte</span></div>
+<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">return</span>; <span class="comment">// Sai da função update</span></div>
+<div class="line"><span class="lineno">  312</span>    }</div>
+<div class="line"><span class="lineno">  313</span> </div>
+<div class="line"><span class="lineno">  314</span>    cleanUpPipes(); <span class="comment">// Remove os canos que saíram da tela</span></div>
+<div class="line"><span class="lineno">  315</span> </div>
+<div class="line"><span class="lineno">  316</span>    <span class="comment">// Atualiza o offset de rolagem do background</span></div>
+<div class="line"><span class="lineno">  317</span>    <span class="keywordflow">if</span> (background != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  318</span>        <span class="keywordtype">int</span> bg_w = al_get_bitmap_width(background);</div>
+<div class="line"><span class="lineno">  319</span>        <span class="keywordtype">int</span> bg_h = al_get_bitmap_height(background);</div>
+<div class="line"><span class="lineno">  320</span> </div>
+<div class="line"><span class="lineno">  321</span>        <span class="keywordflow">if</span> (bg_w &lt;= 0) bg_w = 1; <span class="comment">// Prevenção de divisão por zero</span></div>
+<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">if</span> (bg_h &lt;= 0) bg_h = 1;</div>
+<div class="line"><span class="lineno">  323</span> </div>
+<div class="line"><span class="lineno">  324</span>        <span class="comment">// Calcula a escala para preencher a tela, mantendo a proporção do fundo</span></div>
+<div class="line"><span class="lineno">  325</span>        <span class="keywordtype">float</span> bg_scale_to_fill = std::max(SCREEN_W / (<span class="keywordtype">float</span>)bg_w, SCREEN_H / (<span class="keywordtype">float</span>)bg_h);</div>
+<div class="line"><span class="lineno">  326</span>        <span class="keywordtype">float</span> final_bg_width = bg_w * bg_scale_to_fill; <span class="comment">// Largura final do fundo</span></div>
+<div class="line"><span class="lineno">  327</span> </div>
+<div class="line"><span class="lineno">  328</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> BACKGROUND_SCROLL_FIXED_SPEED_PER_FRAME = -1.0f; <span class="comment">// Velocidade de rolagem do fundo (fixa)</span></div>
+<div class="line"><span class="lineno">  329</span>        backgroundScrollOffset += BACKGROUND_SCROLL_FIXED_SPEED_PER_FRAME; <span class="comment">// Move o fundo</span></div>
+<div class="line"><span class="lineno">  330</span> </div>
+<div class="line"><span class="lineno">  331</span>        <span class="comment">// Se o fundo rolou completamente para fora da tela, reseta o offset para criar um loop contínuo</span></div>
+<div class="line"><span class="lineno">  332</span>        <span class="keywordflow">while</span> (backgroundScrollOffset &lt;= -final_bg_width) {</div>
+<div class="line"><span class="lineno">  333</span>            backgroundScrollOffset += final_bg_width;</div>
+<div class="line"><span class="lineno">  334</span>        }</div>
+<div class="line"><span class="lineno">  335</span>    }</div>
+<div class="line"><span class="lineno">  336</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Atributos</h2>
+<a id="a8d3989e5f59efa3ee74b25b462cd436c" name="a8d3989e5f59efa3ee74b25b462cd436c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d3989e5f59efa3ee74b25b462cd436c">&#9670;&#160;</a></span>INITIAL_PIPE_DESIGN_SPEED_PER_FRAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Scenario::INITIAL_PIPE_DESIGN_SPEED_PER_FRAME = -150.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Velocidade inicial dos canos no design do jogo, por frame. </p>
+<p>Velocidade horizontal inicial dos canos por frame, baseada no design. </p>
+
+</div>
+</div>
+<a id="aa4c4621a468293de629e51bfa5ba9aa5" name="aa4c4621a468293de629e51bfa5ba9aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4c4621a468293de629e51bfa5ba9aa5">&#9670;&#160;</a></span>PIPE_SPACING_DESIGN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Scenario::PIPE_SPACING_DESIGN = 420.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Espaçamento horizontal padrão entre os canos no design do jogo. </p>
+<p>Espaçamento horizontal padrão entre os canos, baseado no design. </p>
+
+</div>
+</div>
+<a id="a24f052bb4c4f48a47b61e791e3e1df39" name="a24f052bb4c4f48a47b61e791e3e1df39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24f052bb4c4f48a47b61e791e3e1df39">&#9670;&#160;</a></span>PIPE_SPEED_INCREASE_PER_SCORE_PER_FRAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Scenario::PIPE_SPEED_INCREASE_PER_SCORE_PER_FRAME = -0.05f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Aumento da velocidade dos canos por ponto marcado, por frame. </p>
+<p>Aumento de velocidade dos canos por ponto, baseado no design. </p>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
+<li>include/<a class="el" href="_scenario_8hpp_source.html">Scenario.hpp</a></li>
+<li>src/<a class="el" href="_scenario_8cpp.html">Scenario.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
