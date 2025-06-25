@@ -122,7 +122,6 @@ pds2_projeto_final/
 Durante o desenvolvimento do **Traveling Dragon**, diversos desafios técnicos e conceituais foram superados com atenção, refatorações e testes progressivos:
 
 - 🧱 **Colisão com o teto** exigiu refinamento das bounding boxes para evitar falsos positivos.
-- 📐 **Centralização da janela** e evitar distorções em **monitores ultrawide (21:9)** exigiu lógica personalizada para detectar resolução e aplicar offset corretamente.
 - 🌗 **Transições com fade** ao trocar de cenário ou iniciar o jogo precisaram ser sincronizadas com o estado interno do motor (`GameEngine`) para evitar artefatos visuais como tela preta.
 - 💾 **Persistência de jogadores** exigiu leitura e escrita cuidadosa no arquivo `players.txt`, garantindo ordenação, não duplicação e atualização de dados.
 - 🔀 **Integração de mouse e teclado simultaneamente** exigiu estrutura híbrida no `GameEngine` para lidar com múltiplos tipos de entrada.
