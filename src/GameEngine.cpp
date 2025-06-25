@@ -233,7 +233,7 @@ void GameEngine::loadGameAssets() {
     }
 
     // Carrega a música de fundo para os menus e os samples de efeito sonoro.
-    musicaMenuRankingGameOver = al_load_audio_stream("assets/menu2.ogg", 4, 2048);
+    musicaMenuRankingGameOver = al_load_audio_stream("assets/menu.ogg", 4, 2048);
     somFlap = al_load_sample("assets/asas.wav");
     somDie = al_load_sample("assets/die.wav");
     somPoint = al_load_sample("assets/point.wav");
