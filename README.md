@@ -67,7 +67,7 @@ Este projeto utiliza **testes unitários com [Doctest](https://github.com/doctes
 No terminal, na raiz do projeto:
 
 ```bash
-mingw32-make run-tests
+mingw32-make test
 ```
 
 Isso compilará os testes da pasta `tests/` e executará o binário `bin/run_tests.exe`.
@@ -107,7 +107,7 @@ pds2_projeto_final/
 
 1. Acesse a pasta `bin/`
 2. **Execute o arquivo `Traveling Dragon.exe`**
-3. Divirta-se controlando o dragão, evite obstáculos e avance pelos cenários!
+3. Divirta-se controlando o dragão com a sua barra de espaço, evite obstáculos e avance pelos cenários!
 
 ---
 
