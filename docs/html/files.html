@@ -5,12 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Traveling Dragon: Lista de Arquivos</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
+<title>Traviling Dragon: Lista de Arquivos</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -25,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="dragao (1).png"/></td>
   <td id="projectalign">
-   <div id="projectname">Traveling Dragon<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Traviling Dragon<span id="projectnumber">&#160;1.0</span>
    </div>
    <div id="projectbrief">Traveling Dragon é uma releitura autoral do clássico Flappy Bird. Neste jogo, você controla um dragão aventureiro que sai de sua caverna para explorar o mundo. A cada novo cenário, o tempo passa mais rápido, o dia clareia, escurece, e por fim o dragão mergulha em uma noite eterna, repleta de obstáculos desafiadores.</div>
   </td>
@@ -45,12 +47,26 @@ $(function() { codefold.init(); });
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',true,false,'search.php','Busca',false);
+  initMenu('',true,false,'search.php','Busca',true);
   $(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('files.html','',''); });
+</script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -93,32 +109,36 @@ $(function() {
 <tr id="row_0_10_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="_resolution_selector_8hpp_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a><a class="el" href="_resolution_selector_8hpp.html" target="_self">ResolutionSelector.hpp</a></td><td class="desc">ResolutionSelectorheader do projeto Traveling Dragon </td></tr>
 <tr id="row_0_11_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="_scenario_8hpp_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a><a class="el" href="_scenario_8hpp.html" target="_self">Scenario.hpp</a></td><td class="desc">Scenarioheader do projeto Traveling Dragon </td></tr>
 <tr id="row_0_12_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="_score_manager_8hpp_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a><a class="el" href="_score_manager_8hpp.html" target="_self">ScoreManager.hpp</a></td><td class="desc">ScoreManagerheader do projeto Traveling Dragon </td></tr>
-<tr id="row_1_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_1_" class="arrow" onclick="dynsection.toggleFolder('1_')"><span class="arrowhead opened"></span></span><span id="img_1_" class="iconfolder" onclick="dynsection.toggleFolder('1_')"><div class="folder-icon open"></div></span><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html" target="_self">src</a></td><td class="desc"></td></tr>
-<tr id="row_1_0_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_bird_8cpp.html" target="_self">Bird.cpp</a></td><td class="desc">Birdimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_1_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_config_screen_8cpp.html" target="_self">ConfigScreen.cpp</a></td><td class="desc">ConfigScreenimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_1_2_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_game_engine_8cpp.html" target="_self">GameEngine.cpp</a></td><td class="desc">GameEngineimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_1_3_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_game_object_8cpp.html" target="_self">GameObject.cpp</a></td><td class="desc">GameObjectimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_1_4_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_game_over_screen_8cpp.html" target="_self">GameOverScreen.cpp</a></td><td class="desc">GameOverScreenimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_1_5_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="main_8cpp.html" target="_self">main.cpp</a></td><td class="desc">Mainimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_1_6_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_menu_8cpp.html" target="_self">Menu.cpp</a></td><td class="desc">Menuimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_1_7_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_pipe_8cpp.html" target="_self">Pipe.cpp</a></td><td class="desc">Pipeimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_1_8_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_player_8cpp.html" target="_self">Player.cpp</a></td><td class="desc">Playerimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_1_9_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_player_manager_8cpp.html" target="_self">PlayerManager.cpp</a></td><td class="desc">PlayerManagerimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_1_10_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_ranking_screen_8cpp.html" target="_self">RankingScreen.cpp</a></td><td class="desc">RankingScreenimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_1_11_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_resolution_selector_8cpp.html" target="_self">ResolutionSelector.cpp</a></td><td class="desc">ResolutionSelectorimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_1_12_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_scenario_8cpp.html" target="_self">Scenario.cpp</a></td><td class="desc">Scenarioimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_1_13_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_score_manager_8cpp.html" target="_self">ScoreManager.cpp</a></td><td class="desc">ScoreManagerimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_2_" class="odd"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_2_" class="arrow" onclick="dynsection.toggleFolder('2_')"><span class="arrowhead opened"></span></span><span id="img_2_" class="iconfolder" onclick="dynsection.toggleFolder('2_')"><div class="folder-icon open"></div></span><a class="el" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html" target="_self">tests</a></td><td class="desc"></td></tr>
-<tr id="row_2_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="test__main_8cpp.html" target="_self">test_main.cpp</a></td><td class="desc">Test_mainimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_2_1_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="test___player_manager_8cpp.html" target="_self">test_PlayerManager.cpp</a></td><td class="desc">Test_PlayerManagerimplementação do projeto Traveling Dragon </td></tr>
-<tr id="row_2_2_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="test___scenario_8cpp.html" target="_self">test_Scenario.cpp</a></td><td class="desc">Test_Scenarioimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_0_13_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="_utils_8hpp_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a><a class="el" href="_utils_8hpp.html" target="_self">Utils.hpp</a></td><td class="desc">Utils para save do projeto Traveling Dragon </td></tr>
+<tr id="row_1_" class="odd"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_1_" class="arrow" onclick="dynsection.toggleFolder('1_')"><span class="arrowhead opened"></span></span><span id="img_1_" class="iconfolder" onclick="dynsection.toggleFolder('1_')"><div class="folder-icon open"></div></span><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html" target="_self">src</a></td><td class="desc"></td></tr>
+<tr id="row_1_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_bird_8cpp.html" target="_self">Bird.cpp</a></td><td class="desc">Birdimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_1_1_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_config_screen_8cpp.html" target="_self">ConfigScreen.cpp</a></td><td class="desc">ConfigScreenimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_1_2_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_game_engine_8cpp.html" target="_self">GameEngine.cpp</a></td><td class="desc">GameEngineimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_1_3_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_game_object_8cpp.html" target="_self">GameObject.cpp</a></td><td class="desc">GameObjectimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_1_4_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_game_over_screen_8cpp.html" target="_self">GameOverScreen.cpp</a></td><td class="desc">GameOverScreenimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_1_5_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="main_8cpp.html" target="_self">main.cpp</a></td><td class="desc">Mainimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_1_6_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_menu_8cpp.html" target="_self">Menu.cpp</a></td><td class="desc">Menuimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_1_7_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_pipe_8cpp.html" target="_self">Pipe.cpp</a></td><td class="desc">Pipeimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_1_8_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_player_8cpp.html" target="_self">Player.cpp</a></td><td class="desc">Playerimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_1_9_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_player_manager_8cpp.html" target="_self">PlayerManager.cpp</a></td><td class="desc">Implementação da classe <a class="el" href="class_player_manager.html" title="Gerencia o armazenamento e a manipulação dos dados de todos os jogadores.">PlayerManager</a> do projeto Traveling Dragon </td></tr>
+<tr id="row_1_10_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_ranking_screen_8cpp.html" target="_self">RankingScreen.cpp</a></td><td class="desc">RankingScreenimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_1_11_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_resolution_selector_8cpp.html" target="_self">ResolutionSelector.cpp</a></td><td class="desc">ResolutionSelectorimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_1_12_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_scenario_8cpp.html" target="_self">Scenario.cpp</a></td><td class="desc">Scenarioimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_1_13_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_score_manager_8cpp.html" target="_self">ScoreManager.cpp</a></td><td class="desc">ScoreManagerimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_2_" class="arrow" onclick="dynsection.toggleFolder('2_')"><span class="arrowhead opened"></span></span><span id="img_2_" class="iconfolder" onclick="dynsection.toggleFolder('2_')"><div class="folder-icon open"></div></span><a class="el" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html" target="_self">tests</a></td><td class="desc"></td></tr>
+<tr id="row_2_0_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="test__main_8cpp.html" target="_self">test_main.cpp</a></td><td class="desc">Test_mainimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_2_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="test___player_manager_8cpp.html" target="_self">test_PlayerManager.cpp</a></td><td class="desc">Test_PlayerManagerimplementação do projeto Traveling Dragon </td></tr>
+<tr id="row_2_2_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="test___scenario_8cpp.html" target="_self">test_Scenario.cpp</a></td><td class="desc">Test_Scenarioimplementação do projeto Traveling Dragon </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
-</small></address>
 </div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
 </body>
 </html>

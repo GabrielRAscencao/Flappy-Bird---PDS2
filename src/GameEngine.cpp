@@ -58,7 +58,7 @@ GameEngine::GameEngine(int w, int h, WindowMode mode)
     scaleY = (float)screenHeight / resolucaoY;
 
     // Instancia o gerenciador de jogadores e carrega os dados persistidos.
-    playerManager = new PlayerManager("data/players.txt");
+    playerManager = new PlayerManager(getSaveFilePath());
     playerManager->carregar();
 }
 

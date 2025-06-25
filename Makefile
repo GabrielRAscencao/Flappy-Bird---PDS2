@@ -99,7 +99,7 @@ $(BIN_DIR):
 clean:
 	@echo "Cleaning..."
 	@if exist $(OBJ_DIR) del /Q $(OBJ_DIR)\*.o
-	@if exist $(OBJ_DIR) del /Q $(OBJ_DIR)\*.test.o
+	@if exist $(OBJ_DIR)\*.test.o del /Q $(OBJ_DIR)\*.test.o
 	@if exist $(ICON_OBJ) del /Q $(ICON_OBJ)
 	@if exist $(BIN_DIR)\*.exe del /Q $(BIN_DIR)\*.exe
 

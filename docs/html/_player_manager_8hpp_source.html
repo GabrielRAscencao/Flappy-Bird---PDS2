@@ -5,12 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Traveling Dragon: Código-Fonte de include/PlayerManager.hpp</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
+<title>Traviling Dragon: Código-Fonte de include/PlayerManager.hpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -25,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="dragao (1).png"/></td>
   <td id="projectalign">
-   <div id="projectname">Traveling Dragon<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Traviling Dragon<span id="projectnumber">&#160;1.0</span>
    </div>
    <div id="projectbrief">Traveling Dragon é uma releitura autoral do clássico Flappy Bird. Neste jogo, você controla um dragão aventureiro que sai de sua caverna para explorar o mundo. A cada novo cenário, o tempo passa mais rápido, o dia clareia, escurece, e por fim o dragão mergulha em uma noite eterna, repleta de obstáculos desafiadores.</div>
   </td>
@@ -45,11 +47,27 @@ $(function() { codefold.init(); });
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',true,false,'search.php','Busca',false);
+  initMenu('',true,false,'search.php','Busca',true);
   $(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_player_manager_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -71,12 +89,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">PlayerManager.hpp</div></div>
 </div><!--header-->
@@ -117,18 +129,22 @@ $(function() {
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_player_8hpp_html"><div class="ttname"><a href="_player_8hpp.html">Player.hpp</a></div><div class="ttdoc">Playerheader do projeto Traveling Dragon.</div></div>
 <div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Representa um jogador individual no jogo.</div><div class="ttdef"><b>Definição</b> Player.hpp:17</div></div>
-<div class="ttc" id="aclass_player_manager_html_a211cfcf387ce940538aa85a22e355445"><div class="ttname"><a href="class_player_manager.html#a211cfcf387ce940538aa85a22e355445">PlayerManager::buscar</a></div><div class="ttdeci">Player * buscar(const std::string &amp;apelido)</div><div class="ttdoc">Busca um jogador pelo seu apelido.</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:83</div></div>
-<div class="ttc" id="aclass_player_manager_html_a2e8d1793806950cd4cc2818f63b045fc"><div class="ttname"><a href="class_player_manager.html#a2e8d1793806950cd4cc2818f63b045fc">PlayerManager::PlayerManager</a></div><div class="ttdeci">PlayerManager(const std::string &amp;caminho)</div><div class="ttdoc">Construtor da classe PlayerManager.</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:15</div></div>
-<div class="ttc" id="aclass_player_manager_html_a404259092990d4b587ee1c87256e4a49"><div class="ttname"><a href="class_player_manager.html#a404259092990d4b587ee1c87256e4a49">PlayerManager::getJogadores</a></div><div class="ttdeci">const std::vector&lt; Player &gt; &amp; getJogadores() const</div><div class="ttdoc">Retorna uma referência constante para o vetor de todos os jogadores. Permite acessar a lista de jogad...</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:74</div></div>
-<div class="ttc" id="aclass_player_manager_html_a88c624229658284fad3f00ec8b518516"><div class="ttname"><a href="class_player_manager.html#a88c624229658284fad3f00ec8b518516">PlayerManager::carregar</a></div><div class="ttdeci">void carregar()</div><div class="ttdoc">Carrega os dados dos jogadores de um arquivo para a memória.</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:25</div></div>
-<div class="ttc" id="aclass_player_manager_html_ab3336e971457c798124a8779e8c9566b"><div class="ttname"><a href="class_player_manager.html#ab3336e971457c798124a8779e8c9566b">PlayerManager::imprimirRanking</a></div><div class="ttdeci">void imprimirRanking() const</div><div class="ttdoc">Imprime o ranking de todos os jogadores cadastrados no console. A ordem é geralmente decrescente pela...</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:100</div></div>
-<div class="ttc" id="aclass_player_manager_html_ae011abf8cf4a1e488e02e421605b9c17"><div class="ttname"><a href="class_player_manager.html#ae011abf8cf4a1e488e02e421605b9c17">PlayerManager::salvar</a></div><div class="ttdeci">void salvar() const</div><div class="ttdoc">Salva os dados atuais dos jogadores que estão na memória para o arquivo. Marca como const porque não ...</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:50</div></div>
-<div class="ttc" id="aclass_player_manager_html_afa3648efb1df204c1233bad95b882d5c"><div class="ttname"><a href="class_player_manager.html#afa3648efb1df204c1233bad95b882d5c">PlayerManager::cadastrar</a></div><div class="ttdeci">void cadastrar(const std::string &amp;nome, const std::string &amp;apelido)</div><div class="ttdoc">Cadastra um novo jogador no sistema.</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:64</div></div>
+<div class="ttc" id="aclass_player_manager_html_a211cfcf387ce940538aa85a22e355445"><div class="ttname"><a href="class_player_manager.html#a211cfcf387ce940538aa85a22e355445">PlayerManager::buscar</a></div><div class="ttdeci">Player * buscar(const std::string &amp;apelido)</div><div class="ttdoc">Busca um jogador pelo seu apelido.</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:93</div></div>
+<div class="ttc" id="aclass_player_manager_html_a2e8d1793806950cd4cc2818f63b045fc"><div class="ttname"><a href="class_player_manager.html#a2e8d1793806950cd4cc2818f63b045fc">PlayerManager::PlayerManager</a></div><div class="ttdeci">PlayerManager(const std::string &amp;caminho)</div><div class="ttdoc">Construtor da classe PlayerManager.</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:19</div></div>
+<div class="ttc" id="aclass_player_manager_html_a404259092990d4b587ee1c87256e4a49"><div class="ttname"><a href="class_player_manager.html#a404259092990d4b587ee1c87256e4a49">PlayerManager::getJogadores</a></div><div class="ttdeci">const std::vector&lt; Player &gt; &amp; getJogadores() const</div><div class="ttdoc">Retorna uma referência constante para o vetor de todos os jogadores. Permite acessar a lista de jogad...</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:83</div></div>
+<div class="ttc" id="aclass_player_manager_html_a88c624229658284fad3f00ec8b518516"><div class="ttname"><a href="class_player_manager.html#a88c624229658284fad3f00ec8b518516">PlayerManager::carregar</a></div><div class="ttdeci">void carregar()</div><div class="ttdoc">Carrega os dados dos jogadores de um arquivo para a memória.</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:27</div></div>
+<div class="ttc" id="aclass_player_manager_html_ab3336e971457c798124a8779e8c9566b"><div class="ttname"><a href="class_player_manager.html#ab3336e971457c798124a8779e8c9566b">PlayerManager::imprimirRanking</a></div><div class="ttdeci">void imprimirRanking() const</div><div class="ttdoc">Imprime o ranking de todos os jogadores cadastrados no console. A ordem é geralmente decrescente pela...</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:106</div></div>
+<div class="ttc" id="aclass_player_manager_html_ae011abf8cf4a1e488e02e421605b9c17"><div class="ttname"><a href="class_player_manager.html#ae011abf8cf4a1e488e02e421605b9c17">PlayerManager::salvar</a></div><div class="ttdeci">void salvar() const</div><div class="ttdoc">Salva os dados atuais dos jogadores que estão na memória para o arquivo. Marca como const porque não ...</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:54</div></div>
+<div class="ttc" id="aclass_player_manager_html_afa3648efb1df204c1233bad95b882d5c"><div class="ttname"><a href="class_player_manager.html#afa3648efb1df204c1233bad95b882d5c">PlayerManager::cadastrar</a></div><div class="ttdeci">void cadastrar(const std::string &amp;nome, const std::string &amp;apelido)</div><div class="ttdoc">Cadastra um novo jogador no sistema.</div><div class="ttdef"><b>Definição</b> PlayerManager.cpp:76</div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
-</small></address>
 </div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="_player_manager_8hpp.html">PlayerManager.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
 </body>
 </html>

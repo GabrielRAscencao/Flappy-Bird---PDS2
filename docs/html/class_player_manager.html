@@ -5,12 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Traveling Dragon: Referência da Classe PlayerManager</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
+<title>Traviling Dragon: Referência da Classe PlayerManager</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -25,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="dragao (1).png"/></td>
   <td id="projectalign">
-   <div id="projectname">Traveling Dragon<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Traviling Dragon<span id="projectnumber">&#160;1.0</span>
    </div>
    <div id="projectbrief">Traveling Dragon é uma releitura autoral do clássico Flappy Bird. Neste jogo, você controla um dragão aventureiro que sai de sua caverna para explorar o mundo. A cada novo cenário, o tempo passa mais rápido, o dia clareia, escurece, e por fim o dragão mergulha em uma noite eterna, repleta de obstáculos desafiadores.</div>
   </td>
@@ -45,11 +47,27 @@ $(function() { codefold.init(); });
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',true,false,'search.php','Busca',false);
+  initMenu('',true,false,'search.php','Busca',true);
   $(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_player_manager.html','','class_player_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -71,12 +89,7 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Membros Públicos</a> &#124;
-<a href="class_player_manager-members.html">Lista de todos os Membros</a>  </div>
   <div class="headertitle"><div class="title">Referência da Classe PlayerManager</div></div>
 </div><!--header-->
 <div class="contents">
@@ -127,11 +140,17 @@ Membros Públicos</h2></td></tr>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">caminho</td><td>O caminho do arquivo (ex: "players.dat") onde os dados serão salvos/carregados.</td></tr>
-    <tr><td class="paramname">caminho</td><td>O caminho do arquivo onde os dados dos jogadores serão armazenados. </td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>: caminhoArquivo(caminho) {}</div>
+<p>Inicializa o gerenciador de jogadores com o caminho fornecido para o arquivo de persistência de dados.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">caminho</td><td>O caminho completo do arquivo onde os dados serão salvos/carregados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>: caminhoArquivo(caminho) {}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -152,7 +171,7 @@ Membros Públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Busca um jogador pelo seu apelido. </p>
-<p>Busca um jogador na lista pelo seu apelido.</p>
+<p>Busca um jogador pelo apelido.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">apelido</td><td>O apelido do jogador a ser buscado. </td></tr>
@@ -166,15 +185,14 @@ Membros Públicos</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>Um ponteiro para o objeto <a class="el" href="class_player.html" title="Representa um jogador individual no jogo.">Player</a> se encontrado, ou <span class="tt">nullptr</span> caso contrário. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                      {</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; p : jogadores) { <span class="comment">// Itera sobre os jogadores (por referência para poder retornar ponteiro)</span></div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (p.getApelido() == apelido) {</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">return</span> &amp;p; <span class="comment">// Retorna um ponteiro para o jogador encontrado</span></div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; <span class="comment">// Retorna nullptr se o jogador não for encontrado</span></div>
-<div class="line"><span class="lineno">   90</span>}</div>
+<dl class="section return"><dt>Retorna</dt><dd>Ponteiro para o jogador encontrado, ou nullptr se não existir. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>                                                      {</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; p : jogadores) {</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (p.getApelido() == apelido)</div>
+<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">return</span> &amp;p;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   99</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -198,21 +216,20 @@ Membros Públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Cadastra um novo jogador no sistema. </p>
-<p>Cadastra um novo jogador na lista.</p>
+<p>Cadastra um novo jogador na memória.</p>
 <p>Se um jogador com o mesmo apelido já existir, ele pode ser atualizado ou um aviso pode ser gerado, dependendo da implementação.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">nome</td><td>O nome completo do jogador a ser cadastrado. </td></tr>
     <tr><td class="paramname">apelido</td><td>O apelido único do jogador.</td></tr>
-    <tr><td class="paramname">nome</td><td>O nome real do novo jogador. </td></tr>
-    <tr><td class="paramname">apelido</td><td>O apelido do novo jogador. </td></tr>
+    <tr><td class="paramname">nome</td><td>Nome real do jogador. </td></tr>
+    <tr><td class="paramname">apelido</td><td>Apelido único do jogador. </td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>                                                                             {</div>
-<div class="line"><span class="lineno">   65</span>    <span class="comment">// Usa emplace_back para construir o objeto Player diretamente no vetor, evitando cópias desnecessárias</span></div>
-<div class="line"><span class="lineno">   66</span>    jogadores.emplace_back(nome, apelido);</div>
-<div class="line"><span class="lineno">   67</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>                                                                             {</div>
+<div class="line"><span class="lineno">   77</span>    jogadores.emplace_back(nome, apelido);</div>
+<div class="line"><span class="lineno">   78</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -232,29 +249,29 @@ Membros Públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Carrega os dados dos jogadores de um arquivo para a memória. </p>
-<p>Carrega os dados dos jogadores de um arquivo para a memória. Os dados existentes em memória são limpos antes do carregamento.</p>
 <p>Se o arquivo não existir ou estiver corrompido, o vetor de jogadores pode ser inicializado vazio ou com dados padrão.</p>
-<dl class="section note"><dt>Observação</dt><dd>Este método assume um formato de arquivo específico: "nome apelido partidas maiorPontuacao\n". Ele também simplifica a lógica de 'partidas' aplicando a 'maiorPontuacao' a todas as partidas, o que pode não ser ideal para um histórico detalhado. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>                             {</div>
-<div class="line"><span class="lineno">   26</span>    jogadores.clear(); <span class="comment">// Limpa a lista atual de jogadores em memória</span></div>
-<div class="line"><span class="lineno">   27</span>    std::ifstream arq(caminhoArquivo); <span class="comment">// Abre o arquivo para leitura</span></div>
-<div class="line"><span class="lineno">   28</span>    <span class="comment">// Variáveis temporárias para ler os dados de cada jogador</span></div>
-<div class="line"><span class="lineno">   29</span>    std::string nome, apelido;</div>
-<div class="line"><span class="lineno">   30</span>    <span class="keywordtype">int</span> partidas, maiorPontuacao;</div>
-<div class="line"><span class="lineno">   31</span> </div>
-<div class="line"><span class="lineno">   32</span>    <span class="comment">// Loop de leitura: lê os dados de cada linha do arquivo</span></div>
-<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">while</span> (arq &gt;&gt; nome &gt;&gt; apelido &gt;&gt; partidas &gt;&gt; maiorPontuacao) {</div>
-<div class="line"><span class="lineno">   34</span>        Player p(nome, apelido); <span class="comment">// Cria um novo objeto Player</span></div>
-<div class="line"><span class="lineno">   35</span>        <span class="comment">// Nota: Esta parte do código está aplicando a `maiorPontuacao` a todas as `partidas` registradas,</span></div>
-<div class="line"><span class="lineno">   36</span>        <span class="comment">// o que significa que o histórico de pontuações individuais não é mantido, apenas o total de partidas</span></div>
-<div class="line"><span class="lineno">   37</span>        <span class="comment">// e a maior pontuação geral. Se um histórico mais detalhado for necessário, a lógica de salvamento/carregamento</span></div>
-<div class="line"><span class="lineno">   38</span>        <span class="comment">// e a estrutura do Player precisarão ser revisadas.</span></div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; partidas; ++i)</div>
-<div class="line"><span class="lineno">   40</span>            p.adicionarPartida(maiorPontuacao); <span class="comment">// Adiciona as partidas, atualizando a maior pontuação</span></div>
-<div class="line"><span class="lineno">   41</span>        jogadores.push_back(p); <span class="comment">// Adiciona o jogador à lista em memória</span></div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-<div class="line"><span class="lineno">   43</span>    <span class="comment">// O arquivo é fechado automaticamente quando `arq` sai do escopo</span></div>
-<div class="line"><span class="lineno">   44</span>}</div>
+<p>Os dados existentes na memória são limpos antes do carregamento. Cada linha do arquivo deve conter: nome apelido partidas maiorPontuacao </p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>                             {</div>
+<div class="line"><span class="lineno">   28</span>    jogadores.clear(); <span class="comment">// Limpa os dados existentes na memória</span></div>
+<div class="line"><span class="lineno">   29</span> </div>
+<div class="line"><span class="lineno">   30</span>    std::ifstream arq(caminhoArquivo); <span class="comment">// Tenta abrir o arquivo para leitura</span></div>
+<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">if</span> (!arq.is_open()) {</div>
+<div class="line"><span class="lineno">   32</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;Aviso: não foi possível abrir &quot;</span> &lt;&lt; caminhoArquivo &lt;&lt; <span class="stringliteral">&quot; para leitura.\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span>; <span class="comment">// Se o arquivo não existir, apenas termina (não é erro crítico)</span></div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>    std::string nome, apelido;</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordtype">int</span> partidas, maiorPontuacao;</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">while</span> (arq &gt;&gt; nome &gt;&gt; apelido &gt;&gt; partidas &gt;&gt; maiorPontuacao) {</div>
+<div class="line"><span class="lineno">   40</span>        Player p(nome, apelido);</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; partidas; ++i)</div>
+<div class="line"><span class="lineno">   42</span>            p.adicionarPartida(maiorPontuacao); <span class="comment">// Simula partidas para manter contagem e recorde</span></div>
+<div class="line"><span class="lineno">   43</span>        jogadores.push_back(p);</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>    <span class="comment">// O arquivo é fechado automaticamente ao sair do escopo</span></div>
+<div class="line"><span class="lineno">   47</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -274,13 +291,11 @@ Membros Públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Retorna uma referência constante para o vetor de todos os jogadores. Permite acessar a lista de jogadores sem permitir sua modificação externa direta. </p>
-<p>Retorna uma referência constante para o vetor de jogadores. Isso permite acessar a lista de jogadores sem modificá-la diretamente.</p>
-<dl class="section return"><dt>Retorna</dt><dd>Uma referência constante para o <span class="tt">std::vector&lt;<a class="el" href="class_player.html" title="Representa um jogador individual no jogo.">Player</a>&gt;</span> de jogadores.</dd>
-<dd>
-Uma referência constante para <span class="tt">std::vector&lt;<a class="el" href="class_player.html" title="Representa um jogador individual no jogo.">Player</a>&gt;</span>. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                                           {</div>
-<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> jogadores;</div>
-<div class="line"><span class="lineno">   76</span>}</div>
+<p>Retorna uma referência constante para a lista de jogadores.</p>
+<dl class="section return"><dt>Retorna</dt><dd>Uma referência constante para o <span class="tt">std::vector&lt;<a class="el" href="class_player.html" title="Representa um jogador individual no jogo.">Player</a>&gt;</span> de jogadores. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                           {</div>
+<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">return</span> jogadores;</div>
+<div class="line"><span class="lineno">   85</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -300,14 +315,14 @@ Uma referência constante para <span class="tt">std::vector&lt;<a class="el" hre
 </div><div class="memdoc">
 
 <p>Imprime o ranking de todos os jogadores cadastrados no console. A ordem é geralmente decrescente pela maior pontuação. Marca como <span class="tt">const</span> pois não altera os dados dos jogadores. </p>
-<p>Imprime o ranking de jogadores no console. Itera sobre a lista de jogadores e exibe os dados de cada um.</p>
-<dl class="section note"><dt>Observação</dt><dd>Esta função apenas imprime os dados como eles estão no vetor interno, sem ordenação prévia. Para um ranking verdadeiro, a lista de jogadores deve ser ordenada antes de chamar esta função (como feito em <span class="tt"><a class="el" href="class_ranking_screen.html" title="Gerencia e exibe a tela de ranking de pontuações do jogo.">RankingScreen</a></span>). </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                                          {</div>
-<div class="line"><span class="lineno">  101</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Ranking dos jogadores:\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; p : jogadores) {</div>
-<div class="line"><span class="lineno">  103</span>        std::cout &lt;&lt; p.toString() &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-<div class="line"><span class="lineno">  105</span>}</div>
+<p>Imprime no console o ranking dos jogadores cadastrados.</p>
+<p>A lista não é ordenada aqui — apenas exibida como está. </p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>                                          {</div>
+<div class="line"><span class="lineno">  107</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Ranking dos jogadores:\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; p : jogadores) {</div>
+<div class="line"><span class="lineno">  109</span>        std::cout &lt;&lt; p.toString() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="line"><span class="lineno">  111</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -327,15 +342,23 @@ Uma referência constante para <span class="tt">std::vector&lt;<a class="el" hre
 </div><div class="memdoc">
 
 <p>Salva os dados atuais dos jogadores que estão na memória para o arquivo. Marca como <span class="tt">const</span> porque não altera o estado do <a class="el" href="class_player_manager.html" title="Gerencia o armazenamento e a manipulação dos dados de todos os jogadores.">PlayerManager</a>, apenas o arquivo. </p>
-<p>Salva os dados dos jogadores da memória para o arquivo. O arquivo é sobrescrito a cada salvamento. </p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                 {</div>
-<div class="line"><span class="lineno">   51</span>    std::ofstream arq(caminhoArquivo); <span class="comment">// Abre o arquivo para escrita (sobrescreve se existir)</span></div>
-<div class="line"><span class="lineno">   52</span>    <span class="comment">// Itera sobre todos os jogadores na lista e escreve seus dados no arquivo</span></div>
-<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; p : jogadores) {</div>
-<div class="line"><span class="lineno">   54</span>        arq &lt;&lt; p.getNome() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; p.getApelido() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; p.getPartidas() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; p.getMaiorPontuacao() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-<div class="line"><span class="lineno">   56</span>    <span class="comment">// O arquivo é fechado automaticamente quando `arq` sai do escopo</span></div>
-<div class="line"><span class="lineno">   57</span>}</div>
+<p>Salva os dados dos jogadores da memória para o arquivo.</p>
+<p>O arquivo será sobrescrito. Cria a pasta automaticamente se ela não existir. </p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                                 {</div>
+<div class="line"><span class="lineno">   55</span>    <span class="comment">// Garante que o diretório onde o arquivo será salvo exista</span></div>
+<div class="line"><span class="lineno">   56</span>    std::filesystem::create_directories(std::filesystem::path(caminhoArquivo).parent_path());</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    std::ofstream arq(caminhoArquivo); <span class="comment">// Abre o arquivo para escrita</span></div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span> (!arq.is_open()) {</div>
+<div class="line"><span class="lineno">   60</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;Erro: não foi possível salvar os dados em &quot;</span> &lt;&lt; caminhoArquivo &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; p : jogadores) {</div>
+<div class="line"><span class="lineno">   65</span>        arq &lt;&lt; p.getNome() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; p.getApelido() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line"><span class="lineno">   66</span>            &lt;&lt; p.getPartidas() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; p.getMaiorPontuacao() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="line"><span class="lineno">   68</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -344,10 +367,21 @@ Uma referência constante para <span class="tt">std::vector&lt;<a class="el" hre
 <li>src/<a class="el" href="_player_manager_8cpp.html">PlayerManager.cpp</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
-</small></address>
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_player_manager.html">PlayerManager</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
 </body>
 </html>

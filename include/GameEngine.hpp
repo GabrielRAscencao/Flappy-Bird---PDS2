@@ -16,6 +16,8 @@
 #include "RankingScreen.hpp"           // Tela de ranking de jogadores
 #include "ResolutionSelector.hpp"      // Seleção de resolução da janela
 #include "ConfigScreen.hpp"            // Tela de configurações
+#include "Utils.hpp"                   // Save do ranking
+
 
 /**
  * @brief O coração do jogo, gerenciando o loop principal, estados e componentes.

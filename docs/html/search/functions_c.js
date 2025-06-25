@@ -10,5 +10,5 @@ var searchData=
   ['setrotacionar_7',['setRotacionar',['../class_bird.html#af13285483b45b137948814276b1ee23c',1,'Bird']]],
   ['setscored_8',['setScored',['../class_pipe.html#a1f436e349894a1bd6641302facfe6646',1,'Pipe']]],
   ['setspeed_9',['setSpeed',['../class_pipe.html#a3fd60e0469222eab47b551c9f49c6e3b',1,'Pipe']]],
-  ['showresolutionselector_10',['showResolutionSelector',['../_resolution_selector_8cpp.html#ae51c563ab4db2020e017fb7d9c5a16ab',1,'showResolutionSelector():&#160;ResolutionSelector.cpp'],['../_resolution_selector_8hpp.html#ae51c563ab4db2020e017fb7d9c5a16ab',1,'showResolutionSelector():&#160;ResolutionSelector.cpp']]]
+  ['showresolutionselector_10',['showResolutionSelector',['../_resolution_selector_8hpp.html#ae51c563ab4db2020e017fb7d9c5a16ab',1,'showResolutionSelector():&#160;ResolutionSelector.cpp'],['../_resolution_selector_8cpp.html#ae51c563ab4db2020e017fb7d9c5a16ab',1,'showResolutionSelector():&#160;ResolutionSelector.cpp']]]
 ];
